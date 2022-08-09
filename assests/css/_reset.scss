@@ -1,0 +1,22 @@
+:root{
+    --primary-color: #17BE8A;
+    --secondary-color: #FFDF00;
+    --header-font: 'Roboto Slab', serif;
+    --paragraph-font: 'Questrial', sans-serif;
+    --signature-font: 'Brittany Signature', sans-serif;
+    --notification-font: 'Didact Gothic', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    list-style-type: none;
+}
