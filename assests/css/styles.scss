@@ -77,7 +77,7 @@
             margin-left: 0px;
         }
     }
-    @include media-lg{
+    @include media-xl{
         &__text{
             margin-right: 25px;
         }
@@ -112,6 +112,9 @@
         &--icon{
             color: var(--primary-color);
             font-size: 0.8rem;
+        }
+        a{
+            color: #000;
         }
     }
     &__icons-navigation{
@@ -179,6 +182,84 @@
         &__icons-navigation{
             right: 0px;
             position: absolute;
+        }
+    }
+}
+// menu + logo styling
+.menu{
+    font-size: 0.9375rem;
+    padding: 24px 0px;
+    font-family: var(--header-font);
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__navbar-button{
+        display: flex;
+        column-gap: 25px;
+    }
+    &__navbar{
+        margin: auto 0;
+        &--links{
+            column-gap: 15px;
+            display: flex;
+        }
+        &--drop{
+            color: var(--primary-color);
+        }
+        a{
+            color: #000;
+        }
+    }
+    &__item{
+        margin: auto 0;
+        &--button{
+            font-size: 1rem;
+            padding: 13px 25px;
+            border: 1px dotted var(--primary-color);
+            color: var(--primary-color);
+            background-color: #fff;
+        }
+    }
+    @include media-sm{
+        padding: 12px 0px;
+        &__content{
+            row-gap: 10px;
+            text-align: center;
+            flex-direction: column;
+        }
+        &__logo{
+            margin-left: 0px;
+        }
+        &__navbar{
+            display: none;
+        }
+        &__navbar-button{
+            justify-content: center;
+        }
+    }
+    @include media-md{
+        &__logo{
+            margin-left: 0px;
+        }
+        &__navbar{
+            display: none;
+        }
+    }
+    @include media-lg{
+        &__logo{
+            margin-left: 0px;
+        }
+        &__navbar{
+            display: none;
+        }
+    }
+    @include media-xl{
+        &__navbar{
+            display: block;
+        }
+        &__logo{
+            margin-left: -75px;
         }
     }
 }

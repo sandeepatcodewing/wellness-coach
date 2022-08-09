@@ -20,6 +20,9 @@ ul {
 a {
   text-decoration: none; }
 
+button {
+  font-family: inherit; }
+
 .close {
   display: none; }
 
@@ -79,7 +82,7 @@ a {
       margin-right: 0px; }
     .top-notification__button {
       margin-left: 0px; } }
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     .top-notification__text {
       margin-right: 25px; }
     .top-notification__button {
@@ -103,6 +106,8 @@ a {
   .details__contact-address--icon {
     color: var(--primary-color);
     font-size: 0.8rem; }
+  .details__contact-address a {
+    color: #000; }
   .details__icons-navigation {
     display: flex;
     gap: 20.4px; }
@@ -155,3 +160,59 @@ a {
     .details__icons-navigation {
       right: 0px;
       position: absolute; } }
+
+.menu {
+  font-size: 0.9375rem;
+  padding: 24px 0px;
+  font-family: var(--header-font); }
+  .menu__content {
+    display: flex;
+    justify-content: space-between; }
+  .menu__navbar-button {
+    display: flex;
+    column-gap: 25px; }
+  .menu__navbar {
+    margin: auto 0; }
+    .menu__navbar--links {
+      column-gap: 15px;
+      display: flex; }
+    .menu__navbar--drop {
+      color: var(--primary-color); }
+    .menu__navbar a {
+      color: #000; }
+  .menu__item {
+    margin: auto 0; }
+    .menu__item--button {
+      font-size: 1rem;
+      padding: 13px 25px;
+      border: 1px dotted var(--primary-color);
+      color: var(--primary-color);
+      background-color: #fff; }
+  @media (max-width: 767px) {
+    .menu {
+      padding: 12px 0px; }
+      .menu__content {
+        row-gap: 10px;
+        text-align: center;
+        flex-direction: column; }
+      .menu__logo {
+        margin-left: 0px; }
+      .menu__navbar {
+        display: none; }
+      .menu__navbar-button {
+        justify-content: center; } }
+  @media (min-width: 768px) {
+    .menu__logo {
+      margin-left: 0px; }
+    .menu__navbar {
+      display: none; } }
+  @media (min-width: 992px) {
+    .menu__logo {
+      margin-left: 0px; }
+    .menu__navbar {
+      display: none; } }
+  @media (min-width: 1200px) {
+    .menu__navbar {
+      display: block; }
+    .menu__logo {
+      margin-left: -75px; } }
