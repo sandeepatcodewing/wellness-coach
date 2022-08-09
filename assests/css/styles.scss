@@ -25,22 +25,26 @@
     }
 }
 
+// notification styling
 .top-notification{
     font-size: 1rem;
     color: #fff;
     padding: 15px 0px;
     line-height: 35px;
+    position: relative;
     background-color: var(--primary-color);
     font-family: var(--notification-font);
     &__content{
         display: flex;
-        position: relative;
     }
     &__cross{
-        top: 0px;
-        right: 0px;
-        position: absolute;
-        cursor: pointer;
+        &--icon{
+            top: 19px;
+            right: 30px;
+            position: absolute;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
     }
     &__text{
         margin-right: 25px;
@@ -51,5 +55,84 @@
         border: none;
         font-family: var(--header-font);
         background-color: var(--secondary-color);
+    }
+}
+// header contact styling
+.details{
+    padding: 16px 0px;
+    font-family: var(--notification-font);
+    background-color: rgba(255,230,0, 0.08);
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__social-media{
+        &--links{
+            display: flex;
+            gap: 19.7px;
+        }
+        a{
+            color: rgba(35,35,35, 0.6);
+        }
+    }
+    &__contact-address{
+        &--links{
+            display: flex;
+            gap: 30.9px;
+        }
+        &--icon{
+            color: var(--primary-color);
+            font-size: 0.8rem;
+        }
+    }
+    &__icons-navigation{
+        display: flex;
+        gap: 20.4px;
+        &--search-cart{
+            display: flex;
+            gap: 14.5px;
+        }
+        &--icon{
+            color: rgba(35,35,35, 0.6);
+        }
+        &--cart-icon{
+            position: relative;
+        }
+        &--total-item{
+            top: -9px;
+            right: -9px;
+            color: #fff;
+            position: absolute;
+            font-size: 0.75rem;
+            padding: 2px 4.5px;
+            border-radius: 50%;
+            font-family: var(--paragraph-font);
+            background-color: var(--primary-color);
+        }
+        &--hamburger-icon{
+            width: 22.64px;
+            height: 2.2px;
+            background-color: rgba(35,35,35, 0.6);
+            position: relative;
+            margin: auto 0;
+            border-radius: 15px;
+            z-index: 1000;
+            cursor: pointer;
+            &::before,&::after{
+                content: '';
+                width: 22.64px;
+                height: 2.2px;
+                background-color: rgba(35,35,35, 0.6);
+                position: absolute;
+                border-radius: 15px;
+                    transition: 0.25s ease-in-out;
+            }
+            &::before{
+                transform: translateY(-7px);
+            }
+            &::after{
+                transform: translateY(7px);
+            }
+        }
     }
 }

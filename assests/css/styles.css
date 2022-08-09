@@ -17,6 +17,9 @@ img {
 ul {
   list-style-type: none; }
 
+a {
+  text-decoration: none; }
+
 .close {
   display: none; }
 
@@ -45,16 +48,17 @@ ul {
   color: #fff;
   padding: 15px 0px;
   line-height: 35px;
+  position: relative;
   background-color: var(--primary-color);
   font-family: var(--notification-font); }
   .top-notification__content {
-    display: flex;
-    position: relative; }
-  .top-notification__cross {
-    top: 0px;
-    right: 0px;
+    display: flex; }
+  .top-notification__cross--icon {
+    top: 19px;
+    right: 30px;
     position: absolute;
-    cursor: pointer; }
+    cursor: pointer;
+    font-size: 1.5rem; }
   .top-notification__text {
     margin-right: 25px; }
   .top-notification__button {
@@ -63,3 +67,63 @@ ul {
     border: none;
     font-family: var(--header-font);
     background-color: var(--secondary-color); }
+
+.details {
+  padding: 16px 0px;
+  font-family: var(--notification-font);
+  background-color: rgba(255, 230, 0, 0.08); }
+  .details__content {
+    display: flex;
+    justify-content: space-between; }
+  .details__social-media--links {
+    display: flex;
+    gap: 19.7px; }
+  .details__social-media a {
+    color: rgba(35, 35, 35, 0.6); }
+  .details__contact-address--links {
+    display: flex;
+    gap: 30.9px; }
+  .details__contact-address--icon {
+    color: var(--primary-color);
+    font-size: 0.8rem; }
+  .details__icons-navigation {
+    display: flex;
+    gap: 20.4px; }
+    .details__icons-navigation--search-cart {
+      display: flex;
+      gap: 14.5px; }
+    .details__icons-navigation--icon {
+      color: rgba(35, 35, 35, 0.6); }
+    .details__icons-navigation--cart-icon {
+      position: relative; }
+    .details__icons-navigation--total-item {
+      top: -9px;
+      right: -9px;
+      color: #fff;
+      position: absolute;
+      font-size: 0.75rem;
+      padding: 2px 4.5px;
+      border-radius: 50%;
+      font-family: var(--paragraph-font);
+      background-color: var(--primary-color); }
+    .details__icons-navigation--hamburger-icon {
+      width: 22.64px;
+      height: 2.2px;
+      background-color: rgba(35, 35, 35, 0.6);
+      position: relative;
+      margin: auto 0;
+      border-radius: 15px;
+      z-index: 1000;
+      cursor: pointer; }
+      .details__icons-navigation--hamburger-icon::before, .details__icons-navigation--hamburger-icon::after {
+        content: '';
+        width: 22.64px;
+        height: 2.2px;
+        background-color: rgba(35, 35, 35, 0.6);
+        position: absolute;
+        border-radius: 15px;
+        transition: 0.25s ease-in-out; }
+      .details__icons-navigation--hamburger-icon::before {
+        transform: translateY(-7px); }
+      .details__icons-navigation--hamburger-icon::after {
+        transform: translateY(7px); }
