@@ -1,7 +1,7 @@
 let visibility = false;
 
-const menuBar = document.querySelector(".details__icons-navigation--hamburger-icon");
-const navList = document.querySelector(".menu__navbar");
+const menuBar = document.querySelector(".hamburger-menu");
+const navList = document.querySelector(".menu__navbar-button");
 const navLinks = document.querySelector(".menu__navbar--links");
 
 menuBar.addEventListener("click", () => {

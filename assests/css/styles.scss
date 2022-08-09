@@ -18,10 +18,46 @@
         max-width: 800px;
     }
     @include media-lg{
-        max-width: 1170px;
+        max-width: 960px;
     }
     @include media-xl{
-        max-width: 1500px;
+        max-width: 1170px;
+    }
+}
+
+.header{
+    top: 0;
+    left: 0;
+    position: sticky;
+}
+
+// navbar menu
+.hamburger-menu{
+    width: 40px;
+    height: 5px;
+    background-color: #000;
+    position: relative;
+    margin: auto 0;
+    border-radius: 15px;
+    z-index: 1000;
+    cursor: pointer;
+    &::before,&::after{
+        content: '';
+        width: 40px;
+        height: 5px;
+        background-color: #000;
+        position: absolute;
+        border-radius: 15px;
+            transition: 0.25s ease-in-out;
+    }
+    &::before{
+        transform: translateY(-12px);
+    }
+    &::after{
+        transform: translateY(12px);
+    }
+    @include media-md{
+        display: none;
     }
 }
 
@@ -107,7 +143,7 @@
 .details{
     padding: 16px 0px;
     font-family: var(--notification-font);
-    background-color: rgba(255,230,0, 0.08);
+    background-color: #FFFDEB;
     &__content{
         display: flex;
         justify-content: space-between;
@@ -215,6 +251,7 @@
 }
 // menu + logo styling
 .menu{
+    background-color: #fff;
     font-size: 0.9375rem;
     padding: 24px 0px;
     font-family: var(--header-font);
@@ -253,16 +290,12 @@
         padding: 12px 0px;
         &__content{
             row-gap: 10px;
-            text-align: center;
-            flex-direction: column;
         }
         &__logo{
             margin-left: 0px;
         }
-        &__navbar{
-            display: none;
-        }
         &__navbar-button{
+            display: none;
             flex-direction: column-reverse;
             justify-content: center;
         }
@@ -297,12 +330,17 @@
     @include media-sm{
         display: flex;
         flex-direction: column;
-        background-color: #fff;
+        position: fixed;
+        inset: 0 30% 0 0;
+        text-align: center;
+        z-index: 100;
+        backdrop-filter: blur(6px);
+        background-color: rgba(255, 255, 255, 0.8);
+        padding-top: 60px;
         &--links{
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
-            padding-top: 10px;
+            gap: 4rem;
         }
     }
 }
