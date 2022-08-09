@@ -18,12 +18,13 @@
         max-width: 800px;
     }
     @include media-lg{
-        max-width: 960px;
-    }
-    @include media-xl{
         max-width: 1170px;
     }
+    @include media-xl{
+        max-width: 1500px;
+    }
 }
+
 
 // notification styling
 .top-notification{  
@@ -39,8 +40,6 @@
     }
     &__cross{
         &--icon{
-            top: 19px;
-            right: 30px;
             position: absolute;
             cursor: pointer;
             font-size: 1.5rem;
@@ -70,6 +69,15 @@
         }
     }
     @include media-md{
+        &__content{
+            flex-direction: column;
+        }
+        &__cross{
+            &--icon{
+                top: 7px;
+                right: 10px;
+            }
+        }
         &__text{
             margin-right: 0px;
         }
@@ -78,6 +86,15 @@
         }
     }
     @include media-xl{
+        &__content{
+            flex-direction: row;
+        }
+        &__cross{
+            &--icon{
+                top: 19px;
+                right: 30px;
+            }
+        }
         &__text{
             margin-right: 25px;
         }
@@ -185,6 +202,17 @@
         }
     }
 }
+// hamburger animation
+.animate-menu{
+    position: relative;
+    background-color: transparent;
+    &::before{
+        transform: rotate(-45deg);
+    }
+    &::after{
+        transform: rotate(45deg);
+    }
+}
 // menu + logo styling
 .menu{
     font-size: 0.9375rem;
@@ -235,6 +263,7 @@
             display: none;
         }
         &__navbar-button{
+            flex-direction: column-reverse;
             justify-content: center;
         }
     }
@@ -260,6 +289,55 @@
         }
         &__logo{
             margin-left: -75px;
+        }
+    }
+}
+// navbar in mobile
+.list-nav{
+    @include media-sm{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        &--links{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-top: 10px;
+        }
+    }
+}
+// first-section
+.first-section{
+    padding: 120px 0px 60px 0px;
+    &__content{
+        display: grid;
+    }
+    &__texts{
+        margin: auto 0;
+        margin-left: -50px;
+    }
+    &__text-content{
+        display: grid;
+        row-gap: 16.5px;
+        text-align: center;
+        padding: 37px 44px;
+        background-color: #fff;
+        &--title{
+            text-align: start;
+        }
+        &--paragraph{
+            line-height: 43px;
+        }
+        &--buttons{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+    }
+
+    @include media-lg{
+        &__content{
+            grid-template-columns: 65% auto;
         }
     }
 }

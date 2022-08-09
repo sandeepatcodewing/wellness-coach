@@ -1,3 +1,40 @@
 .close{
     display: none;
 }
+
+.bg-primary{
+    background-color: rgba(23,190,138,0.05);
+}
+
+.signature-text{
+    font-family: var(--signature-font);
+}
+
+.primary-dot-border{
+    padding: 1px;
+    border: 1px dotted var(--primary-color);
+}
+.secondary-dot-border{
+    padding: 1px;
+    border: 1px dotted var(--secondary-color);
+}
+
+.primary-button{
+    color: #fff;
+    padding: 14px 25px;
+    line-height: 45px;
+    font-size: 1.0625rem;
+    border: none;
+    font-family: var(--header-font);
+    background-color: var(--primary-color);
+}
+
+.secondary-button{
+    color: #000;
+    padding: 7px 15px;
+    line-height: 45px;
+    font-size: 1.0625rem;
+    border: none;
+    font-family: var(--header-font);
+    background-color: var(--secondary-color);
+}

@@ -11,6 +11,9 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  font-family: var(--paragraph-font); }
+
 img {
   max-width: 100%; }
 
@@ -23,8 +26,45 @@ a {
 button {
   font-family: inherit; }
 
+h1 {
+  font-weight: normal;
+  font-size: 2.5rem;
+  font-family: var(--header-font); }
+
 .close {
   display: none; }
+
+.bg-primary {
+  background-color: rgba(23, 190, 138, 0.05); }
+
+.signature-text {
+  font-family: var(--signature-font); }
+
+.primary-dot-border {
+  padding: 1px;
+  border: 1px dotted var(--primary-color); }
+
+.secondary-dot-border {
+  padding: 1px;
+  border: 1px dotted var(--secondary-color); }
+
+.primary-button {
+  color: #fff;
+  padding: 14px 25px;
+  line-height: 45px;
+  font-size: 1.0625rem;
+  border: none;
+  font-family: var(--header-font);
+  background-color: var(--primary-color); }
+
+.secondary-button {
+  color: #000;
+  padding: 7px 15px;
+  line-height: 45px;
+  font-size: 1.0625rem;
+  border: none;
+  font-family: var(--header-font);
+  background-color: var(--secondary-color); }
 
 .container {
   margin: 0 auto;
@@ -38,13 +78,13 @@ button {
   .container {
     max-width: 800px; } }
 
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px; } }
-
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px; } }
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1500px; } }
 
 .top-notification {
   font-size: 1rem;
@@ -57,8 +97,6 @@ button {
   .top-notification__content {
     display: flex; }
   .top-notification__cross--icon {
-    top: 19px;
-    right: 30px;
     position: absolute;
     cursor: pointer;
     font-size: 1.5rem; }
@@ -78,11 +116,21 @@ button {
     .top-notification__button {
       margin-left: 0px; } }
   @media (min-width: 768px) {
+    .top-notification__content {
+      flex-direction: column; }
+    .top-notification__cross--icon {
+      top: 7px;
+      right: 10px; }
     .top-notification__text {
       margin-right: 0px; }
     .top-notification__button {
       margin-left: 0px; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
+    .top-notification__content {
+      flex-direction: row; }
+    .top-notification__cross--icon {
+      top: 19px;
+      right: 30px; }
     .top-notification__text {
       margin-right: 25px; }
     .top-notification__button {
@@ -161,6 +209,14 @@ button {
       right: 0px;
       position: absolute; } }
 
+.animate-menu {
+  position: relative;
+  background-color: transparent; }
+  .animate-menu::before {
+    transform: rotate(-45deg); }
+  .animate-menu::after {
+    transform: rotate(45deg); }
+
 .menu {
   font-size: 0.9375rem;
   padding: 24px 0px;
@@ -200,19 +256,56 @@ button {
       .menu__navbar {
         display: none; }
       .menu__navbar-button {
+        flex-direction: column-reverse;
         justify-content: center; } }
   @media (min-width: 768px) {
     .menu__logo {
       margin-left: 0px; }
     .menu__navbar {
       display: none; } }
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     .menu__logo {
       margin-left: 0px; }
     .menu__navbar {
       display: none; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
     .menu__navbar {
       display: block; }
     .menu__logo {
       margin-left: -75px; } }
+
+@media (max-width: 767px) {
+  .list-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff; }
+    .list-nav--links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-top: 10px; } }
+
+.first-section {
+  padding: 120px 0px 60px 0px; }
+  .first-section__content {
+    display: grid; }
+  .first-section__texts {
+    margin: auto 0;
+    margin-left: -50px; }
+  .first-section__text-content {
+    display: grid;
+    row-gap: 16.5px;
+    text-align: center;
+    padding: 37px 44px;
+    background-color: #fff; }
+    .first-section__text-content--title {
+      text-align: start; }
+    .first-section__text-content--paragraph {
+      line-height: 43px; }
+    .first-section__text-content--buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px; }
+  @media (min-width: 1200px) {
+    .first-section__content {
+      grid-template-columns: 65% auto; } }
