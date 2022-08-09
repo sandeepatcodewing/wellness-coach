@@ -26,7 +26,7 @@
 }
 
 // notification styling
-.top-notification{
+.top-notification{  
     font-size: 1rem;
     color: #fff;
     padding: 15px 0px;
@@ -46,15 +46,44 @@
             font-size: 1.5rem;
         }
     }
-    &__text{
-        margin-right: 25px;
-    }
     &__button{
         padding: 6px 16px;
-        margin-left: 25px;
         border: none;
         font-family: var(--header-font);
         background-color: var(--secondary-color);
+    }
+    @include media-sm{
+        &__content{
+            flex-direction: column;
+        }
+        &__cross{
+            &--icon{
+                top: 3px;
+                right: 5px;
+            }
+        }
+        &__text{
+            margin-right: 0px;
+        }
+        &__button{
+            margin-left: 0px;
+        }
+    }
+    @include media-md{
+        &__text{
+            margin-right: 0px;
+        }
+        &__button{
+            margin-left: 0px;
+        }
+    }
+    @include media-lg{
+        &__text{
+            margin-right: 25px;
+        }
+        &__button{
+            margin-left: 25px;
+        }
     }
 }
 // header contact styling
@@ -78,7 +107,7 @@
     &__contact-address{
         &--links{
             display: flex;
-            gap: 30.9px;
+            column-gap: 30.9px;
         }
         &--icon{
             color: var(--primary-color);
@@ -133,6 +162,23 @@
             &::after{
                 transform: translateY(7px);
             }
+        }
+    }
+    @include media-sm{
+        &__content{
+            position: relative;
+            row-gap: 10px;
+            flex-direction: column;
+        }
+        &__contact-address{
+            &--links{
+                row-gap: 10px;
+                flex-direction: column;
+            }
+        }
+        &__icons-navigation{
+            right: 0px;
+            position: absolute;
         }
     }
 }
