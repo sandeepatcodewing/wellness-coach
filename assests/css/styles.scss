@@ -29,6 +29,7 @@
     top: 0;
     left: 0;
     position: sticky;
+    z-index: 95;
 }
 // navbar menus
 .hamburger{
@@ -408,6 +409,12 @@
         &__content{
             display: block;
         }
+        &__text-content{
+            padding: 14px 22px;
+            &--buttons{
+                display: grid;
+            }
+        }
     }
     @include media-lg{
         &__content{
@@ -449,5 +456,44 @@
             padding: 20px 0px;
             grid-template-columns: repeat(1,1fr);
         }
+    }
+}
+// health coach section
+.health-coach{
+    padding: 120px 0px;
+    &__paragraph{
+        padding: 15px 0px;
+        &--text{
+            color: #333333;
+            font-size: 1.375rem;
+            line-height: 43px;
+        }
+    }
+    &__details{
+        position: relative;
+    }
+    &__card{
+        &--next{
+            top: 50%;
+            right: 0;
+            z-index: 5;
+            position: absolute;
+        }
+        &--prev{
+            top: 50%;
+            left: 0;
+            z-index: 5;
+            position: absolute;
+        }
+        &--slider-navigation{
+            cursor: pointer;
+            color: var(--primary-color);
+            padding: 22px 10px;
+            border: 1px solid var(--primary-color);
+            background-color: #fff;
+        }
+    }
+    @include media-sm{
+        padding: 30px 0px;
     }
 }

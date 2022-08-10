@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet" />
     <!-- Brittany Signature Font -->
     <link href="http://fonts.cdnfonts.com/css/brittany-signature" rel="stylesheet" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <!-- Font awsome 6.0 -->
     <script src="https://kit.fontawesome.com/ae48f6d481.js" crossorigin="anonymous"></script>
   </head>
@@ -218,7 +220,93 @@
           </div>
         </div>
       </section>
+      <!-- health coach section -->
+      <section class="health-coach bg-primary">
+        <div class="container">
+          <div class="health-coach__content">
+            <div class="health-coach__title section-title">
+              <div class="health-coach__title--header title-header">
+                <hr class="header-secondary" />
+                <h2>Health Coach Features</h2>
+              </div>
+              <div class="health-coach__title--line title-line">
+                <hr class="second-line" />
+              </div>
+            </div>
+            <div class="health-coach__paragraph">
+              <p class="health-coach__paragraph--text">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
+            </div>
+            <div class="health-coach__details">
+              <!-- Swiper -->
+              <div class="swiper health-coach__sliders" id="health-coach-sliders">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img class="width-100" src="/assests/img/blog-thumbnails/thumbnail-1.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="width-100" src="/assests/img/blog-thumbnails/thumbnail-2.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="width-100" src="/assests/img/blog-thumbnails/thumbnail-3.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="width-100" src="/assests/img/blog-thumbnails/thumbnail-1.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="width-100" src="/assests/img/blog-thumbnails/thumbnail-2.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="width-100" src="/assests/img/blog-thumbnails/thumbnail-3.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="width-100" src="/assests/img/blog-thumbnails/thumbnail-1.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="width-100" src="/assests/img/blog-thumbnails/thumbnail-2.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="width-100" src="/assests/img/blog-thumbnails/thumbnail-3.png" alt="" />
+                  </div>
+                </div>
+                <div class="health-coach__card--next">
+                  <i class="fa-solid fa-right-long health-coach__card--slider-navigation"></i>
+                </div>
+                <div class="health-coach__card--prev">
+                  <i class="fa-solid fa-left-long health-coach__card--slider-navigation"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".health-coach__sliders", {
+        navigation: {
+          nextEl: ".health-coach__card--next",
+          prevEl: ".health-coach__card--prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+      });
+    </script>
 
     <!-- navbar js -->
     <script src="/assests/js/navbar.js"></script>

@@ -31,6 +31,14 @@ h1 {
   font-size: 2.5rem;
   font-family: var(--header-font); }
 
+h2 {
+  font-weight: normal;
+  font-size: 2.1875rem;
+  font-family: var(--header-font); }
+
+.width-100 {
+  width: 100%; }
+
 .close {
   display: none; }
 
@@ -86,6 +94,46 @@ h1 {
   .extra-menu__items {
     inset: 0 30% 0 0; } }
 
+@media (min-width: 768px) {
+  .section-title {
+    display: flex;
+    gap: 49.2px; } }
+
+.title-header {
+  z-index: -1;
+  position: relative; }
+
+.header-secondary {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: var(--secondary-color);
+  opacity: 0.1;
+  border: none;
+  bottom: 5px;
+  z-index: -1;
+  left: 0px; }
+
+@media (max-width: 767px) {
+  .header-secondary {
+    display: none; } }
+
+.title-line {
+  margin: auto 0; }
+
+.second-line {
+  width: 71px; }
+
+@media (max-width: 767px) {
+  .second-line {
+    display: none; } }
+
+#health-coach-sliders {
+  padding: 0px 20px; }
+
+.swiper-button-disabled {
+  opacity: 0.5; }
+
 .container {
   margin: 0 auto;
   padding: 0px 16px; }
@@ -109,7 +157,8 @@ h1 {
 .header {
   top: 0;
   left: 0;
-  position: sticky; }
+  position: sticky;
+  z-index: 95; }
 
 .hamburger {
   width: 22.64px;
@@ -447,7 +496,11 @@ h1 {
   .first-section {
     padding: 30px 0px; }
   .first-section__content {
-    display: block; } }
+    display: block; }
+  .first-section__text-content {
+    padding: 14px 22px; }
+  .first-section__text-content--buttons {
+    display: grid; } }
 
 @media (min-width: 992px) {
   .first-section__content {
@@ -483,3 +536,40 @@ h1 {
   .as-seen__image {
     padding: 20px 0px;
     grid-template-columns: repeat(1, 1fr); } }
+
+.health-coach {
+  padding: 120px 0px; }
+
+.health-coach__paragraph {
+  padding: 15px 0px; }
+
+.health-coach__paragraph--text {
+  color: #333333;
+  font-size: 1.375rem;
+  line-height: 43px; }
+
+.health-coach__details {
+  position: relative; }
+
+.health-coach__card--next {
+  top: 50%;
+  right: 0;
+  z-index: 5;
+  position: absolute; }
+
+.health-coach__card--prev {
+  top: 50%;
+  left: 0;
+  z-index: 5;
+  position: absolute; }
+
+.health-coach__card--slider-navigation {
+  cursor: pointer;
+  color: var(--primary-color);
+  padding: 22px 10px;
+  border: 1px solid var(--primary-color);
+  background-color: #fff; }
+
+@media (max-width: 767px) {
+  .health-coach {
+    padding: 30px 0px; } }
