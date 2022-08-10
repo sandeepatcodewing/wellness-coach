@@ -31,7 +31,34 @@
     position: sticky;
 }
 
+
 // navbar menu
+.hamburger{
+    width: 22.64px;
+    height: 2.2px;
+    background-color: rgba(35,35,35, 0.6);
+    position: relative;
+    margin: auto 0;
+    border-radius: 15px;
+    z-index: 1000;
+    cursor: pointer;
+    &::before,&::after{
+        content: '';
+        width: 22.64px;
+        height: 2.2px;
+        background-color: rgba(35,35,35, 0.6);
+        position: absolute;
+        border-radius: 15px;
+        transition: 0.25s ease-in-out;
+    }
+    &::before{
+        transform: translateY(-7px);
+    }
+    &::after{
+        transform: translateY(7px);
+    }
+}
+
 .hamburger-menu{
     width: 35px;
     height: 5px;
@@ -48,7 +75,7 @@
         background-color: #000;
         position: absolute;
         border-radius: 15px;
-            transition: 0.25s ease-in-out;
+        transition: 0.25s ease-in-out;
     }
     &::before{
         transform: translateY(-12px);
@@ -194,31 +221,6 @@
             font-family: var(--paragraph-font);
             background-color: var(--primary-color);
         }
-        &--hamburger-icon{
-            width: 22.64px;
-            height: 2.2px;
-            background-color: rgba(35,35,35, 0.6);
-            position: relative;
-            margin: auto 0;
-            border-radius: 15px;
-            z-index: 1000;
-            cursor: pointer;
-            &::before,&::after{
-                content: '';
-                width: 22.64px;
-                height: 2.2px;
-                background-color: rgba(35,35,35, 0.6);
-                position: absolute;
-                border-radius: 15px;
-                    transition: 0.25s ease-in-out;
-            }
-            &::before{
-                transform: translateY(-7px);
-            }
-            &::after{
-                transform: translateY(7px);
-            }
-        }
     }
     @include media-sm{
         &__content{
@@ -239,6 +241,16 @@
     }
 }
 // hamburger animation
+.small-menu-animate{
+    position: relative;
+    background-color: transparent;
+    &::before{
+        transform: rotate(-45deg);
+    }
+    &::after{
+        transform: rotate(45deg);
+    }
+}
 .animate-menu{
     position: relative;
     background-color: transparent;
