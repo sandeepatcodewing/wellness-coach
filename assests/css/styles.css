@@ -792,3 +792,6 @@ h2 {
   .benifits__all-benifits {
     gap: 30px;
     grid-template-columns: repeat(2, 1fr); } }
+
+.stories {
+  padding: 120px 0px; }
