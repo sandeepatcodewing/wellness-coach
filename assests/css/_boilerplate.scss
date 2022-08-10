@@ -14,14 +14,21 @@
     font-family: var(--signature-font);
 }
 
-.primary-dot-border{
-    padding: 1px;
-    border: 1px dotted var(--primary-color);
-}
-
-.secondary-dot-border{
-    padding: 1px;
-    border: 1px dotted var(--secondary-color);
+.border-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    &__start{
+        justify-content: start;
+    }
+    &__primary-dotted{
+        padding: 1px;
+        border: 1px dotted var(--primary-color);
+    }
+    &__secondary-dotted{
+        padding: 1px;
+        border: 1px dotted var(--secondary-color);
+    }
 }
 
 .primary-button{
@@ -101,4 +108,3 @@
         display: none;
     }
 }
-
