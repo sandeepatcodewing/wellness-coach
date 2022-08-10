@@ -603,7 +603,8 @@ h2 {
   position: absolute;
   display: grid;
   justify-items: center;
-  gap: 25px; }
+  gap: 25px;
+  transform: translate(2px, 0px); }
 
 .about-me__feature-card--title {
   font-family: var(--header-font);
@@ -732,7 +733,8 @@ h2 {
 .benifits__banner {
   position: relative;
   text-align: center;
-  background-color: #FFFDEB; }
+  background-color: #FFFDEB;
+  z-index: -2; }
 
 .benifits__banner--image {
   top: -51px;
@@ -754,6 +756,16 @@ h2 {
 .benifits__banner--button {
   padding-top: 32px; }
 
+.benifits__banner--shape {
+  width: 0;
+  height: 0;
+  border-bottom: 375px solid rgba(255, 223, 0, 0.1);
+  border-left: 310px solid transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }
+
 @media (max-width: 767px) {
   .benifits {
     padding: 30px 0px; }
@@ -767,7 +779,8 @@ h2 {
 
 @media (min-width: 768px) {
   .benifits__details {
-    gap: 55px;
+    column-gap: 30px;
+    row-gap: 55px;
     grid-template-columns: repeat(1, 1fr); }
   .benifits__all-benifits {
     gap: 30px;
