@@ -36,6 +36,15 @@ h2 {
   font-size: 2.1875rem;
   font-family: var(--header-font); }
 
+.swiper-slide {
+  text-align: center; }
+
+#health-coach-sliders {
+  padding: 0px 20px; }
+
+.swiper-button-disabled {
+  opacity: 0.5; }
+
 .width-100 {
   width: 100%; }
 
@@ -127,12 +136,6 @@ h2 {
 @media (max-width: 767px) {
   .second-line {
     display: none; } }
-
-#health-coach-sliders {
-  padding: 0px 20px; }
-
-.swiper-button-disabled {
-  opacity: 0.5; }
 
 .container {
   margin: 0 auto;
@@ -538,7 +541,7 @@ h2 {
     grid-template-columns: repeat(1, 1fr); } }
 
 .health-coach {
-  padding: 120px 0px; }
+  padding: 120px 0px 320px 0px; }
 
 .health-coach__paragraph {
   padding: 15px 0px; }
@@ -547,9 +550,6 @@ h2 {
   color: #333333;
   font-size: 1.375rem;
   line-height: 43px; }
-
-.health-coach__details {
-  position: relative; }
 
 .health-coach__card--next {
   top: 50%;
@@ -573,3 +573,12 @@ h2 {
 @media (max-width: 767px) {
   .health-coach {
     padding: 30px 0px; } }
+
+.about-me__slider-section {
+  margin-top: -305px; }
+
+@media (max-width: 767px) {
+  .about-me {
+    padding: 30px 0px; }
+  .about-me__slider-section {
+    margin-top: 0px; } }
