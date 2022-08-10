@@ -21,7 +21,7 @@
         max-width: 960px;
     }
     @include media-xl{
-        max-width: 1170px;
+        max-width: 1400px;
     }
 }
 
@@ -229,10 +229,7 @@
             flex-direction: column;
         }
         &__contact-address{
-            &--links{
-                row-gap: 10px;
-                flex-direction: column;
-            }
+            display: none;
         }
         &__icons-navigation{
             right: 0px;
@@ -385,19 +382,19 @@
 }
 // first-section
 .first-section{
-    padding: 120px 0px 60px 0px;
+    padding: 120px 0px;
     &__content{
+        row-gap: 10px;
         display: grid;
     }
     &__texts{
         margin: auto 0;
-        margin-left: -50px;
     }
     &__text-content{
         display: grid;
         row-gap: 16.5px;
         text-align: center;
-        padding: 37px 44px;
+        padding: 75px 88px;
         background-color: #fff;
         &--title{
             text-align: start;
@@ -411,10 +408,22 @@
             gap: 15px;
         }
     }
-
+    @include media-sm{
+        &__content{
+            display: block;
+        }
+    }
     @include media-lg{
         &__content{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    @include media-xl{
+        &__content{
             grid-template-columns: 65% auto;
+        }
+        &__texts{
+            margin-left: -120px;
         }
     }
 }
