@@ -8,6 +8,7 @@
     padding: 0px 16px;
 }
 
+
 // responsove container
 .container{
     @extend %container;
@@ -533,7 +534,9 @@
         margin-top: -305px;
     }
     &__feature-card{
-        position: relative;
+        &--image{
+            position: relative;
+        }
         &--contents{
             padding: 67px 59px 40px 59px;
             background-color: #fff;
@@ -758,6 +761,8 @@
 
 // customer stories
 .stories{
-    padding: 120px 0px;
+    padding: 120px 0px 406px 0px;
 }
+
+
 

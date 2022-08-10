@@ -254,10 +254,12 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="about-me__feature-card">
-                      <img class="width-100" src="/assests/img/blog-thumbnails/thumbnail-1.png" alt="" />
-                      <div class="about-me__feature-card--contents">
-                        <p class="about-me__feature-card--title">Feminine Collective</p>
-                        <img src="/assests/img/icons/icon-1.png" alt="" />
+                      <div class="about-me__feature-card--image">
+                        <img class="width-100" src="/assests/img/blog-thumbnails/thumbnail-1.png" alt="" />
+                        <div class="about-me__feature-card--contents">
+                          <p class="about-me__feature-card--title">Feminine Collective</p>
+                          <img src="/assests/img/icons/icon-1.png" alt="" />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -473,12 +475,14 @@
           </div>
         </div>
       </section>
+
+      
     </main>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
+    <!-- Initialize features Swiper -->
     <script>
       var swiper = new Swiper(".health-coach__sliders", {
         navigation: {
@@ -502,6 +506,20 @@
             slidesPerView: 3,
             spaceBetween: 50,
           },
+        },
+      });
+    </script>
+
+    <!-- Initialize feedbacks Swiper -->
+    <script>
+      var swiper = new Swiper(".feedbacks__slider", {
+        navigation: {
+          nextEl: ".feedbacks__nav-right",
+          prevEl: ".feedbacks__nav-left",
+        },
+        pagination: {
+          el: ".feedbacks__bullet",
+          clickable: true,
         },
       });
     </script>

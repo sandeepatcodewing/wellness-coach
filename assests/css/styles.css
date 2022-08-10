@@ -592,7 +592,7 @@ h2 {
 .about-me__slider-section {
   margin-top: -305px; }
 
-.about-me__feature-card {
+.about-me__feature-card--image {
   position: relative; }
 
 .about-me__feature-card--contents {
@@ -794,4 +794,4 @@ h2 {
     grid-template-columns: repeat(2, 1fr); } }
 
 .stories {
-  padding: 120px 0px; }
+  padding: 120px 0px 406px 0px; }
