@@ -163,7 +163,9 @@
                 </ul>
               </div>
               <div class="menu__item">
-                <button class="menu__item--button">Book Free 15 Min Chat</button>
+                <a href="">
+                  <button class="menu__item--button">Book Free 15 Min Chat</button>
+                </a>
               </div>
             </div>
           </div>
@@ -204,6 +206,7 @@
           </div>
         </div>
       </section>
+
       <!-- as seen section -->
       <section class="as-seen">
         <div class="container">
@@ -220,25 +223,27 @@
           </div>
         </div>
       </section>
+
       <!-- health coach section -->
       <section class="health-coach bg-primary">
         <div class="container">
           <div class="health-coach__content">
-            <div class="health-coach__title section-title">
-              <div class="health-coach__title--header title-header">
-                <hr class="header-secondary" />
+            <div class="section-title">
+              <div class="section-title__header">
+                <hr class="section-title__header--secondary" />
                 <h2>Health Coach Features</h2>
               </div>
-              <div class="health-coach__title--line title-line">
-                <hr class="second-line" />
+              <div class="section-title__line">
+                <hr class="section-title__line--second" />
               </div>
             </div>
-            <div class="health-coach__paragraph">
-              <p class="health-coach__paragraph--text">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
+            <div class="section-title__paragraph">
+              <p class="section-title__paragraph--text">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
             </div>
           </div>
         </div>
       </section>
+
       <!-- about me section -->
       <section class="about-me">
         <div class="container">
@@ -368,6 +373,83 @@
           </div>
         </div>
       </section>
+
+      <!-- heading-line section -->
+      <section class="line">
+        <div class="container">
+          <hr class="line__primary" />
+        </div>
+      </section>
+
+      <!-- coach benifits -->
+      <section class="benifits">
+        <div class="container">
+          <div class="benifits__content">
+            <div class="benifits__title">
+              <div class="section-title">
+                <div class="section-title__header">
+                  <hr class="section-title__header--secondary" />
+                  <h2>Health Coach's Benefits</h2>
+                </div>
+                <div class="section-title__line">
+                  <hr class="section-title__line--second" />
+                </div>
+              </div>
+              <div class="section-title__paragraph">
+                <p class="section-title__paragraph--text">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
+              </div>
+            </div>
+            <div class="benifits__details">
+              <div class="benifits__all-benifits">
+                <div class="benifits__card">
+                  <div class="benifits__card--image">
+                    <img src="/assests/img/icons/icon-4.png" alt="" />
+                  </div>
+                  <p class="benifits__card--title">Nutrition</p>
+                  <p class="benifits__card--paragraph">I'm the wellness expert behind super size me, figure out your values and align you life with them.</p>
+                </div>
+                <div class="benifits__card">
+                  <div class="benifits__card--image">
+                    <img src="/assests/img/icons/icon-4.png" alt="" />
+                  </div>
+                  <p class="benifits__card--title">Fitness Training</p>
+                  <p class="benifits__card--paragraph">I've been interviewed by Oprah, figure out you values an align your life with them.</p>
+                </div>
+                <div class="benifits__card">
+                  <div class="benifits__card--image">
+                    <img src="/assests/img/icons/icon-4.png" alt="" />
+                  </div>
+                  <p class="benifits__card--title">Medical</p>
+                  <p class="benifits__card--paragraph">I'm the wellness expert behind super size me, figure out your values and align you life with them.</p>
+                </div>
+                <div class="benifits__card">
+                  <div class="benifits__card--image">
+                    <img src="/assests/img/icons/icon-4.png" alt="" />
+                  </div>
+                  <p class="benifits__card--title">Wellness</p>
+                  <p class="benifits__card--paragraph">I've been interviewed by Oprah, figure out you values an align your life with them.</p>
+                </div>
+              </div>
+              <div class="benifits__banner">
+                <img class="benifits__banner--image" src="/assests/img/icons/icon-5.png" alt="" />
+                <div class="benifits__banner--texts">
+                  <h2 class="benifits__banner--title">
+                    Change
+                    <span class="signature-text">Starts</span>
+                    with just one day.
+                  </h2>
+                  <p class="benifits__banner--paragraph">Make today that day. Time is now for the new beginning.</p>
+                  <div class="benifits__banner--button border-buttons">
+                    <div class="border-buttons__secondary-dotted">
+                      <button class="secondary-button">Join Me On The Journey</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Swiper JS -->
@@ -386,10 +468,14 @@
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 40,
           },
           1024: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+          1250: {
             slidesPerView: 3,
             spaceBetween: 50,
           },
