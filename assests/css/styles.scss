@@ -33,7 +33,7 @@
 
 // navbar menu
 .hamburger-menu{
-    width: 40px;
+    width: 35px;
     height: 5px;
     background-color: #000;
     position: relative;
@@ -43,7 +43,7 @@
     cursor: pointer;
     &::before,&::after{
         content: '';
-        width: 40px;
+        width: 35px;
         height: 5px;
         background-color: #000;
         position: absolute;
@@ -56,7 +56,7 @@
     &::after{
         transform: translateY(12px);
     }
-    @include media-md{
+    @include media-xl{
         display: none;
     }
 }
@@ -94,7 +94,7 @@
         &__cross{
             &--icon{
                 top: 3px;
-                right: 5px;
+                right: 9px;
             }
         }
         &__text{
@@ -255,10 +255,7 @@
     font-size: 0.9375rem;
     padding: 24px 0px;
     font-family: var(--header-font);
-    &__content{
-        display: flex;
-        justify-content: space-between;
-    }
+    box-shadow: 0px 10px 31px -6px rgba(0,0,0,0.13);;
     &__navbar-button{
         display: flex;
         column-gap: 25px;
@@ -289,7 +286,10 @@
     @include media-sm{
         padding: 12px 0px;
         &__content{
-            row-gap: 10px;
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: 80% auto;
+            gap: 10px;
         }
         &__logo{
             margin-left: 0px;
@@ -301,10 +301,17 @@
         }
     }
     @include media-md{
+        padding: 12px 0px;
+        &__content{
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: 80% auto;
+            gap: 10px;
+        }
         &__logo{
             margin-left: 0px;
         }
-        &__navbar{
+        &__navbar-button{
             display: none;
         }
     }
@@ -312,13 +319,14 @@
         &__logo{
             margin-left: 0px;
         }
-        &__navbar{
-            display: none;
-        }
     }
     @include media-xl{
-        &__navbar{
-            display: block;
+        &__content{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__navbar-button{
+            display: flex;
         }
         &__logo{
             margin-left: -75px;
@@ -342,6 +350,25 @@
             flex-direction: column;
             gap: 4rem;
         }
+    }
+    @include media-md{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        inset: 0 30% 0 0;
+        text-align: center;
+        z-index: 100;
+        backdrop-filter: blur(6px);
+        background-color: rgba(255, 255, 255, 0.8);
+        padding-top: 120px;
+        &--links{
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+    }
+    @include media-xl{
+        display: none;
     }
 }
 // first-section
