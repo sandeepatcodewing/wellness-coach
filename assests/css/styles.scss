@@ -24,15 +24,13 @@
         max-width: 1400px;
     }
 }
-
+// sticky header
 .header{
     top: 0;
     left: 0;
     position: sticky;
 }
-
-
-// navbar menu
+// navbar menus
 .hamburger{
     width: 22.64px;
     height: 2.2px;
@@ -58,7 +56,6 @@
         transform: translateY(7px);
     }
 }
-
 .hamburger-menu{
     width: 35px;
     height: 5px;
@@ -87,8 +84,6 @@
         display: none;
     }
 }
-
-
 // notification styling
 .top-notification{  
     font-size: 1rem;
@@ -409,6 +404,7 @@
         }
     }
     @include media-sm{
+        padding: 30px 0px;
         &__content{
             display: block;
         }
@@ -424,6 +420,34 @@
         }
         &__texts{
             margin-left: -120px;
+        }
+    }
+}
+// as seen section
+.as-seen{
+    padding: 90px 0px 64px 0px;
+    &__content{
+        text-align: center;
+    }
+    &__title{
+        &--paragraph{
+            font-size: 1.125rem;
+            text-transform: uppercase;
+        }
+    }
+    &__image{
+        padding: 26px 0px;
+        display: grid;
+        row-gap: 20px;
+        justify-items: center;
+        grid-template-columns: repeat(4,1fr);
+        align-items: center;
+    }
+    @include media-sm{
+        padding: 30px 0px;
+        &__image{
+            padding: 20px 0px;
+            grid-template-columns: repeat(1,1fr);
         }
     }
 }
