@@ -25,6 +25,20 @@
     font-family: var(--signature-font);
 }
 
+.social-media{
+    margin: auto 0;
+    &__links{
+        display: flex;
+        gap: 19.7px;
+    }
+    a{
+        color: rgba(35,35,35, 0.6);
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+}
+
 .border-buttons{
     display: flex;
     justify-content: center;
@@ -115,7 +129,7 @@
     background: var(--primary-color) !important;
 }
 
-.read-button{
+.arrow-button{
     position: relative;
     &__text{
         cursor: pointer;

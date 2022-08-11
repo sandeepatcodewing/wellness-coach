@@ -1217,11 +1217,123 @@
     background-image: url("/assests/img/blog-thumbnails/thumbnail-8.png");
     padding: 71px 0px;
     &__button{
+        cursor: pointer;
         padding: 13px 25px;
         background-color: #fff;
         color: var(--primary-color);
         font-size: 1.1rem;
         font-family: var(--header-font);
         border: 1px dotted var(--primary-color);
+    }
+}
+
+// footer navbar
+.footer-navbar{
+    padding: 51.5px 0px 79.5px 0px;
+    &__content{
+        row-gap: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo{
+        margin-left: -75px;
+    }
+    &__menu{
+        margin: auto 0;
+        &--link{
+            row-gap: 20px;
+            column-gap: 56px;
+            display: flex;
+        }
+    }
+    a{
+        color: #000;
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+    @include media-sm{
+        padding: 15px;
+        &__content{
+            flex-direction: column;
+        }
+        &__logo{
+            text-align: center;
+            margin-left: 0px;
+        }
+        &__menu{
+            &--link{
+                text-align: center;
+                row-gap: 20px;
+                flex-direction: column;
+            }
+        }
+    }
+    @include media-md{
+        &__content{
+            text-align: center;
+            flex-direction: column;
+        }
+        &__logo{
+            margin-left: 0px;
+        }
+        &__menu{
+            &--link{
+                flex-direction: column;
+            }
+        }
+    }
+    @include media-lg{
+        &__content{
+            flex-direction: row;
+        }
+        &__menu{
+            &--link{
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+// copyright section
+.copyright{
+    padding-bottom: 40.5px;
+    &__content{
+        row-gap: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__details{
+        line-height: 32px;
+        color: rgba(35,35,35,0.8);
+    }
+    &__arrow-button{
+        position: relative;
+        &--icon{
+            right: 0px;
+            bottom: -5px;
+            color: var(--primary-color);
+            position: absolute;
+            font-size: 0.3rem;
+            padding-left: 3px;
+            background-color: #fff;
+        }
+    }
+    &__theme-link{
+        cursor: pointer;
+        color: #000;
+        font-family: var(--header-font);
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px dotted var(--primary-color);
+    }
+    @include media-sm{
+        &__content{
+            text-align: center;
+            flex-direction: column;
+        }
+        &__social-media{
+            justify-content: center;
+        }
     }
 }
