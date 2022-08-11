@@ -1,3 +1,14 @@
+.p{
+    &--y{
+        padding: 120px 0px;
+    }
+    @include media-sm{
+        &--y{
+            padding: 30px 0px;
+        }
+    }
+}
+
 .width-100{
     width: 100%;
 }
@@ -101,5 +112,28 @@
 .swiper-pagination-bullet-active{
     background: var(--primary-color) !important;
 }
+
+.read-button{
+    position: relative;
+    &__text{
+        cursor: pointer;
+        color: var(--primary-color);
+        background-color: transparent;
+        border: none;
+        font-size: 0.90rem;
+        padding-bottom: 5px;
+        border-bottom: 1px dotted var(--primary-color);
+    }
+    &__arrow{
+        right: -1px;
+        bottom: -11px;
+        padding-left: 5px;
+        background-color: #fff;
+        color: var(--primary-color);
+        font-size: 0.6rem;
+        position: absolute;
+    }
+}
+
 
 

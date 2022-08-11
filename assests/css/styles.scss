@@ -422,7 +422,6 @@
 
 // first-section
 .first-section{
-    padding: 120px 0px;
     &__content{
         row-gap: 10px;
         display: grid;
@@ -444,7 +443,6 @@
         }
     }
     @include media-sm{
-        padding: 30px 0px;
         &__content{
             display: block;
         }
@@ -692,6 +690,7 @@
         position: relative;
         text-align: center;
         background-color: #FFFDEB;
+        overflow: hidden;
         z-index: -2;
         &--image{
             top: -51px;
@@ -880,7 +879,6 @@
 
 // start section
 .start{
-    padding: 120px 0px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -906,14 +904,19 @@
             padding: 36px 0px 50px 0px;
         }
         &--list{
+            display: grid;
+            gap: 34px;
             padding-left: 25px;
             list-style-image: url("/assests/img/icons/check.png");
         }
     }
     &__curious{
+        z-index: 0;
         color: #fff;
         text-align: center;
         padding: 96px 30px;
+        position: relative;
+        overflow: hidden;
         background-color: var(--primary-color);
         &--title{
             line-height: 45px;
@@ -924,13 +927,25 @@
             padding: 44px 20px 68px 20px;
             font-size: 3.375rem;
         }
+        &--shape{
+            width: 0; 
+            height: 0; 
+            border-bottom: 355px solid #88eebf33; 
+            border-right: 369px solid transparent; 
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
     }
     @include media-sm{
-        padding: 30px 0px;
         &__art{
             padding: 23px 20px;
             &--paragraph{
                 padding: 12px 0px 17px 0px;
+            }
+            &--list{
+                gap: 15px;
             }
         }
         &__curious{
@@ -938,12 +953,126 @@
             &--main-title{
                 padding: 22px 0px 34px 0px;
             }
+            &--shape{
+                border-bottom: 355px solid #88eebf33; 
+                border-right: 330px solid transparent; 
+                bottom: 0px;
+            }
         }
-        
     }
-    @include media-lg{
+    @include media-xl{
         &__content{
             grid-template-columns: 73% auto;
+        }
+    }
+}
+
+// services section
+.services{
+    &__list{
+        gap: 30px;
+        display: grid;
+        margin-top: 70px;
+    }
+    &__card{
+        padding: 60px;
+        background-color: #FFFDEB;
+        font-family: var(--header-font);
+        justify-items: start;
+        &--texts{
+            display: grid;
+            gap: 19px;
+            padding: 30px 0px;
+        }
+        &--title{
+            line-height: 35px;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+        &--paragraph{
+            line-height: 32px;
+            font-size: 1.125rem;
+        }
+        &--arrow{
+            right: -1px;
+            bottom: -11px;
+            padding-left: 5px;
+            background-color: #fff;
+            color: var(--primary-color);
+            font-size: 0.6rem;
+            position: absolute;
+        }
+    }
+    @include media-sm{
+        &__lsit{
+            gap: 15px;
+        }
+        &__card{
+            padding: 30px;
+        }
+    }
+    @include media-lg{
+        &__list{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+// from the blog
+.from{
+    &__two-categ{
+        margin-top: 70px;
+    }
+    &__blog{
+        display: grid;
+        gap: 70px;
+    }
+    &__card{
+        column-gap: 41px;
+        display: flex;
+        &--content{
+            padding: 9px 0px;
+        }
+        &--category{
+            display: flex;
+            gap: 22px;
+            color: var(--primary-color);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            font-family: var(--header-font);
+        }
+        &--bottom{
+            border-bottom: 1px dotted var(--secondary-color);
+        }
+        &--details{
+            padding: 10px 0px 30px 0px;
+        }
+        &--title{
+            line-height: 35px;
+            font-weight: 500;
+            font-size: 1.25rem;
+        }
+        &--link{
+            font-family: var(--header-font);
+            font-weight: bold;
+            color: #000;
+            &:hover{
+                color: var(--primary-color);
+            }
+        }
+        &--date{
+            line-height: 32px;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 00.875rem;
+            color: #232323a1;
+        }
+        &--paragraph{
+            line-height: 32px;
+            font-weight: 300;
+            font-size: 1.125;
+            color: #000;
+            font-family: var(--paragraph-font);
         }
     }
 }
