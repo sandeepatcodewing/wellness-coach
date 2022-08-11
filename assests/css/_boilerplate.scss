@@ -91,4 +91,15 @@
     }
 }
 
+.swiper-pagination-bullet{
+    background-color: #fff !important;
+    width: 15px !important;
+    height: 15px !important;
+    clip-path: polygon(50% 0, 0 50%, 50% 99%, 98% 50%);
+}
+
+.swiper-pagination-bullet-active{
+    background: var(--primary-color) !important;
+}
+
 

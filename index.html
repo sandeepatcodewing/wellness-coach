@@ -476,7 +476,64 @@
         </div>
       </section>
 
-      
+      <!-- feedback section -->
+      <section class="feedback">
+        <div class="container">
+          <div class="feedback__content">
+            <div class="feedback__nav feedback__nav--right">
+              <img class="feedback__nav--icon" src="/assests/img/icons/icon-next.png" alt="" />
+            </div>
+            <div class="feedback__nav feedback__nav--left">
+              <img class="feedback__nav--icon" src="/assests/img/icons/icon-prev.png" alt="" />
+            </div>
+            <!-- Swiper -->
+            <div class="swiper feedback__swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="feedback__card">
+                    <img class="feedback__card--image" src="/assests/img/profile/profile-1.png" alt="" />
+                    <div class="feedback__card--texts">
+                      <p class="feedback__card--main-text">Thank You Coach For The Coaching, Guidance And Friendship You Give Me. I Will Be Forever Grateful.</p>
+                      <p class="feedback__card--sub-text">The Wellness Business Bootcam Gave Me The Exact Framwork I Was Searching For no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, to grow my network marketing business.</p>
+                      <p class="feedback__card--user">
+                        <span class="feedback__card--author">- Alice Wells</span>
+                      </p>
+                      <p class="feedback__card--user-designation">Alice Wells | Co-Founder of Wells Foundations</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="feedback__card">
+                    <img class="feedback__card--image" src="/assests/img/profile/profile-1.png" alt="" />
+                    <div class="feedback__card--texts">
+                      <p class="feedback__card--main-text">Thank You Coach For The Coaching, Guidance And Friendship You Give Me. I Will Be Forever Grateful.</p>
+                      <p class="feedback__card--sub-text">The Wellness Business Bootcam Gave Me The Exact Framwork I Was Searching For no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, to grow my network marketing business.</p>
+                      <p class="feedback__card--user">
+                        <span class="feedback__card--author">- Alice Wells</span>
+                      </p>
+                      <p class="feedback__card--user-designation">Alice Wells | Co-Founder of Wells Foundations</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="feedback__card">
+                    <img class="feedback__card--image" src="/assests/img/profile/profile-1.png" alt="" />
+                    <div class="feedback__card--texts">
+                      <p class="feedback__card--main-text">Thank You Coach For The Coaching, Guidance And Friendship You Give Me. I Will Be Forever Grateful.</p>
+                      <p class="feedback__card--sub-text">The Wellness Business Bootcam Gave Me The Exact Framwork I Was Searching For no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, to grow my network marketing business.</p>
+                      <p class="feedback__card--user">
+                        <span class="feedback__card--author">- Alice Wells</span>
+                      </p>
+                      <p class="feedback__card--user-designation">Alice Wells | Co-Founder of Wells Foundations</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="feedback__bullet"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Swiper JS -->
@@ -512,13 +569,13 @@
 
     <!-- Initialize feedbacks Swiper -->
     <script>
-      var swiper = new Swiper(".feedbacks__slider", {
+      var swiper = new Swiper(".feedback__swiper", {
         navigation: {
-          nextEl: ".feedbacks__nav-right",
-          prevEl: ".feedbacks__nav-left",
+          nextEl: ".feedback__nav--right",
+          prevEl: ".feedback__nav--left",
         },
         pagination: {
-          el: ".feedbacks__bullet",
+          el: ".feedback__bullet",
           clickable: true,
         },
       });

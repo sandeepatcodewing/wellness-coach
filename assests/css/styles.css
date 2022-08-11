@@ -131,6 +131,15 @@ h2 {
     display: flex;
     gap: 49.2px; } }
 
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+  width: 15px !important;
+  height: 15px !important;
+  clip-path: polygon(50% 0, 0 50%, 50% 99%, 98% 50%); }
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color) !important; }
+
 .container {
   margin: 0 auto;
   padding: 0px 16px; }
@@ -795,3 +804,97 @@ h2 {
 
 .stories {
   padding: 120px 0px 406px 0px; }
+
+@media (max-width: 767px) {
+  .stories {
+    padding: 30px 0px 250px 0px; } }
+
+.feedback {
+  margin-top: -335px;
+  padding-bottom: 120px; }
+
+.feedback__content {
+  padding: 0px 165px;
+  position: relative; }
+
+.feedback__nav {
+  z-index: 5;
+  cursor: pointer;
+  position: absolute; }
+
+.feedback__nav--right {
+  top: 50%;
+  right: 15%; }
+
+.feedback__nav--left {
+  top: 50%;
+  left: 15%; }
+
+.feedback__card {
+  font-family: var(--header-font); }
+
+.feedback__card--image {
+  margin-bottom: -50px; }
+
+.feedback__card--texts {
+  color: #fff;
+  padding: 88px 185px 27.5px 185px;
+  background-color: #000;
+  display: grid;
+  gap: 1rem; }
+
+.feedback__card--main-text {
+  line-height: 45px;
+  font-size: 1.5rem; }
+
+.feedback__card--sub-text {
+  line-height: 32px;
+  font-size: 1.125rem;
+  font-family: var(--paragraph-font); }
+
+.feedback__card--author {
+  font-size: 3.56rem;
+  font-family: var(--signature-font); }
+
+.feedback__bullet {
+  display: flex;
+  gap: 13px;
+  justify-content: center;
+  padding: 27.5px 0px 30px;
+  background-color: #000; }
+
+@media (max-width: 767px) {
+  .feedback {
+    margin-top: -265px;
+    padding-bottom: 30px; }
+  .feedback__content {
+    padding: 0px; }
+  .feedback__nav--icon {
+    width: 70%; }
+  .feedback__nav--right {
+    top: 50%;
+    right: -3%; }
+  .feedback__nav--left {
+    top: 50%;
+    left: 1%; }
+  .feedback__card--texts {
+    padding: 54px 46.25px 6.75px 46.25px; }
+  .feedback__card--main-text {
+    line-height: 35px;
+    font-size: 1.2rem; }
+  .feedback__card--sub-text {
+    font-size: 1rem; }
+  .feedback__card--author {
+    font-size: 2.5rem; } }
+
+@media (min-width: 768px) {
+  .feedback__content {
+    padding: 0px 30px; }
+  .feedback__nav--right {
+    top: 50%;
+    right: 6%; }
+  .feedback__nav--left {
+    top: 50%;
+    left: 6%; }
+  .feedback__card--texts {
+    padding: 44px 95px 13.5px 95px; } }

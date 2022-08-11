@@ -762,7 +762,119 @@
 // customer stories
 .stories{
     padding: 120px 0px 406px 0px;
+    @include media-sm{
+        padding: 30px 0px 250px 0px;
+    }
 }
 
-
+// feedback
+.feedback{
+    margin-top: -335px;
+    padding-bottom: 120px;
+    &__content{
+        padding: 0px 165px;
+        position: relative;
+    }
+    &__nav{
+        z-index: 5;
+        cursor: pointer;
+        position: absolute;
+        &--right{
+            top: 50%;
+            right: 15%;
+        }
+        &--left{
+            top: 50%;
+            left: 15%;
+        }
+    }
+    &__card{
+        font-family: var(--header-font);
+        &--image{
+            margin-bottom: -50px;
+        }
+        &--texts{
+            color: #fff;
+            padding: 88px 185px 27.5px 185px;
+            background-color: #000;
+            display: grid;
+            gap: 1rem;
+        }
+        &--main-text{
+            line-height: 45px;
+            font-size: 1.5rem;
+        }
+        &--sub-text{
+            line-height: 32px;
+            font-size: 1.125rem;
+            font-family: var(--paragraph-font);
+        }
+        &--author{
+            font-size: 3.56rem;
+            font-family: var(--signature-font);
+        }
+    }
+    &__bullet{
+        display: flex;
+        gap: 13px;
+        justify-content: center;
+        padding: 27.5px 0px 30px;
+        background-color: #000;
+    }
+    @include media-sm{
+        margin-top: -265px;
+        padding-bottom: 30px;
+        &__content{
+            padding: 0px;
+        }
+        &__nav{
+            &--icon{
+                width: 70%;
+            }
+            &--right{
+                top: 50%;
+                right: -3%;
+            }
+            &--left{
+                top: 50%;
+                left: 1%;
+            }
+        }
+        &__card{
+            &--texts{
+                padding: 54px 46.25px 6.75px 46.25px;
+            }
+            &--main-text{
+                line-height: 35px;
+                font-size: 1.2rem;
+            }
+            &--sub-text{
+                font-size: 1rem;
+            }
+            &--author{
+                font-size: 2.5rem;
+            }
+        }
+    }
+    @include media-md{
+        &__content{
+            padding: 0px 30px;
+        }
+        &__nav{
+            &--right{
+                top: 50%;
+                right: 6%;
+            }
+            &--left{
+                top: 50%;
+                left: 6%;
+            }
+        }
+        &__card{
+            &--texts{
+                padding: 44px 95px 13.5px 95px;
+            }
+        }
+    }
+}
 
