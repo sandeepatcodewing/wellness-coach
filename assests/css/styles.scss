@@ -694,7 +694,6 @@
         position: relative;
         text-align: center;
         background-color: #FFFDEB;
-        overflow: hidden;
         z-index: -2;
         &--image{
             top: -51px;
@@ -1124,6 +1123,40 @@
             z-index: -1;
         }
     }
+    &__question{
+        position: relative;
+        margin-top: 60px;
+        text-align: center;
+        z-index: 0;
+        padding: 56px 37px 59.5px 37px;
+        background-color: #FFFDEB;
+        &--image{
+            right: 0px;
+            bottom: 0px;
+            position: absolute;
+            z-index: -1;
+        }
+        &--content{
+            z-index: 1;
+        }
+        &--title{
+            padding: 0px 51px;
+            line-height: 40px;
+            font-size: 1.875rem;
+            font-family: var(--header-font);
+        }
+        &--paragraph{
+            padding: 22px 0px 23px 0px;
+            line-height: 32px;
+            font-size: 1.25rem;
+        }
+        &--button{
+            cursor: pointer;
+        }
+        &--button-link{
+            background-color: var(--primary-color);
+        }
+    }
     @include media-sm{
         &__two-categ{
             margin-top: 0px;
@@ -1139,6 +1172,10 @@
         }
         &__subscribe{
             padding: 1.5rem;
+        }
+        &__question{
+            margin-top: 30px;
+            padding: 20px 16px;
         }
     }
     @include media-md{

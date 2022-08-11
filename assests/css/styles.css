@@ -82,6 +82,7 @@ h2 {
 
 .primary-button {
   color: #fff;
+  cursor: pointer;
   padding: 14px 25px;
   font-size: 1.0625rem;
   border: none;
@@ -93,6 +94,7 @@ h2 {
   padding: 14px 25px;
   font-size: 1.0625rem;
   border: none;
+  cursor: pointer;
   font-family: var(--header-font);
   background-color: var(--secondary-color); }
 
@@ -776,7 +778,6 @@ input[type=text], input[type=email] {
   position: relative;
   text-align: center;
   background-color: #FFFDEB;
-  overflow: hidden;
   z-index: -2; }
 
 .benifits__banner--image {
@@ -1158,6 +1159,40 @@ input[type=text], input[type=email] {
   bottom: 0;
   z-index: -1; }
 
+.from__question {
+  position: relative;
+  margin-top: 60px;
+  text-align: center;
+  z-index: 0;
+  padding: 56px 37px 59.5px 37px;
+  background-color: #FFFDEB; }
+
+.from__question--image {
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
+  z-index: -1; }
+
+.from__question--content {
+  z-index: 1; }
+
+.from__question--title {
+  padding: 0px 51px;
+  line-height: 40px;
+  font-size: 1.875rem;
+  font-family: var(--header-font); }
+
+.from__question--paragraph {
+  padding: 22px 0px 23px 0px;
+  line-height: 32px;
+  font-size: 1.25rem; }
+
+.from__question--button {
+  cursor: pointer; }
+
+.from__question--button-link {
+  background-color: var(--primary-color); }
+
 @media (max-width: 767px) {
   .from__two-categ {
     margin-top: 0px; }
@@ -1167,7 +1202,10 @@ input[type=text], input[type=email] {
   .from__card--image {
     width: 100%; }
   .from__subscribe {
-    padding: 1.5rem; } }
+    padding: 1.5rem; }
+  .from__question {
+    margin-top: 30px;
+    padding: 20px 16px; } }
 
 @media (min-width: 768px) {
   .from__blog {
