@@ -1210,3 +1210,18 @@
     }
 }
 
+// footer Section
+// follow on instagram
+.follow-us{
+    text-align: center;
+    background-image: url("/assests/img/blog-thumbnails/thumbnail-8.png");
+    padding: 71px 0px;
+    &__button{
+        padding: 13px 25px;
+        background-color: #fff;
+        color: var(--primary-color);
+        font-size: 1.1rem;
+        font-family: var(--header-font);
+        border: 1px dotted var(--primary-color);
+    }
+}

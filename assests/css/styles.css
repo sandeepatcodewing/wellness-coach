@@ -1228,3 +1228,16 @@ input[type=text], input[type=email] {
     grid-template-columns: 998px auto; }
   .from__card {
     grid-template-columns: 270px auto; } }
+
+.follow-us {
+  text-align: center;
+  background-image: url("/assests/img/blog-thumbnails/thumbnail-8.png");
+  padding: 71px 0px; }
+
+.follow-us__button {
+  padding: 13px 25px;
+  background-color: #fff;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-family: var(--header-font);
+  border: 1px dotted var(--primary-color); }
