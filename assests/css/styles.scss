@@ -1022,14 +1022,19 @@
 .from{
     &__two-categ{
         margin-top: 70px;
+        display: grid;
     }
     &__blog{
         display: grid;
-        gap: 70px;
+        gap: 35px;
+        padding-right: 70px;
+        &--break{
+            opacity: 0.09;
+        }
     }
     &__card{
         column-gap: 41px;
-        display: flex;
+        display: grid;
         &--content{
             padding: 9px 0px;
         }
@@ -1044,11 +1049,9 @@
         &--bottom{
             border-bottom: 1px dotted var(--secondary-color);
         }
-        &--details{
-            padding: 10px 0px 30px 0px;
-        }
         &--title{
             line-height: 35px;
+            padding: 10px 0px 14px 0px;
             font-weight: 500;
             font-size: 1.25rem;
         }
@@ -1061,7 +1064,6 @@
             }
         }
         &--date{
-            line-height: 32px;
             font-weight: 300;
             text-transform: uppercase;
             font-size: 00.875rem;
@@ -1070,9 +1072,78 @@
         &--paragraph{
             line-height: 32px;
             font-weight: 300;
-            font-size: 1.125;
+            font-size: 1.125rem;
             color: #000;
-            font-family: var(--paragraph-font);
+            padding: 21px 0px 30px 0px;
+        }
+    }
+    &__subscribe{
+        color: #fff;
+        padding: 45px 41px;
+        text-align: center;
+        background: linear-gradient(180deg, rgba(98,207,114,1) 0%, rgba(23,190,138,1) 100%);
+        &--title{
+            font-size: 1.875rem;
+            font-family: var(--header-font);
+        }
+        &--highlight{
+            font-weight: 500;
+        }
+        &--paragraph{
+            padding: 35px 0px 29px 0px;
+            line-height: 32px;
+            font-size: 1.125rem;
+        }
+        &--form{
+            display: grid;
+            gap: 1rem;
+            text-align: start;
+        }
+        &--button-section{
+            margin-top: 20px;
+        }
+        &--button{
+            background-color: var(--secondary-color);
+        }
+    }
+    @include media-sm{
+        &__blog{
+            padding-right: 0px;
+        }
+        &__card{
+            &--image{
+                width: 100%;
+            }
+        }
+    }
+    @include media-md{
+        &__blog{
+            padding-right: 0px;
+        }
+        &__two-categ{
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__card{
+            grid-template-columns: repeat(1,1fr);
+            &--image{
+                width: 100%;
+            }
+        }
+    }
+    @include media-lg{
+        &__two-categ{
+            grid-template-columns: repeat(1,1fr);
+        }
+        &__card{
+            grid-template-columns: 270px auto;
+        }
+    }
+    @include media-xl{
+        &__two-categ{
+            grid-template-columns: 998px auto;
+        }
+        &__card{
+            grid-template-columns: 270px auto;
         }
     }
 }
