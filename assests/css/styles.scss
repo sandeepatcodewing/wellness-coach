@@ -452,6 +452,10 @@
                 display: grid;
             }
         }
+        &__buttons{
+            display: grid;
+            justify-items: center;
+        }
     }
     @include media-lg{
         &__content{
@@ -949,7 +953,7 @@
             }
         }
         &__curious{
-            padding: 20px 15px;
+            padding: 20px 28px;
             &--main-title{
                 padding: 22px 0px 34px 0px;
             }

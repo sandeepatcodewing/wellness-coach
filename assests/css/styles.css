@@ -565,7 +565,10 @@ input[type=text], input[type=email] {
   .first-section__text-content {
     padding: 14px 22px; }
   .first-section__text-content--buttons {
-    display: grid; } }
+    display: grid; }
+  .first-section__buttons {
+    display: grid;
+    justify-items: center; } }
 
 @media (min-width: 992px) {
   .first-section__content {
@@ -999,7 +1002,7 @@ input[type=text], input[type=email] {
   .start__art--list {
     gap: 15px; }
   .start__curious {
-    padding: 20px 15px; }
+    padding: 20px 28px; }
   .start__curious--main-title {
     padding: 22px 0px 34px 0px; }
   .start__curious--shape {
