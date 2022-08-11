@@ -797,7 +797,7 @@ h2 {
 
 @media (min-width: 1200px) {
   .benifits__details {
-    grid-template-columns: 75% auto; }
+    grid-template-columns: 71% auto; }
   .benifits__all-benifits {
     gap: 30px;
     grid-template-columns: repeat(2, 1fr); } }
@@ -898,3 +898,66 @@ h2 {
     left: 6%; }
   .feedback__card--texts {
     padding: 44px 95px 13.5px 95px; } }
+
+.start {
+  padding: 120px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/assests/img/image-2.png");
+  font-family: var(--header-font); }
+
+.start__content {
+  display: grid; }
+
+.start__art {
+  padding: 86px 80px;
+  background-color: #fff; }
+
+.start__art--title {
+  line-height: 45px;
+  font-size: 1.875rem; }
+
+.start__art--texts {
+  line-height: 43px;
+  font-size: 1.375rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: var(--paragraph-font); }
+
+.start__art--paragraph {
+  padding: 36px 0px 50px 0px; }
+
+.start__art--list {
+  padding-left: 25px;
+  list-style-image: url("/assests/img/icons/check.png"); }
+
+.start__curious {
+  color: #fff;
+  text-align: center;
+  padding: 96px 30px;
+  background-color: var(--primary-color); }
+
+.start__curious--title {
+  line-height: 45px;
+  font-size: 1.5rem; }
+
+.start__curious--main-title {
+  line-height: 70px;
+  padding: 44px 20px 68px 20px;
+  font-size: 3.375rem; }
+
+@media (max-width: 767px) {
+  .start {
+    padding: 30px 0px; }
+  .start__art {
+    padding: 23px 20px; }
+  .start__art--paragraph {
+    padding: 12px 0px 17px 0px; }
+  .start__curious {
+    padding: 20px 15px; }
+  .start__curious--main-title {
+    padding: 22px 0px 34px 0px; } }
+
+@media (min-width: 992px) {
+  .start__content {
+    grid-template-columns: 73% auto; } }

@@ -750,7 +750,7 @@
     }
     @include media-xl{
         &__details{
-            grid-template-columns: 75% auto;
+            grid-template-columns: 71% auto;
         }
         &__all-benifits{
             gap: 30px;
@@ -874,6 +874,76 @@
             &--texts{
                 padding: 44px 95px 13.5px 95px;
             }
+        }
+    }
+}
+
+// start section
+.start{
+    padding: 120px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/assests/img/image-2.png");
+    font-family: var(--header-font);
+    &__content{
+        display: grid;
+    }
+    &__art{
+        padding: 86px 80px;
+        background-color: #fff;
+        &--title{
+            line-height: 45px;
+            font-size: 1.875rem;
+        }
+        &--texts{
+            line-height: 43px;
+            font-size: 1.375rem;
+            color: rgba(0,0,0,0.8);
+            font-family: var(--paragraph-font);
+        }
+        &--paragraph{
+            padding: 36px 0px 50px 0px;
+        }
+        &--list{
+            padding-left: 25px;
+            list-style-image: url("/assests/img/icons/check.png");
+        }
+    }
+    &__curious{
+        color: #fff;
+        text-align: center;
+        padding: 96px 30px;
+        background-color: var(--primary-color);
+        &--title{
+            line-height: 45px;
+            font-size: 1.5rem;
+        }
+        &--main-title{
+            line-height: 70px;
+            padding: 44px 20px 68px 20px;
+            font-size: 3.375rem;
+        }
+    }
+    @include media-sm{
+        padding: 30px 0px;
+        &__art{
+            padding: 23px 20px;
+            &--paragraph{
+                padding: 12px 0px 17px 0px;
+            }
+        }
+        &__curious{
+            padding: 20px 15px;
+            &--main-title{
+                padding: 22px 0px 34px 0px;
+            }
+        }
+        
+    }
+    @include media-lg{
+        &__content{
+            grid-template-columns: 73% auto;
         }
     }
 }
