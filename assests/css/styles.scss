@@ -544,13 +544,13 @@
             left: 0px;
             bottom: 0px;
             position: absolute;
-            display: grid;
-            justify-items: center;
-            gap: 25px;
             width: 100%;
             transform: translate(2px, 0px);
         }
         &--texts{
+            gap: 25px;
+            display: grid;
+            justify-items: center;
             padding: 67px 59px 39.4px;
             background-color: #fff;
         }
@@ -641,6 +641,9 @@
                 padding: 25px 20px 15px;
                 background-color: #fff;
             }
+            &--title{
+                font-size: 1rem;
+            }
         }
     }
     @include media-md{
@@ -650,6 +653,11 @@
                 display: none;
             }
         }
+        &__feature-card{
+            &--title{
+                font-size: 1rem;
+            }
+        } 
     }
     @include media-xl{
         &__details{
@@ -657,7 +665,7 @@
             &--back-image{
                 display: block;
             }
-        }
+        }       
     }
 }
 
@@ -714,7 +722,9 @@
             padding: 82px 27px ;
         }
         &--title{
+            padding: 0px 35px;
             line-height: 60px;
+            text-transform: capitalize;
         }
         &--paragraph{
             line-height: 43px;
@@ -742,6 +752,7 @@
         }
         &__all-benifits{
             gap: 15px;
+            padding-right: 0px;
         }
         &__card{
             padding: 20px;
@@ -749,21 +760,22 @@
     }
     @include media-md{
         &__details{            
-            column-gap: 30px;
             row-gap: 55px;
             grid-template-columns: repeat(1,1fr);
         }
         &__all-benifits{
             gap: 30px;
+            padding-right: 0px;
             grid-template-columns: repeat(2,1fr);
         }
     }
     @include media-xl{
         &__details{
-            grid-template-columns: 71% auto;
+            grid-template-columns: 73% auto;
         }
         &__all-benifits{
             gap: 30px;
+            padding-right: 30px;
             grid-template-columns: repeat(2,1fr);
         }
     }
@@ -789,16 +801,10 @@
         z-index: 5;
         cursor: pointer;
         position: absolute;
-        &--right{
-            top: 50%;
-            right: 15%;
-        }
-        &--left{
-            top: 50%;
-            left: 15%;
-        }
     }
     &__card{
+        margin: 0 auto;
+        max-width: 970px; //74.2%
         font-family: var(--header-font);
         &--image{
             margin-bottom: -50px;
@@ -806,7 +812,7 @@
         &--texts{
             color: #fff;
             padding: 88px 185px 27.5px 185px;
-            background-color: #000;
+            background-color: #232323;
             display: grid;
             gap: 1rem;
         }
@@ -827,9 +833,12 @@
     &__bullet{
         display: flex;
         gap: 13px;
+        margin: 0 auto;
+        max-width: 970px;
+        margin-top: -1px;
         justify-content: center;
         padding: 27.5px 0px 30px;
-        background-color: #000;
+        background-color: #232323;
     }
     @include media-sm{
         margin-top: -265px;
@@ -843,11 +852,11 @@
             }
             &--right{
                 top: 50%;
-                right: -3%;
+                right: -2%;
             }
             &--left{
                 top: 50%;
-                left: 1%;
+                left: 2%;
             }
         }
         &__card{
@@ -873,16 +882,40 @@
         &__nav{
             &--right{
                 top: 50%;
-                right: 6%;
+                right: 8%;
             }
             &--left{
                 top: 50%;
-                left: 6%;
+                left: 8%;
             }
         }
         &__card{
             &--texts{
                 padding: 44px 95px 13.5px 95px;
+            }
+        }
+    }
+    @include media-lg{
+        &__nav{
+            &--right{
+                top: 50%;
+                right: 5%;
+            }
+            &--left{
+                top: 50%;
+                left: 5%;
+            }
+        }
+    }
+    @include media-xl{
+        &__nav{
+            &--right{
+                top: 50%;
+                right: 16%;
+            }
+            &--left{
+                top: 50%;
+                left: 16%;
             }
         }
     }
@@ -1136,6 +1169,7 @@
         margin-top: 60px;
         text-align: center;
         z-index: 0;
+        overflow: hidden;
         padding: 56px 37px 59.5px 37px;
         background-color: #FFFDEB;
         &--image{
@@ -1164,6 +1198,20 @@
         &--button-link{
             background-color: var(--primary-color);
         }
+        &--shape{
+            width: 0; 
+            height: 0; 
+            border-bottom: 375px solid rgba(255,223,0,0.1); 
+            border-left: 310px solid transparent; 
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+    &__load{
+        display: grid;
+        justify-items: start;
     }
     @include media-sm{
         &__two-categ{
@@ -1184,6 +1232,10 @@
         &__question{
             margin-top: 30px;
             padding: 20px 16px;
+            &--shape{
+                border-bottom: 268px solid rgba(255,223,0,0.1); 
+                border-left: 375px solid transparent; 
+            }
         }
     }
     @include media-md{
