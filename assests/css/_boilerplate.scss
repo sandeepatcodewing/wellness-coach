@@ -25,6 +25,10 @@
     font-family: var(--signature-font);
 }
 
+.grid-start{
+    display: grid;
+    justify-items: start;
+}
 
 .social-media{
     margin: auto 0;
