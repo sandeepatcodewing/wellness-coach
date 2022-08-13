@@ -653,15 +653,19 @@ input[type=text], input[type=email] {
   position: relative; }
 
 .about-me__feature-card--contents {
-  padding: 67px 59px 40px 59px;
-  background-color: #fff;
-  left: 65px;
+  padding: 0px 40px;
+  left: 0px;
   bottom: 0px;
   position: absolute;
   display: grid;
   justify-items: center;
   gap: 25px;
+  width: 100%;
   transform: translate(2px, 0px); }
+
+.about-me__feature-card--texts {
+  padding: 67px 59px 39.4px;
+  background-color: #fff; }
 
 .about-me__feature-card--title {
   font-family: var(--header-font);
@@ -733,11 +737,14 @@ input[type=text], input[type=email] {
   .about-me__hi {
     padding-left: 30px; }
   .about-me__feature-card--contents {
-    padding: 16.75px 14.75px 10px 14.75px;
-    left: 50px;
+    padding: 0px 20px;
+    left: 0px;
     bottom: 0px;
     position: absolute;
-    gap: 15px; } }
+    gap: 15px; }
+  .about-me__feature-card--texts {
+    padding: 25px 20px 15px;
+    background-color: #fff; } }
 
 @media (min-width: 768px) {
   .about-me__details {
@@ -1238,7 +1245,7 @@ input[type=text], input[type=email] {
 
 @media (min-width: 1200px) {
   .from__two-categ {
-    grid-template-columns: 998px auto; }
+    grid-template-columns: 73% auto; }
   .from__card {
     grid-template-columns: 270px auto; } }
 

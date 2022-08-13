@@ -540,15 +540,19 @@
             position: relative;
         }
         &--contents{
-            padding: 67px 59px 40px 59px;
-            background-color: #fff;
-            left: 65px;
+            padding: 0px 40px;
+            left: 0px;
             bottom: 0px;
             position: absolute;
             display: grid;
             justify-items: center;
             gap: 25px;
+            width: 100%;
             transform: translate(2px, 0px);
+        }
+        &--texts{
+            padding: 67px 59px 39.4px;
+            background-color: #fff;
         }
         &--title{
             font-family: var(--header-font);
@@ -627,11 +631,15 @@
         }
         &__feature-card{
             &--contents{
-                padding: 16.75px 14.75px 10px 14.75px;
-                left: 50px;
+                padding: 0px 20px;
+                left: 0px;
                 bottom: 0px;
                 position: absolute;
                 gap: 15px;
+            }
+            &--texts{
+                padding: 25px 20px 15px;
+                background-color: #fff;
             }
         }
     }
@@ -1202,7 +1210,7 @@
     }
     @include media-xl{
         &__two-categ{
-            grid-template-columns: 998px auto;
+            grid-template-columns: 73% auto;
         }
         &__card{
             grid-template-columns: 270px auto;
