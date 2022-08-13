@@ -1209,10 +1209,6 @@
             z-index: -1;
         }
     }
-    &__load{
-        display: grid;
-        justify-items: start;
-    }
     @include media-sm{
         &__two-categ{
             margin-top: 0px;
@@ -1266,6 +1262,74 @@
         }
         &__card{
             grid-template-columns: 270px auto;
+        }
+    }
+}
+
+// book section
+.book{
+    position: relative;
+    text-align: center;
+    font-family: var(--header-font);
+    background-color: rgba(23,190,138, 0.05);
+    &__content{
+        display: flex;
+        row-gap: 15px;
+    }
+    &__details{
+        max-width: 652px;
+    }
+    &__sub-text{
+        line-height: 35px;
+        font-size: 1.3125rem;
+        text-transform: uppercase;
+    }
+    &__title{
+        padding: 11px 0px 42px 0px;
+        line-height: 79px;
+        font-size: 3.25rem;
+    }
+    &__button{
+        justify-content: center;
+    }
+    &__get-button{
+        display: flex;
+        gap: 20.7px;
+        align-items: center;
+    }
+    @include media-sm{
+        &__content{
+            flex-direction: column;
+        }
+        &__details{
+            margin: 0 auto;
+        }
+        &__title{
+            padding: 10px 0px 22px 0px;
+        }
+        &__image{
+            margin-top: 0px;
+        }
+    }
+    @include media-md{
+        &__content{
+            flex-direction: column;
+        }
+        &__details{
+            margin: 0 auto;
+        }
+        &__image{
+            margin-top: 0px;
+        }
+
+    }
+    @include media-lg{
+        &__content{
+            flex-direction: row;
+        justify-content: space-evenly;
+        }
+        &__image{
+            margin-top: -160px;
         }
     }
 }

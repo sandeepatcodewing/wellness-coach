@@ -64,6 +64,10 @@ h2 {
 .signature-text {
   font-family: var(--signature-font); }
 
+.grid-start {
+  display: grid;
+  justify-items: start; }
+
 .social-media {
   margin: auto 0; }
 
@@ -1245,10 +1249,6 @@ input[type=text], input[type=email] {
   bottom: 0;
   z-index: -1; }
 
-.from__load {
-  display: grid;
-  justify-items: start; }
-
 @media (max-width: 767px) {
   .from__two-categ {
     margin-top: 0px; }
@@ -1287,6 +1287,62 @@ input[type=text], input[type=email] {
     grid-template-columns: 73% auto; }
   .from__card {
     grid-template-columns: 270px auto; } }
+
+.book {
+  position: relative;
+  text-align: center;
+  font-family: var(--header-font);
+  background-color: rgba(23, 190, 138, 0.05); }
+
+.book__content {
+  display: flex;
+  row-gap: 15px; }
+
+.book__details {
+  max-width: 652px; }
+
+.book__sub-text {
+  line-height: 35px;
+  font-size: 1.3125rem;
+  text-transform: uppercase; }
+
+.book__title {
+  padding: 11px 0px 42px 0px;
+  line-height: 79px;
+  font-size: 3.25rem; }
+
+.book__button {
+  justify-content: center; }
+
+.book__get-button {
+  display: flex;
+  gap: 20.7px;
+  align-items: center; }
+
+@media (max-width: 767px) {
+  .book__content {
+    flex-direction: column; }
+  .book__details {
+    margin: 0 auto; }
+  .book__title {
+    padding: 10px 0px 22px 0px; }
+  .book__image {
+    margin-top: 0px; } }
+
+@media (min-width: 768px) {
+  .book__content {
+    flex-direction: column; }
+  .book__details {
+    margin: 0 auto; }
+  .book__image {
+    margin-top: 0px; } }
+
+@media (min-width: 992px) {
+  .book__content {
+    flex-direction: row;
+    justify-content: space-evenly; }
+  .book__image {
+    margin-top: -160px; } }
 
 .follow-us {
   text-align: center;
