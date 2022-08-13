@@ -805,10 +805,11 @@ input[type=text], input[type=email] {
   display: grid; }
 
 .benifits__card {
-  padding: 40px;
+  padding: 41px 40px 57px;
   border: 1px solid #88eebe83; }
 
 .benifits__card--title {
+  padding: 21px 0px 20px 0px;
   line-height: 45px;
   font-size: 1.1875rem;
   font-family: var(--header-font); }
@@ -914,7 +915,6 @@ input[type=text], input[type=email] {
 
 .feedback__card--texts {
   color: #fff;
-  padding: 88px 185px 27.5px 185px;
   background-color: #232323;
   display: grid;
   gap: 1rem; }
@@ -984,15 +984,17 @@ input[type=text], input[type=email] {
     right: 5%; }
   .feedback__nav--left {
     top: 50%;
-    left: 5%; } }
+    left: 5%; }
+  .feedback__card--texts {
+    padding: 88px 185px 27.5px 185px; } }
 
 @media (min-width: 1200px) {
   .feedback__nav--right {
     top: 50%;
-    right: 16%; }
+    right: 12%; }
   .feedback__nav--left {
     top: 50%;
-    left: 16%; } }
+    left: 12%; } }
 
 .start {
   background-size: cover;
@@ -1303,6 +1305,7 @@ input[type=text], input[type=email] {
     grid-template-columns: 270px auto; } }
 
 .book {
+  padding: 120px 0px 48px 0px;
   position: relative;
   text-align: center;
   font-family: var(--header-font);
@@ -1310,7 +1313,8 @@ input[type=text], input[type=email] {
 
 .book__content {
   display: flex;
-  row-gap: 15px; }
+  row-gap: 15px;
+  flex-wrap: wrap; }
 
 .book__details {
   max-width: 652px; }
@@ -1334,6 +1338,8 @@ input[type=text], input[type=email] {
   align-items: center; }
 
 @media (max-width: 767px) {
+  .book {
+    padding: 30px; }
   .book__content {
     flex-direction: column; }
   .book__details {
@@ -1344,17 +1350,12 @@ input[type=text], input[type=email] {
     margin-top: 0px; } }
 
 @media (min-width: 768px) {
-  .book__content {
-    flex-direction: column; }
-  .book__details {
-    margin: 0 auto; }
   .book__image {
     margin-top: 0px; } }
 
 @media (min-width: 992px) {
   .book__content {
-    flex-direction: row;
-    justify-content: space-evenly; }
+    justify-content: space-between; }
   .book__image {
     margin-top: -160px; } }
 
@@ -1456,6 +1457,9 @@ input[type=text], input[type=email] {
   border: none;
   background-color: transparent;
   border-bottom: 1px dotted var(--primary-color); }
+
+.copyright__theme-link:hover {
+  color: var(--primary-color); }
 
 @media (max-width: 767px) {
   .copyright__content {

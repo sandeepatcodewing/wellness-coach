@@ -713,9 +713,10 @@
         display: grid;
     }
     &__card{
-        padding: 40px;
+        padding: 41px 40px 57px;
         border: 1px solid #88eebe83;
         &--title{
+            padding: 21px 0px 20px 0px;
             line-height: 45px;
             font-size: 1.1875rem;
             font-family: var(--header-font);
@@ -830,7 +831,6 @@
         }
         &--texts{
             color: #fff;
-            padding: 88px 185px 27.5px 185px;
             background-color: #232323;
             display: grid;
             gap: 1rem;
@@ -925,16 +925,21 @@
                 left: 5%;
             }
         }
+        &__card{
+            &--texts{
+                padding: 88px 185px 27.5px 185px;
+            }
+        }
     }
     @include media-xl{
         &__nav{
             &--right{
                 top: 50%;
-                right: 16%;
+                right: 12%;
             }
             &--left{
                 top: 50%;
-                left: 16%;
+                left: 12%;
             }
         }
     }
@@ -1286,6 +1291,7 @@
 
 // book section
 .book{
+    padding: 120px 0px 48px 0px;
     position: relative;
     text-align: center;
     font-family: var(--header-font);
@@ -1293,6 +1299,7 @@
     &__content{
         display: flex;
         row-gap: 15px;
+        flex-wrap: wrap;
     }
     &__details{
         max-width: 652px;
@@ -1316,6 +1323,7 @@
         align-items: center;
     }
     @include media-sm{
+        padding: 30px;
         &__content{
             flex-direction: column;
         }
@@ -1330,12 +1338,6 @@
         }
     }
     @include media-md{
-        &__content{
-            flex-direction: column;
-        }
-        &__details{
-            margin: 0 auto;
-        }
         &__image{
             margin-top: 0px;
         }
@@ -1343,8 +1345,7 @@
     }
     @include media-lg{
         &__content{
-            flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
         }
         &__image{
             margin-top: -160px;
@@ -1468,6 +1469,9 @@
         border: none;
         background-color: transparent;
         border-bottom: 1px dotted var(--primary-color);
+        &:hover{
+            color: var(--primary-color);
+        }
     }
     @include media-sm{
         &__content{
