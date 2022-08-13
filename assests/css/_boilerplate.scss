@@ -1,3 +1,9 @@
+.section-width{
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+
 .p{
     &--y{
         padding: 120px 0px;
@@ -112,6 +118,7 @@
     &__paragraph{
         padding: 15px 0px;
         &--text{
+            max-width: 970px;
             color: #333333;
             font-size: 1.375rem;
             line-height: 43px;

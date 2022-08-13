@@ -376,7 +376,7 @@
             display: flex;
         }
         &__logo{
-            margin-left: -75px;
+            margin-left: -77px;
         }
     }
 }
@@ -486,34 +486,44 @@
     }
     &__image{
         padding: 26px 0px;
-        display: grid;
         row-gap: 20px;
-        justify-items: center;
-        grid-template-columns: repeat(4,1fr);
+        column-gap: 132px;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
     @include media-sm{
         padding: 30px 0px;
         &__image{
             padding: 20px 0px;
-            grid-template-columns: repeat(1,1fr);
+            flex-direction: column;
+        }
+    }
+    @include media-md{
+        &__image{
+            justify-content: space-evenly;
+        }
+    }
+    @include media-xl{
+        &__image{
+            justify-content: space-between;
         }
     }
 }
 
 // health coach section
 .health-coach{
-    padding: 120px 0px 320px 0px;
+    padding: 120px 0px 306px 0px;
     &__card{
         &--next{
             top: 50%;
-            right: 0;
+            right: -2.3%;
             z-index: 5;
             position: absolute;
         }
         &--prev{
             top: 50%;
-            left: 0;
+            left: -2.3%;
             z-index: 5;
             position: absolute;
         }
@@ -527,13 +537,22 @@
     }
     @include media-sm{
         padding: 30px 0px;
+        &__card{
+            &--next{
+                right: 2%;
+            }
+            &--prev{
+                left: 2%;
+            }
+        }
     }
 }
 
 // about me section styling
 .about-me{
     &__slider-section{
-        margin-top: -305px;
+        position: relative;
+        margin-top: -275px;
     }
     &__feature-card{
         &--image{
@@ -564,16 +583,15 @@
         position: relative;
         padding: 120px 0px 57px 0px;
         display: grid;
-        justify-items: center;
         &--back-image{
             z-index: -1;
             top: 65px;
-            left: 355px;
+            left: 200px;
             position: absolute;
         }
     }
     &__images{
-        margin: auto;
+        margin: auto 0;
         position: relative;
         &--main{
             position: relative;
@@ -590,10 +608,9 @@
         }
     }
     &__text{
-        padding: 40.4px 65px 63px 64px;
+        padding: 40.4px 0px 63px 64px;
         background-color: #fff;
         display: flex;
-        gap: 35px;
         flex-direction: column;
     }
     &__hi{
@@ -604,11 +621,13 @@
         color: #232323;
         line-height: 32px;
         font-size: 1.125rem;
+        padding: 35px 0px 21.5px;
     }
     &__mission{
         font-family: var(--header-font);
         font-size: 1.375rem;
         line-height: 40px;
+        padding: 21.5px 0px 50px;
     }
     @include media-sm{
         padding: 30px 0px;
@@ -661,7 +680,7 @@
     }
     @include media-xl{
         &__details{
-            grid-template-columns: 50% auto;
+            grid-template-columns: 45.3% auto;
             &--back-image{
                 display: block;
             }
@@ -771,7 +790,7 @@
     }
     @include media-xl{
         &__details{
-            grid-template-columns: 73% auto;
+            grid-template-columns: 68.377% auto;
         }
         &__all-benifits{
             gap: 30px;
@@ -1006,7 +1025,7 @@
     }
     @include media-xl{
         &__content{
-            grid-template-columns: 73% auto;
+            grid-template-columns: 68.377% auto;
         }
     }
 }
@@ -1078,10 +1097,9 @@
         }
     }
     &__card{
-        column-gap: 41px;
         display: grid;
         &--content{
-            padding: 9px 0px;
+            padding: 9px 80px 0px 41px;
         }
         &--category{
             display: flex;
@@ -1258,7 +1276,7 @@
     }
     @include media-xl{
         &__two-categ{
-            grid-template-columns: 73% auto;
+            grid-template-columns: 68.377% auto;
         }
         &__card{
             grid-template-columns: 270px auto;
