@@ -974,8 +974,15 @@
         &--list{
             display: grid;
             gap: 34px;
+            line-height: 25px;
+            font-size: 1.125rem;
             padding-left: 25px;
             list-style-image: url("/assests/img/icons/check.png");
+        }
+    }
+    li{
+        &::marker{
+            margin-top: 5px;
         }
     }
     &__curious{
