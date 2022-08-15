@@ -3,7 +3,6 @@
     max-width: 1170px;
 }
 
-
 .p{
     &--y{
         padding: 120px 0px;
@@ -19,8 +18,17 @@
     width: 100%;
 }
 
+.open{
+    padding: 15px 0px;
+    transition: 0.3s all ease-in;
+    display: block;
+}
+
 .close{
-    display: none;
+    padding: 0px 0px;
+    height: 0px;
+    opacity: 0;
+    transition: 0.2s all ease-out;
 }
 
 .bg-primary{
