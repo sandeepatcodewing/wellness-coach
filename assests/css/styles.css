@@ -119,6 +119,37 @@ h2 {
   opacity: 0;
   transition: 0.2s all ease-out; }
 
+.hide {
+  width: 0;
+  height: 0;
+  opacity: 0; }
+
+@media (max-width: 767px) {
+  .item-list {
+    display: none; } }
+
+@media (min-width: 768px) {
+  .item-list {
+    display: none; } }
+
+@media (max-width: 767px) {
+  .rotate-up {
+    transform: rotate(180deg);
+    transition: 0.3s all ease-in-out; } }
+
+@media (min-width: 768px) {
+  .rotate-up {
+    transform: rotate(180deg);
+    transition: 0.3s all ease-in-out; } }
+
+@media (min-width: 1200px) {
+  .rotate-up {
+    transform: none; } }
+
+.fa-caret-down {
+  cursor: pointer;
+  color: var(--primary-color); }
+
 .bg-primary {
   background-color: rgba(23, 190, 138, 0.05); }
 
@@ -634,19 +665,16 @@ input[type=text], input[type=email] {
   display: flex;
   flex-wrap: wrap; }
 
-.menu__navbar--drop {
-  color: var(--primary-color); }
-
 .menu__navbar a {
   color: #000; }
 
 .menu__navbar a:hover {
   color: var(--primary-color); }
 
-.menu__item {
+.menu__button-section {
   margin: auto 0; }
 
-.menu__item--button {
+.menu__button-section--button {
   cursor: pointer;
   font-size: 1rem;
   padding: 13px 25px;
@@ -654,7 +682,7 @@ input[type=text], input[type=email] {
   color: var(--primary-color);
   background-color: #fff; }
 
-.menu__item--button:hover {
+.menu__button-section--button:hover {
   border: 1px dotted #fff;
   color: #fff;
   background-color: var(--primary-color); }
@@ -672,7 +700,15 @@ input[type=text], input[type=email] {
   .menu__navbar-button {
     display: none;
     flex-direction: column-reverse;
-    justify-content: center; } }
+    justify-content: center; }
+  .menu__drop-menu--list {
+    display: grid;
+    padding-top: 2rem;
+    gap: 2rem; }
+  .menu__sub-drop--list {
+    display: grid;
+    padding-top: 2rem;
+    gap: 2rem; } }
 
 @media (min-width: 768px) {
   .menu {
@@ -682,14 +718,48 @@ input[type=text], input[type=email] {
     justify-content: space-between;
     grid-template-columns: 80% auto; }
   .menu__navbar-button {
-    display: none; } }
+    display: none; }
+  .menu__drop-menu--list {
+    display: grid;
+    padding-top: 2rem;
+    gap: 2rem; }
+  .menu__sub-drop--list {
+    display: grid;
+    padding-top: 2rem;
+    gap: 2rem; } }
 
 @media (min-width: 1200px) {
   .menu__content {
     display: flex;
     justify-content: space-between; }
   .menu__navbar-button {
-    display: flex; } }
+    display: flex; }
+  .menu__drop-menu {
+    position: relative; }
+  .menu__drop-menu--item {
+    display: none; }
+  .menu__drop-menu:hover .menu__drop-menu--item {
+    width: 200px;
+    display: grid;
+    padding: 16px;
+    gap: 16px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 3px 9px -7px rgba(0, 0, 0, 0.5); }
+  .menu__sub-drop {
+    position: relative; }
+  .menu__sub-drop--item {
+    display: none; }
+  .menu__sub-drop:hover .menu__sub-drop--item {
+    top: -70%;
+    left: 100%;
+    width: 200px;
+    display: grid;
+    padding: 16px;
+    gap: 16px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 3px 9px -7px rgba(0, 0, 0, 0.5); } }
 
 @media (max-width: 767px) {
   .list-nav {
@@ -705,7 +775,7 @@ input[type=text], input[type=email] {
   .list-nav--links {
     display: flex;
     flex-direction: column;
-    gap: 4rem; } }
+    gap: 3rem; } }
 
 @media (min-width: 768px) {
   .list-nav {
@@ -721,7 +791,7 @@ input[type=text], input[type=email] {
   .list-nav--links {
     display: flex;
     flex-direction: column;
-    gap: 4rem; } }
+    gap: 3rem; } }
 
 @media (min-width: 1200px) {
   .list-nav {

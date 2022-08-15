@@ -417,9 +417,6 @@
             display: flex;
             flex-wrap: wrap;
         }
-        &--drop{
-            color: var(--primary-color);
-        }
         a{
             color: #000;
             &:hover{
@@ -427,7 +424,7 @@
             }
         }
     }
-    &__item{
+    &__button-section{
         margin: auto 0;
         &--button{
             cursor: pointer;
@@ -459,6 +456,20 @@
             flex-direction: column-reverse;
             justify-content: center;
         }
+        &__drop-menu{
+            &--list{
+                display: grid;
+                padding-top: 2rem;
+                gap: 2rem;
+            }
+        }
+        &__sub-drop{
+            &--list{
+                display: grid;
+                padding-top: 2rem;
+                gap: 2rem;
+            }
+        }
     }
     @include media-md{
         padding: 12px 0px;
@@ -470,6 +481,20 @@
         &__navbar-button{
             display: none;
         }
+        &__drop-menu{
+            &--list{
+                display: grid;
+                padding-top: 2rem;
+                gap: 2rem;
+            }
+        }
+        &__sub-drop{
+            &--list{
+                display: grid;
+                padding-top: 2rem;
+                gap: 2rem;
+            }
+        }
     }
     @include media-xl{
         &__content{
@@ -478,6 +503,38 @@
         }
         &__navbar-button{
             display: flex;
+        }  
+        &__drop-menu{
+            position: relative;
+            &--item{
+                display: none;
+            }
+            &:hover &--item{
+                width: 200px;
+                display: grid;
+                padding: 16px;
+                gap: 16px;
+                position: absolute;
+                background-color: #fff;
+                box-shadow: 0px 3px 9px -7px rgba(0,0,0,0.5);
+            }
+        }
+        &__sub-drop{
+            position: relative;
+            &--item{
+                display: none;
+            }
+            &:hover &--item{
+                top: -70%;
+                left: 100%;
+                width: 200px;
+                display: grid;
+                padding: 16px;
+                gap: 16px;
+                position: absolute;
+                background-color: #fff;
+                box-shadow: 0px 3px 9px -7px rgba(0,0,0,0.5);
+            }
         }
     }
 }
@@ -497,7 +554,7 @@
         &--links{
             display: flex;
             flex-direction: column;
-            gap: 4rem;
+            gap: 3rem;
         }
     }
     @include media-md{
@@ -513,7 +570,7 @@
         &--links{
             display: flex;
             flex-direction: column;
-            gap: 4rem;
+            gap: 3rem;
         }
     }
     @include media-xl{

@@ -130,13 +130,26 @@
         </div>
       </section>
 
+      <!-- search bar -->
       <div class="search">
-        <i class="fa-solid fa-xmark search__close-icon"></i>
+        <i class="fa-solid fa-xmark search__close-icon hide"></i>
         <form class="search__form" action="" method="get">
           <input class="search__form--search" type="search" name="" id="" />
           <input class="search__form--submit" type="submit" value="Search" />
         </form>
       </div>
+
+      <!-- cart items -->
+      <!-- <div class="cart-items">
+        <i class="fa-solid fa-xmark"></i>
+        <div class="cart-items__content">
+          <img src="/assests/img/cart/cart-01.png" alt="" />
+          <div class="cart-items__texts">
+            <p class="cart-items__texts--title">Fresh Juice</p>
+            <p class="cart-items__texts-price"></p>
+          </div>
+        </div>
+      </div> -->
 
       <!-- menu -->
       <section class="menu">
@@ -163,9 +176,23 @@
                   <li>
                     <a href="">Portfolio</a>
                   </li>
-                  <li>
+                  <li class="menu__drop-menu">
                     <a href="">Templates</a>
-                    <span><i class="fa-solid fa-caret-down menu__navbar--drop"></i></span>
+                    <i class="fa-solid fa-caret-down icon-first-down rotate-down"></i>
+                    <ul class="menu__drop-menu--item item-list">
+                      <li>
+                        <a href="">Rishi Templates</a>
+                      </li>
+                      <li class="menu__sub-drop">
+                        <a href="">Blossom Templates</a>
+                        <i class="fa-solid fa-caret-down icon-second-down rotate-down"></i>
+                        <ul class="menu__sub-drop--item item-list">
+                          <li><a href="">Call</a></li>
+                          <li><a href="">About Us</a></li>
+                          <li><a href="">Contact Us</a></li>
+                        </ul>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     <a href="">Blog</a>
@@ -175,9 +202,9 @@
                   </li>
                 </ul>
               </div>
-              <div class="menu__item">
+              <div class="menu__button-section">
                 <a href="">
-                  <button class="menu__item--button">Book Free 15 Min Chat</button>
+                  <button class="menu__button-section--button">Book Free 15 Min Chat</button>
                 </a>
               </div>
             </div>
@@ -940,6 +967,8 @@
     <script src="/assests/js/search.js"></script>
     <!-- navbar js -->
     <script src="/assests/js/navbar.js"></script>
+    <!-- drop down js -->
+    <script src="/assests/js/drop-down.js"></script>
     <!-- notification close js -->
     <script src="/assests/js/notification-close.js"></script>
   </body>
