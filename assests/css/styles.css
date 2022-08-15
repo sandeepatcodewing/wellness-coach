@@ -1,4 +1,5 @@
 :root {
+  --body-color: #232323;
   --primary-color: #17BE8A;
   --secondary-color: #FFDF00;
   --header-font: 'Roboto Slab', serif;
@@ -12,6 +13,7 @@
   box-sizing: border-box; }
 
 body {
+  color: var(--body-color);
   font-family: var(--paragraph-font); }
 
 img {
@@ -507,7 +509,7 @@ input[type=text], input[type=email] {
   font-size: 0.8rem; }
 
 .details__contact-address a {
-  color: #000; }
+  color: inherit; }
 
 .details__contact-address a:hover {
   color: var(--primary-color); }
@@ -798,7 +800,7 @@ input[type=text], input[type=email] {
     display: none; } }
 
 .first-section__content {
-  row-gap: 10px;
+  row-gap: 15px;
   display: grid; }
 
 .first-section__texts {
@@ -812,14 +814,12 @@ input[type=text], input[type=email] {
   background-color: #fff; }
 
 .first-section__text-content--title {
-  text-align: start; }
+  text-align: center; }
 
 .first-section__text-content--paragraph {
   line-height: 43px; }
 
 @media (max-width: 767px) {
-  .first-section__content {
-    display: block; }
   .first-section__text-content {
     padding: 14px 22px; }
   .first-section__text-content--buttons {

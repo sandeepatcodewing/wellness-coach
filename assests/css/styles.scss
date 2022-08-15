@@ -244,7 +244,7 @@
             font-size: 0.8rem;
         }
         a{
-            color: #000;
+            color: inherit;
             &:hover{
                 color: var(--primary-color);
             }
@@ -581,7 +581,7 @@
 // first-section
 .first-section{
     &__content{
-        row-gap: 10px;
+        row-gap: 15px;
         display: grid;
     }
     &__texts{
@@ -594,16 +594,13 @@
         padding: 75px 88px;
         background-color: #fff;
         &--title{
-            text-align: start;
+            text-align: center;
         }
         &--paragraph{
             line-height: 43px;
         }
     }
     @include media-sm{
-        &__content{
-            display: block;
-        }
         &__text-content{
             padding: 14px 22px;
             &--buttons{
