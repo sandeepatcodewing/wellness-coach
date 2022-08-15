@@ -753,7 +753,7 @@ input[type=text], input[type=email] {
   .menu__sub-drop:hover .menu__sub-drop--item {
     top: -70%;
     left: 100%;
-    width: 200px;
+    width: 150px;
     display: grid;
     padding: 16px;
     gap: 16px;
