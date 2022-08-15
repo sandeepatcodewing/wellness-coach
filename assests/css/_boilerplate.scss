@@ -95,6 +95,7 @@
 .border-buttons{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
     &__start{
         justify-content: start;

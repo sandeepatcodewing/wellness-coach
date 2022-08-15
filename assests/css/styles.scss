@@ -580,17 +580,22 @@
 
 // first-section
 .first-section{
+    width: 100%;
+    padding: 120px 150px;
     &__content{
         row-gap: 15px;
         display: grid;
+        align-items: center;
     }
     &__texts{
         margin: auto 0;
     }
     &__text-content{
+        margin: 0 auto;
         text-align: center;
         padding: 75px 88px 80px;
         background-color: #fff;
+        max-width: 678px;
         &--paragraph{
             line-height: 1.954em;
             font-size: 1.375em;
@@ -598,15 +603,9 @@
         }
     }
     @include media-sm{
+        padding: 30px 16px;
         &__text-content{
             padding: 14px 22px;
-            &--buttons{
-                display: grid;
-            }
-        }
-        &__buttons{
-            display: grid;
-            justify-items: center;
         }
     }
     @include media-lg{
