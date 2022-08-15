@@ -259,25 +259,45 @@ input[type=text], input[type=email] {
   margin-top: 7px;
   opacity: 0.9; }
 
-.container {
+.container-fluid {
   margin: 0 auto;
   padding: 0px 16px; }
 
+.container {
+  margin: 0 auto;
+  padding: 0px 8px; }
+
 @media (max-width: 767px) {
-  .container {
+  .container-fluid {
     max-width: 540px; } }
 
 @media (min-width: 768px) {
-  .container {
+  .container-fluid {
     max-width: 800px; } }
 
 @media (min-width: 992px) {
-  .container {
+  .container-fluid {
     max-width: 960px; } }
 
 @media (min-width: 1200px) {
-  .container {
+  .container-fluid {
     max-width: 1400px; } }
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 510px; } }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 770px; } }
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 930px; } }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px; } }
 
 .header {
   top: 0;

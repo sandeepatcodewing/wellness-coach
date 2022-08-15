@@ -3,15 +3,19 @@
 @import 'boilerplate';
 
 
-%container{
+%container-fluid{
     margin: 0 auto;
     padding: 0px 16px;
+}
+%container{
+    margin: 0 auto;
+    padding: 0px 8px;
 }
 
 
 // responsove container
-.container{
-    @extend %container;
+.container-fluid{
+    @extend %container-fluid;
     @include media-sm{
         max-width: 540px;
     }
@@ -23,6 +27,22 @@
     }
     @include media-xl{
         max-width: 1400px;
+    }
+}
+
+.container{
+    @extend %container;
+    @include media-sm{
+        max-width: 510px;
+    }
+    @include media-md{
+        max-width: 770px;
+    }
+    @include media-lg{
+        max-width: 930px;
+    }
+    @include media-xl{
+        max-width: 1170px;
     }
 }
 
