@@ -147,6 +147,7 @@
     &__content{
         column-gap: 50px;
         display: flex;
+        flex-wrap: wrap;
     }
     &__icon{
         position: absolute;
@@ -178,8 +179,10 @@
         }
     }
     @include media-md{
+        display: none;
         &__content{
-            flex-direction: column;
+            height: 0;
+            opacity: 0;
         }
         &__icon{
             top: 7px;
@@ -190,6 +193,13 @@
         }
         &__button{
             margin-left: 0px;
+        }
+    }
+    @include media-lg{
+        display: block;
+        &__content{
+            height: 100%;
+            opacity: 1;
         }
     }
     @include media-xl{
@@ -213,17 +223,6 @@
         position: relative;
         display: flex;
         justify-content: space-between;
-    }
-    &__bell{
-        top: -16px;
-        right: 130px;
-        position: absolute;
-        color: #fff;
-        font-size: 0.8em;
-        padding: 6px;
-        border-radius: 5px;
-        display: none;
-        background-color: var(--primary-color);
     }
     &__social-media{
         &--links{
@@ -295,6 +294,27 @@
         &__bell{
             height: 0;
             opacity: 0;
+        }
+    }
+    @include media-md{
+        &__bell{
+            height: 0;
+            opacity: 0;
+        }
+    }
+    @include media-lg{     
+        &__bell{
+            height: 100%;
+            opacity: 1;
+            top: -16px;
+            right: 130px;
+            position: absolute;
+            color: #fff;
+            font-size: 0.8em;
+            padding: 6px;
+            border-radius: 5px;
+            display: none;
+            background-color: var(--primary-color);
         }
     }
 }

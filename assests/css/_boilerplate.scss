@@ -24,6 +24,9 @@
     height: 0px;
     opacity: 0;
     transition: 0.2s all ease-out;
+    @include media-md{
+        padding: 0px 0px;
+    }
 }
 
 .hide{
