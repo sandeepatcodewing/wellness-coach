@@ -130,12 +130,22 @@
         </div>
       </section>
 
+      <div class="search">
+        <i class="fa-solid fa-xmark search__close-icon"></i>
+        <form class="search__form" action="" method="get">
+          <input class="search__form--search" type="search" name="" id="" />
+          <input class="search__form--submit" type="submit" value="Search" />
+        </form>
+      </div>
+
       <!-- menu -->
       <section class="menu">
         <div class="container-fluid">
           <div class="menu__content">
             <div class="menu__logo">
-              <img src="/assests/img/logo/logo.png" alt="Logo" />
+              <a href="">
+                <img src="/assests/img/logo/logo.png" alt="Logo" />
+              </a>
             </div>
             <div class="hamburger-menu"></div>
             <div class="menu__navbar-button">
@@ -213,7 +223,7 @@
       <!-- as seen section -->
       <section class="as-seen">
         <div class="container">
-          <div class="as-seen__content section-width">
+          <div class="as-seen__content">
             <div class="as-seen__title">
               <p class="as-seen__title--paragraph">as seen in:</p>
             </div>
@@ -230,7 +240,7 @@
       <!-- health coach section -->
       <section class="health-coach bg-primary">
         <div class="container">
-          <div class="health-coach__content section-width">
+          <div class="health-coach__content">
             <div class="section-title">
               <div class="section-title__header">
                 <hr class="section-title__header--secondary" />
@@ -250,7 +260,7 @@
       <!-- about me section -->
       <section class="about-me">
         <div class="container">
-          <div class="about-me__content section-width">
+          <div class="about-me__content">
             <div class="about-me__slider-section">
               <!-- previous next slider -->
               <div class="health-coach__card--next">
@@ -386,7 +396,7 @@
       <!-- coach benifits -->
       <section class="benifits">
         <div class="container">
-          <div class="benifits__content section-width">
+          <div class="benifits__content">
             <div class="benifits__title">
               <div class="section-title">
                 <div class="section-title__header">
@@ -457,7 +467,7 @@
       <!-- customer stories -->
       <section class="stories bg-primary">
         <div class="container">
-          <div class="stories__content section-width">
+          <div class="stories__content">
             <div class="benifits__title">
               <div class="section-title">
                 <div class="section-title__header">
@@ -479,7 +489,7 @@
       <!-- feedback section -->
       <section class="feedback">
         <div class="container">
-          <div class="feedback__content section-width">
+          <div class="feedback__content">
             <div class="feedback__nav feedback__nav--right">
               <img class="feedback__nav--icon" src="/assests/img/icons/icon-next.png" alt="" />
             </div>
@@ -538,7 +548,7 @@
       <!-- start -->
       <section class="start p--y">
         <div class="container">
-          <div class="start__content section-width">
+          <div class="start__content">
             <div class="start__art">
               <p class="start__art--title">It's time to start living your very best life! That usually involves eating MORE and working out less...</p>
               <p class="start__art--texts start__art--paragraph">After 30 years in the field, we've developed state-of-the art programs that have helped hundreds of thousand of clients:</p>
@@ -566,7 +576,7 @@
       <!-- services -->
       <section class="services p--y">
         <div class="container">
-          <div class="services__content section-width">
+          <div class="services__content">
             <div class="section-title">
               <div class="section-title__header">
                 <hr class="section-title__header--secondary" />
@@ -632,7 +642,7 @@
       <!-- from the blog -->
       <section class="from p--y">
         <div class="container">
-          <div class="from__content section-width">
+          <div class="from__content">
             <div class="section-title">
               <div class="section-title__header">
                 <hr class="section-title__header--secondary" />
@@ -770,7 +780,7 @@
       <!-- book -->
       <section class="book">
         <div class="container">
-          <div class="book__content section-width">
+          <div class="book__content">
             <div class="book__details">
               <p class="book__sub-text">Grab the #1 new realease</p>
               <p class="book__title">
@@ -926,6 +936,8 @@
       });
     </script>
 
+    <!-- search bar js -->
+    <script src="/assests/js/search.js"></script>
     <!-- navbar js -->
     <script src="/assests/js/navbar.js"></script>
     <!-- notification close js -->
