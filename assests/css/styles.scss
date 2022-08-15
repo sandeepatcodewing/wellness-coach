@@ -588,16 +588,13 @@
         margin: auto 0;
     }
     &__text-content{
-        display: grid;
-        row-gap: 16.5px;
         text-align: center;
-        padding: 75px 88px;
+        padding: 75px 88px 80px;
         background-color: #fff;
-        &--title{
-            text-align: center;
-        }
         &--paragraph{
-            line-height: 43px;
+            line-height: 1.954em;
+            font-size: 1.375em;
+            padding: 33px 0px 36px 0px;
         }
     }
     @include media-sm{
@@ -641,7 +638,7 @@
     }
     &__image{
         padding: 26px 0px;
-        row-gap: 20px;
+        row-gap: 30px;
         column-gap: 132px;
         display: flex;
         flex-wrap: wrap;

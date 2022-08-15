@@ -807,17 +807,14 @@ input[type=text], input[type=email] {
   margin: auto 0; }
 
 .first-section__text-content {
-  display: grid;
-  row-gap: 16.5px;
   text-align: center;
-  padding: 75px 88px;
+  padding: 75px 88px 80px;
   background-color: #fff; }
 
-.first-section__text-content--title {
-  text-align: center; }
-
 .first-section__text-content--paragraph {
-  line-height: 43px; }
+  line-height: 1.954em;
+  font-size: 1.375em;
+  padding: 33px 0px 36px 0px; }
 
 @media (max-width: 767px) {
   .first-section__text-content {
@@ -850,7 +847,7 @@ input[type=text], input[type=email] {
 
 .as-seen__image {
   padding: 26px 0px;
-  row-gap: 20px;
+  row-gap: 30px;
   column-gap: 132px;
   display: flex;
   flex-wrap: wrap;
