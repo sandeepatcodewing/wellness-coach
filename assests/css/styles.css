@@ -126,6 +126,9 @@ h2 {
   height: 0;
   opacity: 0; }
 
+.hide-search {
+  display: none; }
+
 @media (max-width: 767px) {
   .item-list {
     display: none; } }
@@ -606,6 +609,9 @@ input[type=text], input[type=email] {
   transition: 0.5s all ease-in-out;
   background-color: var(--secondary-color); }
 
+.search__hide {
+  display: none; }
+
 .search__open {
   opacity: 1;
   width: 100%;
@@ -862,7 +868,7 @@ input[type=text], input[type=email] {
   .as-seen {
     padding: 30px 0px; }
   .as-seen__image {
-    padding: 20px 0px;
+    padding: 20px 0px 0px;
     flex-direction: column; } }
 
 @media (min-width: 768px) {

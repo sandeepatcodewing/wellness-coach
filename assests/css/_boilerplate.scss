@@ -32,6 +32,10 @@
     opacity: 0;
 }
 
+.hide-search{
+    display: none;
+}
+
 // drop down menu
 .item-list{
     @include media-sm{

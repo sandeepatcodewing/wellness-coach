@@ -347,6 +347,9 @@
             }
         }
     }
+    &__hide{
+        display: none;
+    }
     &__open{
         opacity: 1;
         width: 100%;
@@ -646,7 +649,7 @@
     @include media-sm{
         padding: 30px 0px;
         &__image{
-            padding: 20px 0px;
+            padding: 20px 0px 0px;
             flex-direction: column;
         }
     }
