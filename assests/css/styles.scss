@@ -608,7 +608,7 @@
     @include media-sm{
         padding: 30px 16px;
         &__text-content{
-            padding: 14px 22px;
+            padding: 20px 22px 30px;
         }
     }
     @include media-lg{
@@ -628,12 +628,13 @@
 
 // as seen section
 .as-seen{
-    padding: 90px 0px 64px 0px;
+    padding: 90px 0px 69px 0px;
     &__content{
         text-align: center;
     }
     &__title{
         &--paragraph{
+            line-height: 1.78em;
             font-size: 1.125rem;
             text-transform: uppercase;
         }
@@ -650,7 +651,7 @@
         padding: 30px 0px;
         &__image{
             padding: 20px 0px 0px;
-            flex-direction: column;
+            justify-content: center;
         }
     }
     @include media-md{
