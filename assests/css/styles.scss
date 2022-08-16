@@ -1557,13 +1557,13 @@
         max-width: 652px;
     }
     &__sub-text{
-        line-height: 35px;
+        line-height: 1.458em;
         font-size: 1.3125em;
         text-transform: uppercase;
     }
     &__title{
         padding: 11px 0px 42px 0px;
-        line-height: 79px;
+        line-height: 1.52em;
         font-size: 3.25em;
     }
     &__button{
@@ -1593,12 +1593,14 @@
         &__image{
             margin-top: 0px;
         }
-
-    }
-    @include media-lg{
         &__content{
-        justify-content: space-between;
+            justify-content: center;
         }
+    }
+    @include media-xl{
+        &__content{
+            justify-content: space-between;
+            }
         &__image{
             margin-top: -160px;
         }

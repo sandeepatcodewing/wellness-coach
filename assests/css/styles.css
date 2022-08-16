@@ -1677,13 +1677,13 @@ input[type=text], input[type=email] {
   max-width: 652px; }
 
 .book__sub-text {
-  line-height: 35px;
+  line-height: 1.458em;
   font-size: 1.3125em;
   text-transform: uppercase; }
 
 .book__title {
   padding: 11px 0px 42px 0px;
-  line-height: 79px;
+  line-height: 1.52em;
   font-size: 3.25em; }
 
 .book__button {
@@ -1708,9 +1708,11 @@ input[type=text], input[type=email] {
 
 @media (min-width: 768px) {
   .book__image {
-    margin-top: 0px; } }
+    margin-top: 0px; }
+  .book__content {
+    justify-content: center; } }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .book__content {
     justify-content: space-between; }
   .book__image {
