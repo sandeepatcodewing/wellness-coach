@@ -1126,13 +1126,13 @@ input[type=text], input[type=email] {
   border: 1px solid #88eebe83; }
 
 .benifits__card--title {
-  padding: 21px 0px 20px 0px;
-  line-height: 45px;
+  padding: 21px 0px 20px;
+  line-height: 2.368em;
   font-size: 1.1875em;
   font-family: var(--header-font); }
 
 .benifits__card--paragraph {
-  line-height: 32px;
+  line-height: 1.78em;
   font-size: 1.125em; }
 
 .benifits__banner {
@@ -1153,11 +1153,11 @@ input[type=text], input[type=email] {
 
 .benifits__banner--title {
   padding: 0px 35px;
-  line-height: 60px;
+  line-height: 1.67em;
   text-transform: capitalize; }
 
 .benifits__banner--paragraph {
-  line-height: 43px;
+  line-height: 1.954em;
   font-size: 1.375em; }
 
 .benifits__banner--button {
@@ -1178,12 +1178,16 @@ input[type=text], input[type=email] {
     padding: 30px 0px; }
   .benifits__details {
     gap: 55px;
-    padding: 10px 0px; }
+    padding: 0px 0px; }
   .benifits__all-benifits {
     gap: 15px;
     padding-right: 0px; }
   .benifits__card {
-    padding: 20px; } }
+    padding: 20px; }
+  .benifits__card--title {
+    padding: 0px 0px; }
+  .benifits__banner--title {
+    padding: 0px; } }
 
 @media (min-width: 768px) {
   .benifits__details {
