@@ -1739,6 +1739,7 @@ input[type=text], input[type=email] {
 
 .footer-navbar__content {
   row-gap: 20px;
+  column-gap: 50px;
   display: flex;
   justify-content: space-between; }
 
@@ -1751,7 +1752,8 @@ input[type=text], input[type=email] {
 .footer-navbar__menu--link {
   row-gap: 20px;
   column-gap: 56px;
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
 
 .footer-navbar a {
   color: #000; }
@@ -1774,12 +1776,9 @@ input[type=text], input[type=email] {
 
 @media (min-width: 768px) {
   .footer-navbar__content {
-    text-align: center;
-    flex-direction: column; }
+    text-align: center; }
   .footer-navbar__logo {
-    margin-left: 0px; }
-  .footer-navbar__menu--link {
-    flex-direction: column; } }
+    margin-left: 0px; } }
 
 @media (min-width: 992px) {
   .footer-navbar__content {

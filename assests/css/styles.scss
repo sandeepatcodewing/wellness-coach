@@ -1631,6 +1631,7 @@
     padding: 51.5px 0px 79.5px 0px;
     &__content{
         row-gap: 20px;
+        column-gap: 50px;
         display: flex;
         justify-content: space-between;
     }
@@ -1642,7 +1643,8 @@
         &--link{
             row-gap: 20px;
             column-gap: 56px;
-            display: flex;
+            display: flex; 
+            flex-wrap: wrap;
         }
     }
     a{
@@ -1671,15 +1673,10 @@
     @include media-md{
         &__content{
             text-align: center;
-            flex-direction: column;
+            // flex-direction: column;
         }
         &__logo{
             margin-left: 0px;
-        }
-        &__menu{
-            &--link{
-                flex-direction: column;
-            }
         }
     }
     @include media-lg{
