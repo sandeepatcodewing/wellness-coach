@@ -1,4 +1,5 @@
 :root{
+    --body-color: #232323;
     --primary-color: #17BE8A;
     --secondary-color: #FFDF00;
     --header-font: 'Roboto Slab', serif;
@@ -14,6 +15,7 @@
 }
 
 body{
+    color: var(--body-color);
     font-family: var(--paragraph-font);
 }
 
@@ -30,6 +32,7 @@ a{
 }
 
 button{
+    border: none;
     font-family: inherit;
 }
 
@@ -39,17 +42,16 @@ h1{
     font-family: var(--header-font);
 }
 h2{
+    line-height: 1.657em;
     font-weight: normal;
     font-size: 2.1875rem;
     font-family: var(--header-font);
 }
 
+
+
 .swiper-slide{
     text-align: center;
-}
-
-#health-coach-sliders{
-    padding: 0px 20px;
 }
 
 .swiper-button-disabled{

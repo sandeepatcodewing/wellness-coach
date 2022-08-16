@@ -24,15 +24,15 @@
   <body>
     <header class="header">
       <!-- Take a quiz notification -->
-      <section class="top-notification">
-        <div class="container">
+      <section class="top-notification open">
+        <div class="container-fluid">
           <div class="top-notification__content">
-            <span class="top-notification__cross">
-              <i class="fa-solid fa-xmark top-notification__cross--icon"></i>
-            </span>
+            <i class="fa-solid fa-xmark top-notification__icon"></i>
             <p class="top-notification__text">An exclusive, one-on-one coaching program for ambitious, designed to get you Real Results in all areas of your life in 3 short months.</p>
             <div class="top-notification__item">
-              <button class="top-notification__button">Take a quiz</button>
+              <a class="top-notification__item--link" href="">
+                <button class="top-notification__button">Take a quiz</button>
+              </a>
             </div>
           </div>
         </div>
@@ -40,8 +40,9 @@
 
       <!-- social media, contact details, cart, hamburger icon -->
       <section class="details">
-        <div class="container">
+        <div class="container-fluid">
           <div class="details__content">
+            <i class="details__bell fa-solid fa-bell" id="bell-icon"></i>
             <div class="social-media">
               <!-- social media link -->
               <ul class="social-media__links">
@@ -71,13 +72,13 @@
             <div class="details__contact-address">
               <ul class="details__contact-address--links">
                 <li>
-                  <a href="">
+                  <a href="tel: 9808605892">
                     <i class="fa-solid fa-phone details__contact-address--icon"></i>
                     +977 9808605892
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="mailto:info.blossomCoach@gmail.com">
                     <i class="fa-solid fa-envelope details__contact-address--icon"></i>
                     info.blossomCoach@gmail.com
                   </a>
@@ -129,12 +130,35 @@
         </div>
       </section>
 
+      <!-- search bar -->
+      <div class="search search__hide">
+        <i class="fa-solid fa-xmark search__close-icon hide"></i>
+        <form class="search__form" action="" method="get">
+          <input class="search__form--search" type="search" name="" id="" />
+          <input class="search__form--submit" type="submit" value="Search" />
+        </form>
+      </div>
+
+      <!-- cart items -->
+      <!-- <div class="cart-items">
+        <i class="fa-solid fa-xmark"></i>
+        <div class="cart-items__content">
+          <img src="/assests/img/cart/cart-01.png" alt="" />
+          <div class="cart-items__texts">
+            <p class="cart-items__texts--title">Fresh Juice</p>
+            <p class="cart-items__texts-price"></p>
+          </div>
+        </div>
+      </div> -->
+
       <!-- menu -->
       <section class="menu">
-        <div class="container">
+        <div class="container-fluid">
           <div class="menu__content">
             <div class="menu__logo">
-              <img src="/assests/img/logo/logo.png" alt="Logo" />
+              <a href="">
+                <img src="/assests/img/logo/logo.png" alt="Logo" />
+              </a>
             </div>
             <div class="hamburger-menu"></div>
             <div class="menu__navbar-button">
@@ -152,9 +176,23 @@
                   <li>
                     <a href="">Portfolio</a>
                   </li>
-                  <li>
+                  <li class="menu__drop-menu">
                     <a href="">Templates</a>
-                    <span><i class="fa-solid fa-caret-down menu__navbar--drop"></i></span>
+                    <i class="fa-solid fa-caret-down icon-first-down rotate-down"></i>
+                    <ul class="menu__drop-menu--item item-list">
+                      <li>
+                        <a href="">Rishi Templates</a>
+                      </li>
+                      <li class="menu__sub-drop">
+                        <a href="">Blossom Templates</a>
+                        <i class="fa-solid fa-caret-down icon-second-down rotate-down"></i>
+                        <ul class="menu__sub-drop--item item-list">
+                          <li><a href="">Call</a></li>
+                          <li><a href="">About Us</a></li>
+                          <li><a href="">Contact Us</a></li>
+                        </ul>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     <a href="">Blog</a>
@@ -164,9 +202,9 @@
                   </li>
                 </ul>
               </div>
-              <div class="menu__item">
+              <div class="menu__button-section">
                 <a href="">
-                  <button class="menu__item--button">Book Free 15 Min Chat</button>
+                  <button class="menu__button-section--button">Book Free 15 Min Chat</button>
                 </a>
               </div>
             </div>
@@ -177,31 +215,25 @@
 
     <main>
       <!-- fist section -->
-      <section class="first-section p--y bg-primary">
-        <div class="container">
-          <div class="first-section__content">
-            <div class="first-section__image">
-              <img src="/assests/img/persons/persons-1.png" alt="" />
-            </div>
-            <div class="first-section__texts">
-              <div class="first-section__text-content">
-                <div class="first-section__text-content--title">
-                  <h1>
-                    Change
-                    <span class="signature-text">Starts</span>
-                    with just one day.
-                  </h1>
+      <section class="first-section bg-primary">
+        <div class="first-section__content">
+          <div class="first-section__image">
+            <img width="width-100" src="/assests/img/persons/persons-1.png" alt="" />
+          </div>
+          <div class="first-section__texts">
+            <div class="first-section__text-content">
+              <h1 class="first-section__text-content--title">
+                Change
+                <span class="signature-text">Starts</span>
+                with just one day.
+              </h1>
+              <p class="first-section__text-content--paragraph">My free 1-day-reset is a mini-cleanse that will kickstart your healthy habits and inspire you to continue on a path to wellness.</p>
+              <div class="first-section__buttons border-buttons">
+                <div class="border-buttons__secondary-dotted">
+                  <button class="secondary-button">Get Started</button>
                 </div>
-                <div class="first-section__text-content--paragraph">
-                  <p>My free 1-day-reset is a mini-cleanse that will kickstart your healthy habits and inspire you to continue on a path to wellness.</p>
-                </div>
-                <div class="first-section__buttons border-buttons">
-                  <div class="border-buttons__secondary-dotted">
-                    <button class="secondary-button">Get Started</button>
-                  </div>
-                  <div class="border-buttons__primary-dotted">
-                    <button class="primary-button">Learn More</button>
-                  </div>
+                <div class="border-buttons__primary-dotted">
+                  <button class="primary-button">Learn More</button>
                 </div>
               </div>
             </div>
@@ -239,9 +271,7 @@
                 <hr class="section-title__line--second" />
               </div>
             </div>
-            <div class="section-title__paragraph">
-              <p class="section-title__paragraph--text">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
-            </div>
+            <p class="section-title__paragraph">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
           </div>
         </div>
       </section>
@@ -251,8 +281,17 @@
         <div class="container">
           <div class="about-me__content">
             <div class="about-me__slider-section">
+              <!-- previous next slider -->
+              <div class="health-coach__card--next">
+                <img class="health-coach__card--slider-navigation" src="/assests/img/icons/icon-next-g.png" alt="" />
+                <!-- <i class="fa-solid fa-right-long health-coach__card--slider-navigation"></i> -->
+              </div>
+              <div class="health-coach__card--prev">
+                <img class="health-coach__card--slider-navigation" src="/assests/img/icons/icon-prev-g.png" alt="" />
+                <!-- <i class="fa-solid fa-left-long health-coach__card--slider-navigation"></i> -->
+              </div>
               <!-- Swiper -->
-              <div class="swiper health-coach__sliders" id="health-coach-sliders">
+              <div class="swiper health-coach__sliders">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="about-me__feature-card">
@@ -333,22 +372,15 @@
                     </div>
                   </div>
                 </div>
-                <!-- previous next slider -->
-                <div class="health-coach__card--next">
-                  <i class="fa-solid fa-right-long health-coach__card--slider-navigation"></i>
-                </div>
-                <div class="health-coach__card--prev">
-                  <i class="fa-solid fa-left-long health-coach__card--slider-navigation"></i>
-                </div>
               </div>
             </div>
             <div class="about-me__details">
               <img class="about-me__details--back-image" src="/assests/img/image-1.png" alt="" />
               <div class="about-me__images">
                 <div class="about-me__images--main">
-                  <img src="/assests/img/persons/persons-2.png" alt="" />
-                  <img class="about-me__images--thumbs-up" src="/assests/img/icons/icon-2.png" alt="" />
-                  <img class="about-me__images--heart" src="/assests/img/icons/icon-3.png" alt="" />
+                  <img class="about-me__main-image" src="/assests/img/persons/persons-2.png" alt="" />
+                  <img class="about-me__images--thumbs-up icon-thumbs-up" src="/assests/img/icons/icon-2.png" alt="" />
+                  <img class="about-me__images--heart icon-heart" src="/assests/img/icons/icon-3.png" alt="" />
                 </div>
               </div>
               <div class="about-me__text">
@@ -361,10 +393,10 @@
                 <p class="about-me__mission">"My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves."</p>
                 <div class="border-buttons border-buttons__start">
                   <div class="border-buttons__secondary-dotted">
-                    <button class="secondary-button">Get Started</button>
+                    <button class="secondary-button">Work With Me</button>
                   </div>
                   <div class="border-buttons__primary-dotted">
-                    <button class="primary-button">Learn More</button>
+                    <button class="primary-button">Know My Story</button>
                   </div>
                 </div>
               </div>
@@ -394,9 +426,7 @@
                   <hr class="section-title__line--second" />
                 </div>
               </div>
-              <div class="section-title__paragraph">
-                <p class="section-title__paragraph--text">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
-              </div>
+              <p class="section-title__paragraph">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
             </div>
             <div class="benifits__details">
               <div class="benifits__all-benifits">
@@ -465,9 +495,7 @@
                   <hr class="section-title__line--second" />
                 </div>
               </div>
-              <div class="section-title__paragraph">
-                <p class="section-title__paragraph--text">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
-              </div>
+              <p class="section-title__paragraph">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
             </div>
           </div>
         </div>
@@ -483,50 +511,52 @@
             <div class="feedback__nav feedback__nav--left">
               <img class="feedback__nav--icon" src="/assests/img/icons/icon-prev.png" alt="" />
             </div>
-            <!-- Swiper -->
-            <div class="swiper feedback__swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="feedback__card">
-                    <img class="feedback__card--image" src="/assests/img/profile/profile-1.png" alt="" />
-                    <div class="feedback__card--texts">
-                      <p class="feedback__card--main-text">Thank You Coach For The Coaching, Guidance And Friendship You Give Me. I Will Be Forever Grateful.</p>
-                      <p class="feedback__card--sub-text">The Wellness Business Bootcam Gave Me The Exact Framwork I Was Searching For no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, to grow my network marketing business.</p>
-                      <p class="feedback__card--user">
-                        <span class="feedback__card--author">- Alice Wells</span>
-                      </p>
-                      <p class="feedback__card--user-designation">Alice Wells | Co-Founder of Wells Foundations</p>
+            <div class="feedback__swiper-started">
+              <!-- Swiper -->
+              <div class="swiper feedback__swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="feedback__card">
+                      <img class="feedback__card--image" src="/assests/img/profile/profile-1.png" alt="" />
+                      <div class="feedback__card--texts">
+                        <p class="feedback__card--main-text">Thank You Coach For The Coaching, Guidance And Friendship You Give Me. I Will Be Forever Grateful.</p>
+                        <p class="feedback__card--sub-text">The Wellness Business Bootcam Gave Me The Exact Framwork I Was Searching For no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, to grow my network marketing business.</p>
+                        <p class="feedback__card--user">
+                          <span class="feedback__card--author">- Alice Wells</span>
+                        </p>
+                        <p class="feedback__card--user-designation">Alice Wells | Co-Founder of Wells Foundations</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="feedback__card">
+                      <img class="feedback__card--image" src="/assests/img/profile/profile-1.png" alt="" />
+                      <div class="feedback__card--texts">
+                        <p class="feedback__card--main-text">Thank You Coach For The Coaching, Guidance And Friendship You Give Me. I Will Be Forever Grateful.</p>
+                        <p class="feedback__card--sub-text">The Wellness Business Bootcam Gave Me The Exact Framwork I Was Searching For no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, to grow my network marketing business.</p>
+                        <p class="feedback__card--user">
+                          <span class="feedback__card--author">- Alice Wells</span>
+                        </p>
+                        <p class="feedback__card--user-designation">Alice Wells | Co-Founder of Wells Foundations</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="feedback__card">
+                      <img class="feedback__card--image" src="/assests/img/profile/profile-1.png" alt="" />
+                      <div class="feedback__card--texts">
+                        <p class="feedback__card--main-text">Thank You Coach For The Coaching, Guidance And Friendship You Give Me. I Will Be Forever Grateful.</p>
+                        <p class="feedback__card--sub-text">The Wellness Business Bootcam Gave Me The Exact Framwork I Was Searching For no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, to grow my network marketing business.</p>
+                        <p class="feedback__card--user">
+                          <span class="feedback__card--author">- Alice Wells</span>
+                        </p>
+                        <p class="feedback__card--user-designation">Alice Wells | Co-Founder of Wells Foundations</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="feedback__card">
-                    <img class="feedback__card--image" src="/assests/img/profile/profile-1.png" alt="" />
-                    <div class="feedback__card--texts">
-                      <p class="feedback__card--main-text">Thank You Coach For The Coaching, Guidance And Friendship You Give Me. I Will Be Forever Grateful.</p>
-                      <p class="feedback__card--sub-text">The Wellness Business Bootcam Gave Me The Exact Framwork I Was Searching For no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, to grow my network marketing business.</p>
-                      <p class="feedback__card--user">
-                        <span class="feedback__card--author">- Alice Wells</span>
-                      </p>
-                      <p class="feedback__card--user-designation">Alice Wells | Co-Founder of Wells Foundations</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="feedback__card">
-                    <img class="feedback__card--image" src="/assests/img/profile/profile-1.png" alt="" />
-                    <div class="feedback__card--texts">
-                      <p class="feedback__card--main-text">Thank You Coach For The Coaching, Guidance And Friendship You Give Me. I Will Be Forever Grateful.</p>
-                      <p class="feedback__card--sub-text">The Wellness Business Bootcam Gave Me The Exact Framwork I Was Searching For no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, to grow my network marketing business.</p>
-                      <p class="feedback__card--user">
-                        <span class="feedback__card--author">- Alice Wells</span>
-                      </p>
-                      <p class="feedback__card--user-designation">Alice Wells | Co-Founder of Wells Foundations</p>
-                    </div>
-                  </div>
-                </div>
+                <div class="feedback__bullet"></div>
               </div>
-              <div class="feedback__bullet"></div>
             </div>
           </div>
         </div>
@@ -561,7 +591,7 @@
       </section>
 
       <!-- services -->
-      <section class="services p--y">
+      <section class="services">
         <div class="container">
           <div class="services__content">
             <div class="section-title">
@@ -573,9 +603,7 @@
                 <hr class="section-title__line--second" />
               </div>
             </div>
-            <div class="section-title__paragraph">
-              <p class="section-title__paragraph--text">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
-            </div>
+            <p class="section-title__paragraph">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
             <div class="services__list">
               <div class="services__card">
                 <img src="/assests/img/icons/tomato.png" alt="" class="services__card--image" />
@@ -627,7 +655,7 @@
       </section>
 
       <!-- from the blog -->
-      <section class="from p--y">
+      <section class="from">
         <div class="container">
           <div class="from__content">
             <div class="section-title">
@@ -639,9 +667,7 @@
                 <hr class="section-title__line--second" />
               </div>
             </div>
-            <div class="section-title__paragraph">
-              <p class="section-title__paragraph--text">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
-            </div>
+            <p class="section-title__paragraph">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
             <div class="from__two-categ">
               <div class="from__blog">
                 <div class="from__card">
@@ -650,8 +676,8 @@
                   </div>
                   <div class="from__card--content">
                     <div class="from__card--category">
-                      <span class="from__card--bottom">food</span>
-                      <span class="from__card--bottom">exercise</span>
+                      <a class="from__card--bottom" href="">food</a>
+                      <a class="from__card--bottom" href="">exercise</a>
                     </div>
                     <div class="from__card--details">
                       <p class="from__card--title"><a class="from__card--link" href="">Low-calorie pasta primavera</a></p>
@@ -673,8 +699,8 @@
                   </div>
                   <div class="from__card--content">
                     <div class="from__card--category">
-                      <span class="from__card--bottom">food</span>
-                      <span class="from__card--bottom">exercise</span>
+                      <a class="from__card--bottom" href="">food</a>
+                      <a class="from__card--bottom" href="">exercise</a>
                     </div>
                     <div class="from__card--details">
                       <p class="from__card--title"><a class="from__card--link" href="">Super green immunity-boosting soup</a></p>
@@ -696,8 +722,8 @@
                   </div>
                   <div class="from__card--content">
                     <div class="from__card--category">
-                      <span class="from__card--bottom">food</span>
-                      <span class="from__card--bottom">exercise</span>
+                      <a class="from__card--bottom" href="">food</a>
+                      <a class="from__card--bottom" href="">exercise</a>
                     </div>
                     <div class="from__card--details">
                       <p class="from__card--title"><a class="from__card--link" href="">Trying to find your purpose</a></p>
@@ -765,7 +791,7 @@
       </section>
 
       <!-- book -->
-      <section class="book p--y">
+      <section class="book">
         <div class="container">
           <div class="book__content">
             <div class="book__details">
@@ -808,7 +834,7 @@
 
       <!-- logo navbar -->
       <section class="footer-navbar">
-        <div class="container">
+        <div class="container-fluid">
           <div class="footer-navbar__content">
             <div class="footer-navbar__logo">
               <img src="/assests/img/logo/logo.png" alt="" />
@@ -836,7 +862,7 @@
 
       <!-- copyright section -->
       <section class="copyright">
-        <div class="container">
+        <div class="container-fluid">
           <div class="copyright__content">
             <div class="copyright__details">
               <p>©Copyright 2020 Blossom Health Coach ltd.</p>
@@ -923,8 +949,12 @@
       });
     </script>
 
+    <!-- search bar js -->
+    <script src="/assests/js/search.js"></script>
     <!-- navbar js -->
     <script src="/assests/js/navbar.js"></script>
+    <!-- drop down js -->
+    <script src="/assests/js/drop-down.js"></script>
     <!-- notification close js -->
     <script src="/assests/js/notification-close.js"></script>
   </body>

@@ -3,6 +3,10 @@
 @import 'boilerplate';
 
 
+%container-fluid{
+    margin: 0 auto;
+    padding: 0px 16px;
+}
 %container{
     margin: 0 auto;
     padding: 0px 16px;
@@ -10,8 +14,8 @@
 
 
 // responsove container
-.container{
-    @extend %container;
+.container-fluid{
+    @extend %container-fluid;
     @include media-sm{
         max-width: 540px;
     }
@@ -22,7 +26,23 @@
         max-width: 960px;
     }
     @include media-xl{
-        max-width: 1400px;
+        max-width: 1600px;
+    }
+}
+
+.container{
+    @extend %container;
+    @include media-sm{
+        max-width: 510px;
+    }
+    @include media-md{
+        max-width: 770px;
+    }
+    @include media-lg{
+        max-width: 930px;
+    }
+    @include media-xl{
+        max-width: 1170px;
     }
 }
 
@@ -67,7 +87,7 @@
     position: relative;
     margin: auto 0;
     border-radius: 15px;
-    z-index: 1000;
+    z-index: 99;
     cursor: pointer;
     &::before,&::after{
         content: '';
@@ -95,17 +115,18 @@
         inset: 0 70% 0 0;
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 3em;
         text-align: center;
         z-index: 100;
         backdrop-filter: blur(6px);
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.9);
         padding-top: 120px;
+        box-shadow: -5px 3px 24px -18px rgba(0, 0, 0, 75%) inset;
         a{
             color: #000;
         }
         @include media-sm{
-            inset: 0 30% 0 0;
+            inset: 0 0 0 30%;
         }
     }
     a{
@@ -117,38 +138,37 @@
 
 // notification styling
 .top-notification{  
-    font-size: 1rem;
+    font-size: 1em;
     color: #fff;
-    padding: 15px 0px;
     line-height: 35px;
     position: relative;
     background-color: var(--primary-color);
     font-family: var(--notification-font);
     &__content{
+        column-gap: 50px;
         display: flex;
     }
-    &__cross{
-        &--icon{
-            position: absolute;
-            cursor: pointer;
-            font-size: 1.5rem;
-        }
+    &__icon{
+        position: absolute;
+        cursor: pointer;
+        font-size: 1.5em;
     }
     &__button{
+        cursor: pointer;
         padding: 6px 16px;
         border: none;
         font-family: var(--header-font);
         background-color: var(--secondary-color);
     }
     @include media-sm{
+        padding: 0px 0px;
         &__content{
-            flex-direction: column;
+            height: 0;
+            opacity: 0;
         }
-        &__cross{
-            &--icon{
-                top: 3px;
-                right: 9px;
-            }
+        &__icon{
+            top: 3px;
+            right: 9px;
         }
         &__text{
             margin-right: 0px;
@@ -161,11 +181,9 @@
         &__content{
             flex-direction: column;
         }
-        &__cross{
-            &--icon{
-                top: 7px;
-                right: 10px;
-            }
+        &__icon{
+            top: 7px;
+            right: 10px;
         }
         &__text{
             margin-right: 0px;
@@ -176,19 +194,12 @@
     }
     @include media-xl{
         &__content{
+            justify-content: center;
             flex-direction: row;
         }
-        &__cross{
-            &--icon{
-                top: 19px;
-                right: 30px;
-            }
-        }
-        &__text{
-            margin-right: 25px;
-        }
-        &__button{
-            margin-left: 25px;
+        &__icon{
+            top: 19px;
+            right: 30px;
         }
     }
 }
@@ -199,8 +210,20 @@
     font-family: var(--notification-font);
     background-color: #FFFDEB;
     &__content{
+        position: relative;
         display: flex;
         justify-content: space-between;
+    }
+    &__bell{
+        top: -16px;
+        right: 130px;
+        position: absolute;
+        color: #fff;
+        font-size: 0.8em;
+        padding: 6px;
+        border-radius: 5px;
+        display: none;
+        background-color: var(--primary-color);
     }
     &__social-media{
         &--links{
@@ -218,10 +241,13 @@
         }
         &--icon{
             color: var(--primary-color);
-            font-size: 0.8rem;
+            font-size: 0.8em;
         }
         a{
-            color: #000;
+            color: inherit;
+            &:hover{
+                color: var(--primary-color);
+            }
         }
     }
     &__icons-navigation{
@@ -232,7 +258,11 @@
             gap: 14.5px;
         }
         &--icon{
+            cursor: pointer;
             color: rgba(35,35,35, 0.6);
+            &:hover{
+                color: var(--primary-color);
+            }
         }
         &--cart-icon{
             position: relative;
@@ -242,7 +272,7 @@
             right: -9px;
             color: #fff;
             position: absolute;
-            font-size: 0.75rem;
+            font-size: 0.75em;
             padding: 2px 4.5px;
             border-radius: 50%;
             font-family: var(--paragraph-font);
@@ -261,6 +291,86 @@
         &__icons-navigation{
             right: 0px;
             position: absolute;
+        }
+        &__bell{
+            height: 0;
+            opacity: 0;
+        }
+    }
+}
+
+// search
+.search{
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: fixed;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.8);
+    font-family: var(--paragraph-font);
+    transition: 0.5s ease-in-out;
+    &__close-icon{
+        top: 80px;
+        right: 260px;
+        color: #fff;
+        font-size: 1.5em;
+        cursor: pointer;
+        position: absolute;
+    }
+    &__form{
+        text-align: center;
+        top: 50%;
+        position: relative;
+        &--search{
+            width: 50%;
+            padding: 16px;
+            font-size: 1.5em;
+            border: none;
+            &:focus{
+                outline: solid var(--primary-color);
+            }
+        }
+        &--submit{
+            cursor: pointer;
+            color: #fff;
+            font-size: 1.5em;
+            padding: 16px 20px;
+            border: none;
+            background-color: var(--primary-color);
+            &:hover{
+                color: #000;
+                transition: 0.5s all ease-in-out;
+                background-color: var(--secondary-color);
+            }
+        }
+    }
+    &__hide{
+        display: none;
+    }
+    &__open{
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s ease-in-out;
+    }
+    @include media-sm{
+        &__close-icon{
+            top: 15px;
+            right: 50px;
+        }
+        &__form{
+            &--search{
+                width: 60%;
+                padding: 8px;
+                font-size: 1em;
+            }
+            &--submit{
+                padding: 8px;
+                font-size: 1em;
+            }
         }
     }
 }
@@ -290,22 +400,25 @@
 // menu + logo styling
 .menu{
     background-color: #fff;
-    font-size: 0.9375rem;
+    font-size: 0.9375em;
     padding: 24px 0px;
     font-family: var(--header-font);
     box-shadow: 0px 3px 9px -3px rgba(0,0,0,0.13);
+    &__content{
+        column-gap: 30px;
+    }
     &__navbar-button{
         display: flex;
-        column-gap: 25px;
+        justify-content: end;
+        column-gap: 75px;
     }
     &__navbar{
         margin: auto 0;
         &--links{
-            column-gap: 35px;
+            row-gap: 15px;
+            column-gap: 55px;
             display: flex;
-        }
-        &--drop{
-            color: var(--primary-color);
+            flex-wrap: wrap;
         }
         a{
             color: #000;
@@ -314,11 +427,11 @@
             }
         }
     }
-    &__item{
+    &__button-section{
         margin: auto 0;
         &--button{
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1em;
             padding: 13px 25px;
             border: 1px dotted var(--primary-color);
             color: var(--primary-color);
@@ -336,7 +449,7 @@
             display: grid;
             justify-content: space-between;
             grid-template-columns: 80% auto;
-            gap: 10px;
+            column-gap: 10px;
         }
         &__logo{
             margin-left: 0px;
@@ -346,6 +459,20 @@
             flex-direction: column-reverse;
             justify-content: center;
         }
+        &__drop-menu{
+            &--list{
+                display: grid;
+                padding-top: 2em;
+                gap: 2em;
+            }
+        }
+        &__sub-drop{
+            &--list{
+                display: grid;
+                padding-top: 2em;
+                gap: 2em;
+            }
+        }
     }
     @include media-md{
         padding: 12px 0px;
@@ -353,18 +480,23 @@
             display: grid;
             justify-content: space-between;
             grid-template-columns: 80% auto;
-            gap: 10px;
-        }
-        &__logo{
-            margin-left: 0px;
         }
         &__navbar-button{
             display: none;
         }
-    }
-    @include media-lg{
-        &__logo{
-            margin-left: 0px;
+        &__drop-menu{
+            &--list{
+                display: grid;
+                padding-top: 2em;
+                gap: 2em;
+            }
+        }
+        &__sub-drop{
+            &--list{
+                display: grid;
+                padding-top: 2em;
+                gap: 2em;
+            }
         }
     }
     @include media-xl{
@@ -374,9 +506,38 @@
         }
         &__navbar-button{
             display: flex;
+        }  
+        &__drop-menu{
+            position: relative;
+            &--item{
+                display: none;
+            }
+            &:hover &--item{
+                width: 200px;
+                display: grid;
+                padding: 16px;
+                gap: 16px;
+                position: absolute;
+                background-color: #fff;
+                box-shadow: 0px 3px 9px -7px rgba(0,0,0,0.5);
+            }
         }
-        &__logo{
-            margin-left: -75px;
+        &__sub-drop{
+            position: relative;
+            &--item{
+                display: none;
+            }
+            &:hover &--item{
+                top: -70%;
+                left: 100%;
+                width: 150px;
+                display: grid;
+                padding: 16px;
+                gap: 16px;
+                position: absolute;
+                background-color: #fff;
+                box-shadow: 0px 3px 9px -7px rgba(0,0,0,0.5);
+            }
         }
     }
 }
@@ -396,7 +557,7 @@
         &--links{
             display: flex;
             flex-direction: column;
-            gap: 4rem;
+            gap: 3em;
         }
     }
     @include media-md{
@@ -412,7 +573,7 @@
         &--links{
             display: flex;
             flex-direction: column;
-            gap: 4rem;
+            gap: 3em;
         }
     }
     @include media-xl{
@@ -422,39 +583,32 @@
 
 // first-section
 .first-section{
+    width: 100%;
+    padding: 120px 150px;
     &__content{
-        row-gap: 10px;
+        row-gap: 15px;
         display: grid;
+        align-items: center;
     }
     &__texts{
         margin: auto 0;
     }
     &__text-content{
-        display: grid;
-        row-gap: 16.5px;
+        margin: 0 auto;
         text-align: center;
-        padding: 75px 88px;
+        padding: 75px 88px 80px;
         background-color: #fff;
-        &--title{
-            text-align: start;
-        }
+        max-width: 678px;
         &--paragraph{
-            line-height: 43px;
+            line-height: 1.954em;
+            font-size: 1.375em;
+            padding: 33px 0px 36px 0px;
         }
     }
     @include media-sm{
-        &__content{
-            display: block;
-        }
+        padding: 30px 16px;
         &__text-content{
-            padding: 14px 22px;
-            &--buttons{
-                display: grid;
-            }
-        }
-        &__buttons{
-            display: grid;
-            justify-items: center;
+            padding: 20px 22px 30px;
         }
     }
     @include media-lg{
@@ -474,46 +628,57 @@
 
 // as seen section
 .as-seen{
-    padding: 90px 0px 64px 0px;
+    padding: 90px 0px 69px 0px;
     &__content{
         text-align: center;
     }
     &__title{
         &--paragraph{
-            font-size: 1.125rem;
+            line-height: 1.78em;
+            font-size: 1.125em;
             text-transform: uppercase;
         }
     }
     &__image{
         padding: 26px 0px;
-        display: grid;
-        row-gap: 20px;
-        justify-items: center;
-        grid-template-columns: repeat(4,1fr);
+        row-gap: 30px;
+        column-gap: 132px;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
     @include media-sm{
         padding: 30px 0px;
         &__image{
-            padding: 20px 0px;
-            grid-template-columns: repeat(1,1fr);
+            padding: 20px 0px 0px;
+            justify-content: center;
+        }
+    }
+    @include media-md{
+        &__image{
+            justify-content: space-evenly;
+        }
+    }
+    @include media-xl{
+        &__image{
+            justify-content: space-between;
         }
     }
 }
 
 // health coach section
 .health-coach{
-    padding: 120px 0px 320px 0px;
+    padding: 120px 0px 294.05px 0px;
     &__card{
         &--next{
             top: 50%;
-            right: 0;
+            right: -2.3%;
             z-index: 5;
             position: absolute;
         }
         &--prev{
             top: 50%;
-            left: 0;
+            left: -2.3%;
             z-index: 5;
             position: absolute;
         }
@@ -526,14 +691,22 @@
         }
     }
     @include media-sm{
-        padding: 30px 0px;
+        padding: 15px 0px 350px;
+        &__card{
+            &--next{
+                right: 2%;
+            }
+            &--prev{
+                left: 2%;
+            }
+        }
     }
 }
 
 // about me section styling
 .about-me{
     &__slider-section{
-        margin-top: -305px;
+        position: relative;
     }
     &__feature-card{
         &--image{
@@ -551,29 +724,29 @@
             gap: 25px;
             display: grid;
             justify-items: center;
-            padding: 67px 59px 39.4px;
+            padding: 67px 30.1px 39.4px 30.5px;
             background-color: #fff;
         }
         &--title{
             font-family: var(--header-font);
-            font-size: 1.125rem;
+            font-size: 1.125em;
+            line-height: 2.5em;
         }
     
     }
     &__details{
         position: relative;
-        padding: 120px 0px 57px 0px;
+        padding: 165px 0px 57px 0px;
         display: grid;
-        justify-items: center;
         &--back-image{
             z-index: -1;
-            top: 65px;
-            left: 355px;
+            top: 120px;
+            left: 204px;
             position: absolute;
         }
     }
     &__images{
-        margin: auto;
+        margin: auto 0;
         position: relative;
         &--main{
             position: relative;
@@ -590,30 +763,29 @@
         }
     }
     &__text{
-        padding: 40.4px 65px 63px 64px;
         background-color: #fff;
-        display: flex;
-        gap: 35px;
-        flex-direction: column;
     }
     &__hi{
-        font-size: 3.75rem;
+        line-height: 1.267em;
+        font-size: 3.75em;
         font-family: var(--signature-font);
+        transform: rotate(-8deg);
     }
     &__paragraph{
-        color: #232323;
-        line-height: 32px;
-        font-size: 1.125rem;
+        line-height: 1.78em;
+        font-size: 1.125em;
+        padding: 35px 0px 21.5px;
     }
     &__mission{
         font-family: var(--header-font);
-        font-size: 1.375rem;
-        line-height: 40px;
+        font-size: 1.375em;
+        line-height: 1.818em;
+        padding: 21.5px 0px 50px;
     }
     @include media-sm{
-        padding: 30px 0px;
+        padding: 50px 0px 30px 0px;
         &__slider-section{
-            margin-top: 0px;
+            margin-top: -375px;
         }
         &__details{
             padding: 50px 0px 0px 0px;
@@ -625,9 +797,6 @@
         &__text{
             gap: 10px;
             padding: 0px;
-        }
-        &__hi{
-            padding-left: 30px;
         }
         &__feature-card{
             &--contents{
@@ -642,30 +811,87 @@
                 background-color: #fff;
             }
             &--title{
-                font-size: 1rem;
+                font-size: 1em;
             }
+        }
+        &__hi{
+            padding: 15px 20px 35px;
+        }
+        &__paragraph{
+            padding: 15px 0px;
+        }
+        &__mission{
+            padding: 0px 0px 15px 0px;
         }
     }
     @include media-md{
+        &__slider-section{
+            margin-top: -270px;
+        }
+        &__main-image{
+            width: 100%;
+        }
         &__details{
             grid-template-columns: repeat(1,1fr);
             &--back-image{
                 display: none;
             }
         }
-        &__feature-card{
-            &--title{
-                font-size: 1rem;
-            }
+        &__text{
+            padding: 0px;
         } 
+        &__hi{
+            padding: 0px 20px 75px;
+        }
+    }
+    @include media-lg{
+        &__slider-section{
+            margin-top: -320px;
+        }
+        &__images{
+            &--thumbs-up{
+                top: -1.5%;
+                right: 25%;
+            }
+            &--heart{
+                left: -1.5%;
+                top: 50%;
+            }
+        }
+        &__hi{
+            padding: 15px 20px 75px;
+        }
     }
     @include media-xl{
+        &__slider-section{
+            margin-top: -265px;
+        }
+        &__main-image{
+            width: auto;
+        }
+        &__images{
+            &--thumbs-up{
+                top: -3%;
+                right: 25%;
+            }
+            &--heart{
+                left: -3%;
+                top: 50%;
+            }
+        }
         &__details{
-            grid-template-columns: 50% auto;
+            grid-template-columns: 45.3% auto;
+            // grid-template-columns: 43.762% auto;
             &--back-image{
                 display: block;
             }
-        }       
+        }  
+        &__text{
+            padding: 40.4px 0px 63px 64px;
+        }    
+        &__hi{
+            padding: 0px 0px 50px 24px;
+        } 
     }
 }
 
@@ -694,16 +920,17 @@
         display: grid;
     }
     &__card{
-        padding: 40px;
+        padding: 41px 40px 57px;
         border: 1px solid #88eebe83;
         &--title{
-            line-height: 45px;
-            font-size: 1.1875rem;
+            padding: 21px 0px 20px;
+            line-height: 2.368em;
+            font-size: 1.1875em;
             font-family: var(--header-font);
         }
         &--paragraph{
-            line-height: 32px;
-            font-size: 1.125rem;
+            line-height: 1.78em;
+            font-size: 1.125em;
         }
     }
     &__banner{
@@ -723,12 +950,12 @@
         }
         &--title{
             padding: 0px 35px;
-            line-height: 60px;
+            line-height: 1.67em;
             text-transform: capitalize;
         }
         &--paragraph{
-            line-height: 43px;
-            font-size: 1.375rem;
+            line-height: 1.954em;
+            font-size: 1.375em;
         }
         &--button{
             padding-top: 32px;
@@ -748,7 +975,7 @@
         padding: 30px 0px;
         &__details{
             gap: 55px;
-            padding: 10px 0px;
+            padding: 0px 0px;
         }
         &__all-benifits{
             gap: 15px;
@@ -756,6 +983,14 @@
         }
         &__card{
             padding: 20px;
+            &--title{
+                padding: 0px 0px;
+            }
+        }
+        &__banner{
+            &--title{
+                padding: 0px;
+            }
         }
     }
     @include media-md{
@@ -771,7 +1006,7 @@
     }
     @include media-xl{
         &__details{
-            grid-template-columns: 73% auto;
+            grid-template-columns: 67.488% auto;
         }
         &__all-benifits{
             gap: 30px;
@@ -802,32 +1037,41 @@
         cursor: pointer;
         position: absolute;
     }
+    &__swiper-started{
+        margin: 20px auto 0px;
+        max-width: 970px;
+        max-height: 580px;
+        position: relative;
+        background-color: #232323;
+    }
+    &__swiper{
+        top: -50px;
+    }
     &__card{
         margin: 0 auto;
         max-width: 970px; //74.2%
         font-family: var(--header-font);
-        &--image{
-            margin-bottom: -50px;
-        }
         &--texts{
             color: #fff;
-            padding: 88px 185px 27.5px 185px;
-            background-color: #232323;
-            display: grid;
-            gap: 1rem;
         }
         &--main-text{
-            line-height: 45px;
-            font-size: 1.5rem;
+            line-height: 1.875em;
+            font-size: 1.5em;
         }
         &--sub-text{
-            line-height: 32px;
-            font-size: 1.125rem;
+            line-height: 1.78em;
+            font-size: 1.125em;
+            padding: 16px 0px 8px;
             font-family: var(--paragraph-font);
         }
         &--author{
-            font-size: 3.56rem;
+            line-height: 1.3em;
+            font-size: 3.56em;
+            padding: 8px 0px;
             font-family: var(--signature-font);
+        }
+        &--user-designation{
+            line-height: 2.187em;
         }
     }
     &__bullet{
@@ -842,7 +1086,7 @@
     }
     @include media-sm{
         margin-top: -265px;
-        padding-bottom: 30px;
+        padding-bottom: 90px;
         &__content{
             padding: 0px;
         }
@@ -859,19 +1103,23 @@
                 left: 2%;
             }
         }
+        &__swiper-started{
+            margin-top: 60px;
+            max-height: 800px;
+        }
         &__card{
             &--texts{
-                padding: 54px 46.25px 6.75px 46.25px;
+                padding: 24px 46.25px 6.75px 46.25px;
             }
             &--main-text{
                 line-height: 35px;
-                font-size: 1.2rem;
+                font-size: 1.2em;
             }
             &--sub-text{
-                font-size: 1rem;
+                font-size: 1em;
             }
             &--author{
-                font-size: 2.5rem;
+                font-size: 2.5em;
             }
         }
     }
@@ -906,16 +1154,21 @@
                 left: 5%;
             }
         }
+        &__card{
+            &--texts{
+                padding: 36px 185px 27.5px 185px;
+            }
+        }
     }
     @include media-xl{
         &__nav{
             &--right{
                 top: 50%;
-                right: 16%;
+                right: 10%;
             }
             &--left{
                 top: 50%;
-                left: 16%;
+                left: 10%;
             }
         }
     }
@@ -935,12 +1188,12 @@
         padding: 86px 80px;
         background-color: #fff;
         &--title{
-            line-height: 45px;
-            font-size: 1.875rem;
+            line-height: 1.5em;
+            font-size: 1.875em;
         }
         &--texts{
-            line-height: 43px;
-            font-size: 1.375rem;
+            line-height: 1.954em;
+            font-size: 1.375em;
             color: rgba(0,0,0,0.8);
             font-family: var(--paragraph-font);
         }
@@ -950,8 +1203,15 @@
         &--list{
             display: grid;
             gap: 34px;
+            line-height: 1.78em;
+            font-size: 1.125em;
             padding-left: 25px;
             list-style-image: url("/assests/img/icons/check.png");
+        }
+    }
+    li{
+        &::marker{
+            margin-top: 5px;
         }
     }
     &__curious{
@@ -961,15 +1221,17 @@
         padding: 96px 30px;
         position: relative;
         overflow: hidden;
+        display: grid;
+        align-content: center;
         background-color: var(--primary-color);
         &--title{
             line-height: 45px;
-            font-size: 1.5rem;
+            font-size: 1.5em;
         }
         &--main-title{
             line-height: 70px;
             padding: 44px 20px 68px 20px;
-            font-size: 3.375rem;
+            font-size: 3.375em;
         }
         &--shape{
             width: 0; 
@@ -1006,13 +1268,14 @@
     }
     @include media-xl{
         &__content{
-            grid-template-columns: 73% auto;
+            grid-template-columns: 67.488% auto;
         }
     }
 }
 
 // services section
 .services{
+    padding: 120px 0px 60px;
     &__list{
         gap: 30px;
         display: grid;
@@ -1029,13 +1292,13 @@
             padding: 30px 0px;
         }
         &--title{
-            line-height: 35px;
-            font-size: 1.25rem;
+            line-height: 1.75em;
+            font-size: 1.25em;
             font-weight: 500;
         }
         &--paragraph{
-            line-height: 32px;
-            font-size: 1.125rem;
+            line-height: 1.78;
+            font-size: 1.125em;
         }
         &--arrow{
             right: -1px;
@@ -1043,13 +1306,15 @@
             padding-left: 5px;
             background-color: #fff;
             color: var(--primary-color);
-            font-size: 0.6rem;
+            font-size: 0.6em;
             position: absolute;
         }
     }
     @include media-sm{
-        &__lsit{
+        padding: 30px 0px 15px;
+        &__list{
             gap: 15px;
+            margin-top: 0px;
         }
         &__card{
             padding: 30px;
@@ -1064,9 +1329,11 @@
 
 // from the blog
 .from{
+    padding: 60px 0px 120px;
     &__two-categ{
         margin-top: 70px;
         display: grid;
+        row-gap: 20px;
     }
     &__blog{
         display: grid;
@@ -1078,27 +1345,24 @@
         }
     }
     &__card{
-        column-gap: 41px;
         display: grid;
-        &--content{
-            padding: 9px 0px;
-        }
         &--category{
             display: flex;
             gap: 22px;
             color: var(--primary-color);
-            font-size: 0.875rem;
+            font-size: 0.875em;
             text-transform: uppercase;
             font-family: var(--header-font);
         }
         &--bottom{
+            color: var(--primary-color);
             border-bottom: 1px dotted var(--secondary-color);
         }
         &--title{
-            line-height: 35px;
+            // line-height: 1.75em;
             padding: 10px 0px 14px 0px;
             font-weight: 500;
-            font-size: 1.25rem;
+            font-size: 1.25em;
         }
         &--link{
             font-family: var(--header-font);
@@ -1111,13 +1375,13 @@
         &--date{
             font-weight: 300;
             text-transform: uppercase;
-            font-size: 00.875rem;
+            font-size: 00.875em;
             color: #232323a1;
         }
         &--paragraph{
-            line-height: 32px;
+            line-height: 1.78em;
             font-weight: 300;
-            font-size: 1.125rem;
+            font-size: 1.125em;
             color: #000;
             padding: 21px 0px 30px 0px;
         }
@@ -1131,7 +1395,8 @@
         overflow: hidden;
         background: linear-gradient(180deg, rgba(98,207,114,1) 0%, rgba(23,190,138,1) 100%);
         &--title{
-            font-size: 1.875rem;
+            line-height: 1.33em;
+            font-size: 1.875em;
             font-family: var(--header-font);
         }
         &--highlight{
@@ -1139,12 +1404,12 @@
         }
         &--paragraph{
             padding: 35px 0px 29px 0px;
-            line-height: 32px;
-            font-size: 1.125rem;
+            line-height: 1.78em;
+            font-size: 1.125em;
         }
         &--form{
             display: grid;
-            gap: 1rem;
+            gap: 1em;
             text-align: start;
         }
         &--button-section{
@@ -1183,14 +1448,14 @@
         }
         &--title{
             padding: 0px 51px;
-            line-height: 40px;
-            font-size: 1.875rem;
+            line-height: 1.33em;
+            font-size: 1.875em;
             font-family: var(--header-font);
         }
         &--paragraph{
             padding: 22px 0px 23px 0px;
-            line-height: 32px;
-            font-size: 1.25rem;
+            line-height: 1.78em;
+            font-size: 1.25em;
         }
         &--button{
             cursor: pointer;
@@ -1210,20 +1475,24 @@
         }
     }
     @include media-sm{
+        padding: 15px 0px 30px;
         &__two-categ{
             margin-top: 0px;
         }
         &__blog{
-            gap: 10px;
+            gap: 20px;
             padding-right: 0px;
         }
         &__card{
             &--image{
                 width: 100%;
             }
+            &--content{
+                padding: 9px 0px;
+            }
         }
         &__subscribe{
-            padding: 1.5rem;
+            padding: 1.5em;
         }
         &__question{
             margin-top: 30px;
@@ -1245,6 +1514,9 @@
             grid-template-columns: repeat(1,1fr);
             &--image{
                 width: 100%;
+            }            
+            &--content{
+                padding: 9px 0px;
             }
         }
     }
@@ -1254,11 +1526,14 @@
         }
         &__card{
             grid-template-columns: 270px auto;
+            &--content{
+                padding: 9px 80px 0px 41px;
+            }
         }
     }
     @include media-xl{
         &__two-categ{
-            grid-template-columns: 73% auto;
+            grid-template-columns: 67.488% auto;
         }
         &__card{
             grid-template-columns: 270px auto;
@@ -1268,6 +1543,7 @@
 
 // book section
 .book{
+    padding: 120px 0px 48px 0px;
     position: relative;
     text-align: center;
     font-family: var(--header-font);
@@ -1275,19 +1551,20 @@
     &__content{
         display: flex;
         row-gap: 15px;
+        flex-wrap: wrap;
     }
     &__details{
         max-width: 652px;
     }
     &__sub-text{
-        line-height: 35px;
-        font-size: 1.3125rem;
+        line-height: 1.458em;
+        font-size: 1.3125em;
         text-transform: uppercase;
     }
     &__title{
         padding: 11px 0px 42px 0px;
-        line-height: 79px;
-        font-size: 3.25rem;
+        line-height: 1.52em;
+        font-size: 3.25em;
     }
     &__button{
         justify-content: center;
@@ -1298,6 +1575,7 @@
         align-items: center;
     }
     @include media-sm{
+        padding: 30px;
         &__content{
             flex-direction: column;
         }
@@ -1312,22 +1590,17 @@
         }
     }
     @include media-md{
-        &__content{
-            flex-direction: column;
-        }
-        &__details{
-            margin: 0 auto;
-        }
         &__image{
             margin-top: 0px;
         }
-
-    }
-    @include media-lg{
         &__content{
-            flex-direction: row;
-        justify-content: space-evenly;
+            justify-content: center;
         }
+    }
+    @include media-xl{
+        &__content{
+            justify-content: space-between;
+            }
         &__image{
             margin-top: -160px;
         }
@@ -1338,6 +1611,8 @@
 // follow on instagram
 .follow-us{
     text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
     background-image: url("/assests/img/blog-thumbnails/thumbnail-8.png");
     padding: 71px 0px;
     &__button{
@@ -1345,7 +1620,7 @@
         padding: 13px 25px;
         background-color: #fff;
         color: var(--primary-color);
-        font-size: 1.1rem;
+        font-size: 1.1em;
         font-family: var(--header-font);
         border: 1px dotted var(--primary-color);
     }
@@ -1356,6 +1631,7 @@
     padding: 51.5px 0px 79.5px 0px;
     &__content{
         row-gap: 20px;
+        column-gap: 50px;
         display: flex;
         justify-content: space-between;
     }
@@ -1367,7 +1643,8 @@
         &--link{
             row-gap: 20px;
             column-gap: 56px;
-            display: flex;
+            display: flex; 
+            flex-wrap: wrap;
         }
     }
     a{
@@ -1396,15 +1673,10 @@
     @include media-md{
         &__content{
             text-align: center;
-            flex-direction: column;
+            // flex-direction: column;
         }
         &__logo{
             margin-left: 0px;
-        }
-        &__menu{
-            &--link{
-                flex-direction: column;
-            }
         }
     }
     @include media-lg{
@@ -1438,7 +1710,7 @@
             bottom: -5px;
             color: var(--primary-color);
             position: absolute;
-            font-size: 0.3rem;
+            font-size: 0.3em;
             padding-left: 3px;
             background-color: #fff;
         }
@@ -1450,6 +1722,9 @@
         border: none;
         background-color: transparent;
         border-bottom: 1px dotted var(--primary-color);
+        &:hover{
+            color: var(--primary-color);
+        }
     }
     @include media-sm{
         &__content{
