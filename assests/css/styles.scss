@@ -1037,33 +1037,41 @@
         cursor: pointer;
         position: absolute;
     }
-    &__swiper-items{
-        background-color: #000;
+    &__swiper-started{
+        margin: 20px auto 0px;
+        max-width: 970px;
+        max-height: 580px;
+        position: relative;
+        background-color: #232323;
+    }
+    &__swiper{
+        top: -50px;
     }
     &__card{
         margin: 0 auto;
         max-width: 970px; //74.2%
         font-family: var(--header-font);
-        &--image{
-            margin-bottom: -50px;
-        }
         &--texts{
             color: #fff;
-            display: grid;
-            gap: 1em;
         }
         &--main-text{
-            line-height: 45px;
+            line-height: 1.875em;
             font-size: 1.5em;
         }
         &--sub-text{
-            line-height: 32px;
+            line-height: 1.78em;
             font-size: 1.125em;
+            padding: 16px 0px 8px;
             font-family: var(--paragraph-font);
         }
         &--author{
+            line-height: 1.3em;
             font-size: 3.56em;
+            padding: 8px 0px;
             font-family: var(--signature-font);
+        }
+        &--user-designation{
+            line-height: 2.187em;
         }
     }
     &__bullet{
@@ -1074,6 +1082,7 @@
         margin-top: -1px;
         justify-content: center;
         padding: 27.5px 0px 30px;
+        background-color: #232323;
     }
     @include media-sm{
         margin-top: -265px;
@@ -1094,9 +1103,13 @@
                 left: 2%;
             }
         }
+        &__swiper-started{
+            margin-top: 60px;
+            max-height: 800px;
+        }
         &__card{
             &--texts{
-                padding: 54px 46.25px 6.75px 46.25px;
+                padding: 24px 46.25px 6.75px 46.25px;
             }
             &--main-text{
                 line-height: 35px;
@@ -1143,7 +1156,7 @@
         }
         &__card{
             &--texts{
-                padding: 88px 185px 27.5px 185px;
+                padding: 36px 185px 27.5px 185px;
             }
         }
     }
@@ -1151,11 +1164,11 @@
         &__nav{
             &--right{
                 top: 50%;
-                right: 12%;
+                right: 10%;
             }
             &--left{
                 top: 50%;
-                left: 12%;
+                left: 10%;
             }
         }
     }

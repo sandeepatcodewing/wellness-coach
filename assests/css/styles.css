@@ -1226,34 +1226,42 @@ input[type=text], input[type=email] {
   cursor: pointer;
   position: absolute; }
 
-.feedback__swiper-items {
-  background-color: #000; }
+.feedback__swiper-started {
+  margin: 20px auto 0px;
+  max-width: 970px;
+  max-height: 580px;
+  position: relative;
+  background-color: #232323; }
+
+.feedback__swiper {
+  top: -50px; }
 
 .feedback__card {
   margin: 0 auto;
   max-width: 970px;
   font-family: var(--header-font); }
 
-.feedback__card--image {
-  margin-bottom: -50px; }
-
 .feedback__card--texts {
-  color: #fff;
-  display: grid;
-  gap: 1em; }
+  color: #fff; }
 
 .feedback__card--main-text {
-  line-height: 45px;
+  line-height: 1.875em;
   font-size: 1.5em; }
 
 .feedback__card--sub-text {
-  line-height: 32px;
+  line-height: 1.78em;
   font-size: 1.125em;
+  padding: 16px 0px 8px;
   font-family: var(--paragraph-font); }
 
 .feedback__card--author {
+  line-height: 1.3em;
   font-size: 3.56em;
+  padding: 8px 0px;
   font-family: var(--signature-font); }
+
+.feedback__card--user-designation {
+  line-height: 2.187em; }
 
 .feedback__bullet {
   display: flex;
@@ -1262,7 +1270,8 @@ input[type=text], input[type=email] {
   max-width: 970px;
   margin-top: -1px;
   justify-content: center;
-  padding: 27.5px 0px 30px; }
+  padding: 27.5px 0px 30px;
+  background-color: #232323; }
 
 @media (max-width: 767px) {
   .feedback {
@@ -1278,8 +1287,11 @@ input[type=text], input[type=email] {
   .feedback__nav--left {
     top: 50%;
     left: 2%; }
+  .feedback__swiper-started {
+    margin-top: 60px;
+    max-height: 800px; }
   .feedback__card--texts {
-    padding: 54px 46.25px 6.75px 46.25px; }
+    padding: 24px 46.25px 6.75px 46.25px; }
   .feedback__card--main-text {
     line-height: 35px;
     font-size: 1.2em; }
@@ -1308,15 +1320,15 @@ input[type=text], input[type=email] {
     top: 50%;
     left: 5%; }
   .feedback__card--texts {
-    padding: 88px 185px 27.5px 185px; } }
+    padding: 36px 185px 27.5px 185px; } }
 
 @media (min-width: 1200px) {
   .feedback__nav--right {
     top: 50%;
-    right: 12%; }
+    right: 10%; }
   .feedback__nav--left {
     top: 50%;
-    left: 12%; } }
+    left: 10%; } }
 
 .start {
   background-size: cover;
