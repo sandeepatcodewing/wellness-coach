@@ -6,10 +6,11 @@ searchButton.addEventListener("click", () => {
     searchBar.classList.remove("search__hide");
     searchBar.classList.add("search__open");
     searchClose.classList.remove("hide");
-    searchClose.style.display = "block";
+    // searchClose.style.display = "block";
 });
 
 searchClose.addEventListener("click", () => {
     searchBar.classList.remove("search__open");
-    searchClose.style.display = "none";
+    searchBar.classList.add("search__hide");
+    // searchClose.style.display = "none";
 });

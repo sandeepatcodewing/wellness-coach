@@ -115,7 +115,7 @@
         inset: 0 70% 0 0;
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 3em;
         text-align: center;
         z-index: 100;
         backdrop-filter: blur(6px);
@@ -138,7 +138,7 @@
 
 // notification styling
 .top-notification{  
-    font-size: 1rem;
+    font-size: 1em;
     color: #fff;
     line-height: 35px;
     position: relative;
@@ -151,7 +151,7 @@
     &__icon{
         position: absolute;
         cursor: pointer;
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
     &__button{
         cursor: pointer;
@@ -241,7 +241,7 @@
         }
         &--icon{
             color: var(--primary-color);
-            font-size: 0.8rem;
+            font-size: 0.8em;
         }
         a{
             color: inherit;
@@ -272,7 +272,7 @@
             right: -9px;
             color: #fff;
             position: absolute;
-            font-size: 0.75rem;
+            font-size: 0.75em;
             padding: 2px 4.5px;
             border-radius: 50%;
             font-family: var(--paragraph-font);
@@ -400,7 +400,7 @@
 // menu + logo styling
 .menu{
     background-color: #fff;
-    font-size: 0.9375rem;
+    font-size: 0.9375em;
     padding: 24px 0px;
     font-family: var(--header-font);
     box-shadow: 0px 3px 9px -3px rgba(0,0,0,0.13);
@@ -431,7 +431,7 @@
         margin: auto 0;
         &--button{
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1em;
             padding: 13px 25px;
             border: 1px dotted var(--primary-color);
             color: var(--primary-color);
@@ -462,15 +462,15 @@
         &__drop-menu{
             &--list{
                 display: grid;
-                padding-top: 2rem;
-                gap: 2rem;
+                padding-top: 2em;
+                gap: 2em;
             }
         }
         &__sub-drop{
             &--list{
                 display: grid;
-                padding-top: 2rem;
-                gap: 2rem;
+                padding-top: 2em;
+                gap: 2em;
             }
         }
     }
@@ -487,15 +487,15 @@
         &__drop-menu{
             &--list{
                 display: grid;
-                padding-top: 2rem;
-                gap: 2rem;
+                padding-top: 2em;
+                gap: 2em;
             }
         }
         &__sub-drop{
             &--list{
                 display: grid;
-                padding-top: 2rem;
-                gap: 2rem;
+                padding-top: 2em;
+                gap: 2em;
             }
         }
     }
@@ -557,7 +557,7 @@
         &--links{
             display: flex;
             flex-direction: column;
-            gap: 3rem;
+            gap: 3em;
         }
     }
     @include media-md{
@@ -573,7 +573,7 @@
         &--links{
             display: flex;
             flex-direction: column;
-            gap: 3rem;
+            gap: 3em;
         }
     }
     @include media-xl{
@@ -635,7 +635,7 @@
     &__title{
         &--paragraph{
             line-height: 1.78em;
-            font-size: 1.125rem;
+            font-size: 1.125em;
             text-transform: uppercase;
         }
     }
@@ -729,18 +729,19 @@
         }
         &--title{
             font-family: var(--header-font);
-            font-size: 1.125rem;
+            font-size: 1.125em;
+            line-height: 2.5em;
         }
     
     }
     &__details{
         position: relative;
-        padding: 120px 0px 57px 0px;
+        padding: 165px 0px 57px 0px;
         display: grid;
         &--back-image{
             z-index: -1;
-            top: 65px;
-            left: 200px;
+            top: 120px;
+            left: 204px;
             position: absolute;
         }
     }
@@ -768,18 +769,18 @@
         flex-direction: column;
     }
     &__hi{
-        font-size: 3.75rem;
+        font-size: 3.75em;
         font-family: var(--signature-font);
     }
     &__paragraph{
         color: #232323;
         line-height: 32px;
-        font-size: 1.125rem;
+        font-size: 1.125em;
         padding: 35px 0px 21.5px;
     }
     &__mission{
         font-family: var(--header-font);
-        font-size: 1.375rem;
+        font-size: 1.375em;
         line-height: 40px;
         padding: 21.5px 0px 50px;
     }
@@ -815,7 +816,7 @@
                 background-color: #fff;
             }
             &--title{
-                font-size: 1rem;
+                font-size: 1em;
             }
         }
     }
@@ -827,11 +828,6 @@
             grid-template-columns: repeat(1,1fr);
             &--back-image{
                 display: none;
-            }
-        }
-        &__feature-card{
-            &--title{
-                font-size: 1rem;
             }
         } 
     }
@@ -883,12 +879,12 @@
         &--title{
             padding: 21px 0px 20px 0px;
             line-height: 45px;
-            font-size: 1.1875rem;
+            font-size: 1.1875em;
             font-family: var(--header-font);
         }
         &--paragraph{
             line-height: 32px;
-            font-size: 1.125rem;
+            font-size: 1.125em;
         }
     }
     &__banner{
@@ -913,7 +909,7 @@
         }
         &--paragraph{
             line-height: 43px;
-            font-size: 1.375rem;
+            font-size: 1.375em;
         }
         &--button{
             padding-top: 32px;
@@ -987,6 +983,9 @@
         cursor: pointer;
         position: absolute;
     }
+    &__swiper-items{
+        background-color: #000;
+    }
     &__card{
         margin: 0 auto;
         max-width: 970px; //74.2%
@@ -996,21 +995,20 @@
         }
         &--texts{
             color: #fff;
-            background-color: #232323;
             display: grid;
-            gap: 1rem;
+            gap: 1em;
         }
         &--main-text{
             line-height: 45px;
-            font-size: 1.5rem;
+            font-size: 1.5em;
         }
         &--sub-text{
             line-height: 32px;
-            font-size: 1.125rem;
+            font-size: 1.125em;
             font-family: var(--paragraph-font);
         }
         &--author{
-            font-size: 3.56rem;
+            font-size: 3.56em;
             font-family: var(--signature-font);
         }
     }
@@ -1022,7 +1020,6 @@
         margin-top: -1px;
         justify-content: center;
         padding: 27.5px 0px 30px;
-        background-color: #232323;
     }
     @include media-sm{
         margin-top: -265px;
@@ -1049,13 +1046,13 @@
             }
             &--main-text{
                 line-height: 35px;
-                font-size: 1.2rem;
+                font-size: 1.2em;
             }
             &--sub-text{
-                font-size: 1rem;
+                font-size: 1em;
             }
             &--author{
-                font-size: 2.5rem;
+                font-size: 2.5em;
             }
         }
     }
@@ -1125,11 +1122,11 @@
         background-color: #fff;
         &--title{
             line-height: 45px;
-            font-size: 1.875rem;
+            font-size: 1.875em;
         }
         &--texts{
             line-height: 43px;
-            font-size: 1.375rem;
+            font-size: 1.375em;
             color: rgba(0,0,0,0.8);
             font-family: var(--paragraph-font);
         }
@@ -1140,7 +1137,7 @@
             display: grid;
             gap: 34px;
             line-height: 25px;
-            font-size: 1.125rem;
+            font-size: 1.125em;
             padding-left: 25px;
             list-style-image: url("/assests/img/icons/check.png");
         }
@@ -1160,12 +1157,12 @@
         background-color: var(--primary-color);
         &--title{
             line-height: 45px;
-            font-size: 1.5rem;
+            font-size: 1.5em;
         }
         &--main-title{
             line-height: 70px;
             padding: 44px 20px 68px 20px;
-            font-size: 3.375rem;
+            font-size: 3.375em;
         }
         &--shape{
             width: 0; 
@@ -1226,12 +1223,12 @@
         }
         &--title{
             line-height: 35px;
-            font-size: 1.25rem;
+            font-size: 1.25em;
             font-weight: 500;
         }
         &--paragraph{
             line-height: 32px;
-            font-size: 1.125rem;
+            font-size: 1.125em;
         }
         &--arrow{
             right: -1px;
@@ -1239,7 +1236,7 @@
             padding-left: 5px;
             background-color: #fff;
             color: var(--primary-color);
-            font-size: 0.6rem;
+            font-size: 0.6em;
             position: absolute;
         }
     }
@@ -1282,7 +1279,7 @@
             display: flex;
             gap: 22px;
             color: var(--primary-color);
-            font-size: 0.875rem;
+            font-size: 0.875em;
             text-transform: uppercase;
             font-family: var(--header-font);
         }
@@ -1293,7 +1290,7 @@
             line-height: 35px;
             padding: 10px 0px 14px 0px;
             font-weight: 500;
-            font-size: 1.25rem;
+            font-size: 1.25em;
         }
         &--link{
             font-family: var(--header-font);
@@ -1306,13 +1303,13 @@
         &--date{
             font-weight: 300;
             text-transform: uppercase;
-            font-size: 00.875rem;
+            font-size: 00.875em;
             color: #232323a1;
         }
         &--paragraph{
             line-height: 32px;
             font-weight: 300;
-            font-size: 1.125rem;
+            font-size: 1.125em;
             color: #000;
             padding: 21px 0px 30px 0px;
         }
@@ -1326,7 +1323,7 @@
         overflow: hidden;
         background: linear-gradient(180deg, rgba(98,207,114,1) 0%, rgba(23,190,138,1) 100%);
         &--title{
-            font-size: 1.875rem;
+            font-size: 1.875em;
             font-family: var(--header-font);
         }
         &--highlight{
@@ -1335,11 +1332,11 @@
         &--paragraph{
             padding: 35px 0px 29px 0px;
             line-height: 32px;
-            font-size: 1.125rem;
+            font-size: 1.125em;
         }
         &--form{
             display: grid;
-            gap: 1rem;
+            gap: 1em;
             text-align: start;
         }
         &--button-section{
@@ -1379,13 +1376,13 @@
         &--title{
             padding: 0px 51px;
             line-height: 40px;
-            font-size: 1.875rem;
+            font-size: 1.875em;
             font-family: var(--header-font);
         }
         &--paragraph{
             padding: 22px 0px 23px 0px;
             line-height: 32px;
-            font-size: 1.25rem;
+            font-size: 1.25em;
         }
         &--button{
             cursor: pointer;
@@ -1418,7 +1415,7 @@
             }
         }
         &__subscribe{
-            padding: 1.5rem;
+            padding: 1.5em;
         }
         &__question{
             margin-top: 30px;
@@ -1478,13 +1475,13 @@
     }
     &__sub-text{
         line-height: 35px;
-        font-size: 1.3125rem;
+        font-size: 1.3125em;
         text-transform: uppercase;
     }
     &__title{
         padding: 11px 0px 42px 0px;
         line-height: 79px;
-        font-size: 3.25rem;
+        font-size: 3.25em;
     }
     &__button{
         justify-content: center;
@@ -1536,7 +1533,7 @@
         padding: 13px 25px;
         background-color: #fff;
         color: var(--primary-color);
-        font-size: 1.1rem;
+        font-size: 1.1em;
         font-family: var(--header-font);
         border: 1px dotted var(--primary-color);
     }
@@ -1629,7 +1626,7 @@
             bottom: -5px;
             color: var(--primary-color);
             position: absolute;
-            font-size: 0.3rem;
+            font-size: 0.3em;
             padding-left: 3px;
             background-color: #fff;
         }

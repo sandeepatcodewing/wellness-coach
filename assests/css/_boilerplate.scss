@@ -46,7 +46,6 @@
     }
 }
 
-
 .rotate-up{
     @include media-sm{
         transform: rotate(180deg);
@@ -60,8 +59,6 @@
         transform: none;
     }
 }
-
-
 // drop down menu styling end
 
 .fa-caret-down{
@@ -206,6 +203,75 @@
         font-size: 0.6rem;
         position: absolute;
     }
+}
+
+// ring bell animation
+#bell-icon{
+    display: none;
+    animation: bell-ring 5s .2s ease-in-out infinite;
+    transform-origin: 50% 4px;
+}
+
+@keyframes bell-ring {
+    0% { transform: rotate(0); }
+    1% { transform: rotate(30deg); }
+    3% { transform: rotate(-28deg); }
+    5% { transform: rotate(34deg); }
+    7% { transform: rotate(-32deg); }
+    9% { transform: rotate(30deg); }
+    11% { transform: rotate(-28deg); }
+    13% { transform: rotate(26deg); }
+    15% { transform: rotate(-24deg); }
+    17% { transform: rotate(22deg); }
+    19% { transform: rotate(-20deg); }
+    21% { transform: rotate(18deg); }
+    23% { transform: rotate(-16deg); }
+    25% { transform: rotate(14deg); }
+    27% { transform: rotate(-12deg); }
+    29% { transform: rotate(10deg); }
+    31% { transform: rotate(-8deg); }
+    33% { transform: rotate(6deg); }
+    35% { transform: rotate(-4deg); }
+    37% { transform: rotate(2deg); }
+    39% { transform: rotate(-1deg); }
+    41% { transform: rotate(1deg); }
+  
+    43% { transform: rotate(0); }
+    100% { transform: rotate(0); }
+}
+// ring bell animation end
+
+
+// thumbs up animation
+.icon-thumbs-up{
+    animation: thumbs-up 5s .2s ease-in-out infinite;
+    transform-origin: 150% 4px;
+}
+
+@keyframes thumbs-up {
+    0% { transform: scale(1); }
+    5% { transform: scale(1.5); }
+    15% { transform: rotate(15deg); }
+    25% { transform: scale(1.5); }
+    35% { transform: scale(1); }
+    45% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+// thumbs up animation end
+
+// heart animation
+.icon-heart{
+    animation: heart 5s .2s ease-in-out infinite;
+    transform-origin: 50% 4px;
+}
+
+@keyframes heart {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.3); }
+    35% { transform: rotateY(180deg); }
+    55% { transform: rotateY(190deg); }
+    75% { transform: scale(1.3); }
+    100% { transform: scale(1); }
 }
 
 input[type=text], input[type=email]{
