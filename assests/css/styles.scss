@@ -1006,7 +1006,7 @@
     }
     @include media-xl{
         &__details{
-            grid-template-columns: 68.377% auto;
+            grid-template-columns: 67.488% auto;
         }
         &__all-benifits{
             gap: 30px;
@@ -1086,7 +1086,7 @@
     }
     @include media-sm{
         margin-top: -265px;
-        padding-bottom: 30px;
+        padding-bottom: 90px;
         &__content{
             padding: 0px;
         }
@@ -1188,11 +1188,11 @@
         padding: 86px 80px;
         background-color: #fff;
         &--title{
-            line-height: 45px;
+            line-height: 1.5em;
             font-size: 1.875em;
         }
         &--texts{
-            line-height: 43px;
+            line-height: 1.954em;
             font-size: 1.375em;
             color: rgba(0,0,0,0.8);
             font-family: var(--paragraph-font);
@@ -1203,7 +1203,7 @@
         &--list{
             display: grid;
             gap: 34px;
-            line-height: 25px;
+            line-height: 1.78em;
             font-size: 1.125em;
             padding-left: 25px;
             list-style-image: url("/assests/img/icons/check.png");
@@ -1221,6 +1221,8 @@
         padding: 96px 30px;
         position: relative;
         overflow: hidden;
+        display: grid;
+        align-content: center;
         background-color: var(--primary-color);
         &--title{
             line-height: 45px;
@@ -1266,7 +1268,7 @@
     }
     @include media-xl{
         &__content{
-            grid-template-columns: 68.377% auto;
+            grid-template-columns: 67.488% auto;
         }
     }
 }
@@ -1517,7 +1519,7 @@
     }
     @include media-xl{
         &__two-categ{
-            grid-template-columns: 68.377% auto;
+            grid-template-columns: 67.488% auto;
         }
         &__card{
             grid-template-columns: 270px auto;
@@ -1593,6 +1595,8 @@
 // follow on instagram
 .follow-us{
     text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
     background-image: url("/assests/img/blog-thumbnails/thumbnail-8.png");
     padding: 71px 0px;
     &__button{
