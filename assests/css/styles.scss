@@ -1311,7 +1311,7 @@
         }
     }
     @include media-sm{
-        padding: 30px 0px;
+        padding: 30px 0px 15px;
         &__list{
             gap: 15px;
             margin-top: 0px;
@@ -1329,9 +1329,11 @@
 
 // from the blog
 .from{
+    padding: 60px 0px 120px;
     &__two-categ{
         margin-top: 70px;
         display: grid;
+        row-gap: 20px;
     }
     &__blog{
         display: grid;
@@ -1344,9 +1346,6 @@
     }
     &__card{
         display: grid;
-        &--content{
-            padding: 9px 80px 0px 41px;
-        }
         &--category{
             display: flex;
             gap: 22px;
@@ -1356,10 +1355,11 @@
             font-family: var(--header-font);
         }
         &--bottom{
+            color: var(--primary-color);
             border-bottom: 1px dotted var(--secondary-color);
         }
         &--title{
-            line-height: 35px;
+            // line-height: 1.75em;
             padding: 10px 0px 14px 0px;
             font-weight: 500;
             font-size: 1.25em;
@@ -1379,7 +1379,7 @@
             color: #232323a1;
         }
         &--paragraph{
-            line-height: 32px;
+            line-height: 1.78em;
             font-weight: 300;
             font-size: 1.125em;
             color: #000;
@@ -1395,6 +1395,7 @@
         overflow: hidden;
         background: linear-gradient(180deg, rgba(98,207,114,1) 0%, rgba(23,190,138,1) 100%);
         &--title{
+            line-height: 1.33em;
             font-size: 1.875em;
             font-family: var(--header-font);
         }
@@ -1403,7 +1404,7 @@
         }
         &--paragraph{
             padding: 35px 0px 29px 0px;
-            line-height: 32px;
+            line-height: 1.78em;
             font-size: 1.125em;
         }
         &--form{
@@ -1447,13 +1448,13 @@
         }
         &--title{
             padding: 0px 51px;
-            line-height: 40px;
+            line-height: 1.33em;
             font-size: 1.875em;
             font-family: var(--header-font);
         }
         &--paragraph{
             padding: 22px 0px 23px 0px;
-            line-height: 32px;
+            line-height: 1.78em;
             font-size: 1.25em;
         }
         &--button{
@@ -1474,16 +1475,20 @@
         }
     }
     @include media-sm{
+        padding: 15px 0px 30px;
         &__two-categ{
             margin-top: 0px;
         }
         &__blog{
-            gap: 10px;
+            gap: 20px;
             padding-right: 0px;
         }
         &__card{
             &--image{
                 width: 100%;
+            }
+            &--content{
+                padding: 9px 0px;
             }
         }
         &__subscribe{
@@ -1509,6 +1514,9 @@
             grid-template-columns: repeat(1,1fr);
             &--image{
                 width: 100%;
+            }            
+            &--content{
+                padding: 9px 0px;
             }
         }
     }
@@ -1518,6 +1526,9 @@
         }
         &__card{
             grid-template-columns: 270px auto;
+            &--content{
+                padding: 9px 80px 0px 41px;
+            }
         }
     }
     @include media-xl{
