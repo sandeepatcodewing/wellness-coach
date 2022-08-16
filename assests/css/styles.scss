@@ -770,7 +770,6 @@
         font-size: 3.75em;
         font-family: var(--signature-font);
         transform: rotate(-8deg);
-        padding: 0px 0px 50px 24px;
     }
     &__paragraph{
         line-height: 1.78em;
@@ -882,13 +881,17 @@
         }
         &__details{
             grid-template-columns: 45.3% auto;
+            // grid-template-columns: 43.762% auto;
             &--back-image{
                 display: block;
             }
         }  
         &__text{
             padding: 40.4px 0px 63px 64px;
-        }     
+        }    
+        &__hi{
+            padding: 0px 0px 50px 24px;
+        } 
     }
 }
 
