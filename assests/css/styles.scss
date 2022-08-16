@@ -763,29 +763,28 @@
         }
     }
     &__text{
-        padding: 40.4px 0px 63px 64px;
         background-color: #fff;
-        display: flex;
-        flex-direction: column;
     }
     &__hi{
+        line-height: 1.267em;
         font-size: 3.75em;
         font-family: var(--signature-font);
+        transform: rotate(-8deg);
+        padding: 0px 0px 50px 24px;
     }
     &__paragraph{
-        color: #232323;
-        line-height: 32px;
+        line-height: 1.78em;
         font-size: 1.125em;
         padding: 35px 0px 21.5px;
     }
     &__mission{
         font-family: var(--header-font);
         font-size: 1.375em;
-        line-height: 40px;
+        line-height: 1.818em;
         padding: 21.5px 0px 50px;
     }
     @include media-sm{
-        padding: 30px 0px;
+        padding: 50px 0px 30px 0px;
         &__slider-section{
             margin-top: -375px;
         }
@@ -799,9 +798,6 @@
         &__text{
             gap: 10px;
             padding: 0px;
-        }
-        &__hi{
-            padding-left: 30px;
         }
         &__feature-card{
             &--contents{
@@ -819,33 +815,80 @@
                 font-size: 1em;
             }
         }
+        &__hi{
+            padding: 15px 20px 35px;
+        }
+        &__paragraph{
+            padding: 15px 0px;
+        }
+        &__mission{
+            padding: 0px 0px 15px 0px;
+        }
     }
     @include media-md{
         &__slider-section{
             margin-top: -270px;
+        }
+        &__main-image{
+            width: 100%;
         }
         &__details{
             grid-template-columns: repeat(1,1fr);
             &--back-image{
                 display: none;
             }
+        }
+        &__text{
+            padding: 0px;
         } 
+        &__hi{
+            padding: 0px 20px 75px;
+        }
     }
     @include media-lg{
         &__slider-section{
             margin-top: -320px;
+        }
+        &__images{
+            &--thumbs-up{
+                top: -1.5%;
+                right: 25%;
+            }
+            &--heart{
+                left: -1.5%;
+                top: 50%;
+            }
+        }
+        &__hi{
+            padding: 15px 20px 75px;
         }
     }
     @include media-xl{
         &__slider-section{
             margin-top: -265px;
         }
+        &__main-image{
+            width: auto;
+        }
+        &__images{
+            &--thumbs-up{
+                top: -3%;
+                right: 25%;
+            }
+            &--heart{
+                left: -3%;
+                top: 50%;
+            }
+        }
         &__details{
             grid-template-columns: 45.3% auto;
             &--back-image{
                 display: block;
             }
-        }       
+        }  
+        &__text{
+            padding: 40.4px 0px 63px 64px;
+        }     
     }
 }
 
