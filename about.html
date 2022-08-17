@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assests/img/logo/fav-icon.png" type="image/x-icon" />
+    <title>Wellness Coach</title>
+    <!-- main css-->
+    <link rel="stylesheet" href="/assests/css/styles.css" />
+    <!-- Roboto Slab Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Questrial Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet" />
+    <!-- Didact Gothic Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet" />
+    <!-- Brittany Signature Font -->
+    <link href="http://fonts.cdnfonts.com/css/brittany-signature" rel="stylesheet" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- Font awsome 6.0 -->
+    <script src="https://kit.fontawesome.com/ae48f6d481.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Take a quiz notification -->
+      <section class="top-notification open">
+        <div class="container-fluid">
+          <div class="top-notification__content">
+            <i class="fa-solid fa-xmark top-notification__icon"></i>
+            <p class="top-notification__text">An exclusive, one-on-one coaching program for ambitious, designed to get you Real Results in all areas of your life in 3 short months.</p>
+            <div class="top-notification__item">
+              <a class="top-notification__item--link" href="">
+                <button class="top-notification__button">Take a quiz</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- social media, contact details, cart, hamburger icon -->
+      <section class="details">
+        <div class="container-fluid">
+          <div class="details__content">
+            <i class="details__bell fa-solid fa-bell" id="bell-icon"></i>
+            <div class="social-media">
+              <!-- social media link -->
+              <ul class="social-media__links">
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-pinterest"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- contact address -->
+            <div class="details__contact-address">
+              <ul class="details__contact-address--links">
+                <li>
+                  <a href="tel: 9808605892">
+                    <i class="fa-solid fa-phone details__contact-address--icon"></i>
+                    +977 9808605892
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:info.blossomCoach@gmail.com">
+                    <i class="fa-solid fa-envelope details__contact-address--icon"></i>
+                    info.blossomCoach@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- search, cart, and hamburger icons -->
+            <div class="details__icons-navigation">
+              <div class="details__icons-navigation--search-cart">
+                <i class="fa-solid fa-magnifying-glass details__icons-navigation--icon"></i>
+                <hr />
+                <span class="details__icons-navigation--cart-icon">
+                  <i class="fa-solid fa-cart-shopping details__icons-navigation--icon"></i>
+                  <span class="details__icons-navigation--total-item">1</span>
+                </span>
+              </div>
+              <div class="hamburger"></div>
+              <ul class="extra-menu">
+                <li>
+                  <a href="">Feedbacks</a>
+                </li>
+                <li>
+                  <a href="">Real Life Examples</a>
+                </li>
+                <li>
+                  <a href="">Diet Plans</a>
+                </li>
+                <li>
+                  <a href="">Other Contents</a>
+                </li>
+                <li>
+                  <a href="">Want to talk?</a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-solid fa-phone details__contact-address--icon"></i>
+                    +977 9808605892
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-solid fa-envelope details__contact-address--icon"></i>
+                    info.blossomCoach@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- search bar -->
+      <div class="search search__hide">
+        <i class="fa-solid fa-xmark search__close-icon hide"></i>
+        <form class="search__form" action="" method="get">
+          <input class="search__form--search" type="search" name="" id="" />
+          <input class="search__form--submit" type="submit" value="Search" />
+        </form>
+      </div>
+
+      <!-- cart items -->
+      <!-- <div class="cart-items">
+        <i class="fa-solid fa-xmark"></i>
+        <div class="cart-items__content">
+          <img src="/assests/img/cart/cart-01.png" alt="" />
+          <div class="cart-items__texts">
+            <p class="cart-items__texts--title">Fresh Juice</p>
+            <p class="cart-items__texts-price"></p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- menu -->
+      <section class="menu bg-primary">
+        <div class="container-fluid">
+          <div class="menu__content">
+            <div class="menu__logo">
+              <a href="">
+                <img src="/assests/img/logo/logo.png" alt="Logo" />
+              </a>
+            </div>
+            <div class="hamburger-menu"></div>
+            <div class="menu__navbar-button">
+              <div class="menu__navbar">
+                <ul class="menu__navbar--links">
+                  <li>
+                    <a href="/index.html">Home</a>
+                  </li>
+                  <li>
+                    <a href="">About(Me)</a>
+                  </li>
+                  <li>
+                    <a href="">Work With(Me)</a>
+                  </li>
+                  <li>
+                    <a href="">Portfolio</a>
+                  </li>
+                  <li class="menu__drop-menu">
+                    <a href="">Templates</a>
+                    <i class="fa-solid fa-caret-down icon-first-down rotate-down"></i>
+                    <ul class="menu__drop-menu--item item-list">
+                      <li>
+                        <a href="">Rishi Templates</a>
+                      </li>
+                      <li class="menu__sub-drop">
+                        <a href="">Blossom Templates</a>
+                        <i class="fa-solid fa-caret-down icon-second-down rotate-down"></i>
+                        <ul class="menu__sub-drop--item item-list">
+                          <li><a href="">Call</a></li>
+                          <li><a href="">About Us</a></li>
+                          <li><a href="">Contact Us</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="">Blog</a>
+                  </li>
+                  <li>
+                    <a href="">Pages</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu__button-section">
+                <a href="">
+                  <button class="menu__button-section--button">Book Free 15 Min Chat</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="breadcrumb bg-primary">
+        <div class="breadcrumb__content">
+          <a class="breadcrumb__first-page" href="/index.html">Home</a>
+          <i class="fa-solid fa-chevron-right breadcrumb__right"></i>
+          <a class="breadcrumb__second-page" href="/about.html">About</a>
+        </div>
+      </section>
+      <!-- gap section -->
+      <section class="gap"></section>
+      
+      <!-- about section -->
+      <section class="first-about">
+        <div class="container">
+          <div class="first-about__content">
+            <div class="first-about__texts">
+              <div class="first-about__title-section">
+                <hr class="first-about__line" />
+                <p class="first-about__title">about me</p>
+              </div>
+              <h1 class="first-about__sub-title">
+                <span class="signature-text">Hi</span>
+                there, I'm
+                <br />
+                Health Coach
+              </h1>
+              <p class="first-about__paragraph">I teach women how to create vibrant health without deprivation and profitable, online businesses they love.</p>
+            </div>
+            <div class="first-about__image-section">
+              <img src="/assests/img/persons/persons-3.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- customer stories -->
+      <section class="stories">
+        <div class="container">
+          <div class="stories__content">
+            <div class="benifits__title">
+              <div class="section-title">
+                <div class="section-title__header">
+                  <hr class="section-title__header--secondary" />
+                  <h2>Customer Stories</h2>
+                </div>
+                <div class="section-title__line">
+                  <hr class="section-title__line--second" />
+                </div>
+              </div>
+              <p class="section-title__paragraph">My mission is to educate and encourage healthy, mindful living helping others embrace the concept that we are a product of what we eat and how we treat ourselves.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- feedback section -->
+      <section class="feedback">
+        <div class="container">
+          <div class="feedback__content">
+            <div class="feedback__nav feedback__nav--right">
+              <img class="feedback__nav--icon" src="/assests/img/icons/icon-next.png" alt="" />
+            </div>
+            <div class="feedback__nav feedback__nav--left">
+              <img class="feedback__nav--icon" src="/assests/img/icons/icon-prev.png" alt="" />
+            </div>
+            <div class="feedback__swiper-started">
+              <!-- Swiper -->
+              <div class="swiper feedback__swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="feedback__card">
+                      <img class="feedback__card--image" src="/assests/img/profile/profile-1.png" alt="" />
+                      <div class="feedback__card--texts">
+                        <p class="feedback__card--main-text">Thank You Coach For The Coaching, Guidance And Friendship You Give Me. I Will Be Forever Grateful.</p>
+                        <p class="feedback__card--sub-text">The Wellness Business Bootcam Gave Me The Exact Framwork I Was Searching For no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, to grow my network marketing business.</p>
+                        <p class="feedback__card--user">
+                          <span class="feedback__card--author">- Alice Wells</span>
+                        </p>
+                        <p class="feedback__card--user-designation">Alice Wells | Co-Founder of Wells Foundations</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="feedback__card">
+                      <img class="feedback__card--image" src="/assests/img/profile/profile-1.png" alt="" />
+                      <div class="feedback__card--texts">
+                        <p class="feedback__card--main-text">Thank You Coach For The Coaching, Guidance And Friendship You Give Me. I Will Be Forever Grateful.</p>
+                        <p class="feedback__card--sub-text">The Wellness Business Bootcam Gave Me The Exact Framwork I Was Searching For no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, to grow my network marketing business.</p>
+                        <p class="feedback__card--user">
+                          <span class="feedback__card--author">- Alice Wells</span>
+                        </p>
+                        <p class="feedback__card--user-designation">Alice Wells | Co-Founder of Wells Foundations</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="feedback__card">
+                      <img class="feedback__card--image" src="/assests/img/profile/profile-1.png" alt="" />
+                      <div class="feedback__card--texts">
+                        <p class="feedback__card--main-text">Thank You Coach For The Coaching, Guidance And Friendship You Give Me. I Will Be Forever Grateful.</p>
+                        <p class="feedback__card--sub-text">The Wellness Business Bootcam Gave Me The Exact Framwork I Was Searching For no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, to grow my network marketing business.</p>
+                        <p class="feedback__card--user">
+                          <span class="feedback__card--author">- Alice Wells</span>
+                        </p>
+                        <p class="feedback__card--user-designation">Alice Wells | Co-Founder of Wells Foundations</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="feedback__bullet"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- as seen section -->
+      <section class="as-seen">
+        <div class="container">
+          <div class="as-seen__content">
+            <div class="as-seen__title">
+              <p class="as-seen__title--paragraph">as seen in:</p>
+            </div>
+            <div class="as-seen__image">
+              <img src="/assests/img/brands/brands-1.png" alt="" />
+              <img src="/assests/img/brands/brands-2.png" alt="" />
+              <img src="/assests/img/brands/brands-3.png" alt="" />
+              <img src="/assests/img/brands/brands-4.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- book -->
+      <section class="book">
+        <div class="container">
+          <div class="book__content">
+            <div class="book__details">
+              <p class="book__sub-text">Grab the #1 new realease</p>
+              <p class="book__title">
+                The Only
+                <span class="signature-text">Health</span>
+                Book You'll Ever Need
+              </p>
+              <div class="book__button grid-start">
+                <div class="border-buttons__secondary-dotted">
+                  <a href="" class="border-buttons">
+                    <button class="book__get-button secondary-button">
+                      Get Your Free Gift
+                      <img src="/assests/img/icons/icon-next-b.png" alt="" />
+                      <!-- <i class="fa-solid fa-arrow-right-long"></i> -->
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="book__image-section">
+              <img class="book__image" src="/assests/img/book.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- follow us -->
+      <section class="follow-us">
+        <a class="follow-us__link" href="">
+          <button class="follow-us__button">
+            <i class="fa-brands fa-instagram"></i>
+            Flourish On Instagram !
+          </button>
+        </a>
+      </section>
+
+      <!-- logo navbar -->
+      <section class="footer-navbar">
+        <div class="container-fluid">
+          <div class="footer-navbar__content">
+            <div class="footer-navbar__logo">
+              <img src="/assests/img/logo/logo.png" alt="" />
+            </div>
+            <div class="footer-navbar__menu">
+              <ul class="footer-navbar__menu--link">
+                <li><a href="">About us</a></li>
+                <li>
+                  <a href="">Work with me</a>
+                </li>
+                <li>
+                  <a href="">Templates</a>
+                </li>
+                <li>
+                  <a href="">Blog</a>
+                </li>
+                <li>
+                  <a href="">Pages</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- copyright section -->
+      <section class="copyright">
+        <div class="container-fluid">
+          <div class="copyright__content">
+            <div class="copyright__details">
+              <p>©Copyright 2020 Blossom Health Coach ltd.</p>
+              <p>
+                Blossom Health Coach by
+                <span>
+                  <a class="copyright__arrow-button" href="">
+                    <button class="copyright__theme-link">Blossom Themes</button>
+                    <i class="copyright__arrow-button--icon fa-solid fa-play"></i>
+                  </a>
+                </span>
+              </p>
+            </div>
+            <div class="social-media">
+              <ul class="copyright__social-media social-media__links">
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-pinterest"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- swiper js -->
+    <script src="/assests/js/swiper.js"></script>
+    <!-- search bar js -->
+    <script src="/assests/js/search.js"></script>
+    <!-- navbar js -->
+    <script src="/assests/js/navbar.js"></script>
+    <!-- drop down js -->
+    <script src="/assests/js/drop-down.js"></script>
+    <!-- notification close js -->
+    <script src="/assests/js/notification-close.js"></script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 @import 'reset';
 @import 'media';
 @import 'boilerplate';
-
+@import 'about';
 
 %container-fluid{
     margin: 0 auto;
@@ -397,9 +397,9 @@
     }
 }
 
+
 // menu + logo styling
 .menu{
-    background-color: #fff;
     font-size: 0.9375em;
     padding: 24px 0px;
     font-family: var(--header-font);
@@ -584,7 +584,7 @@
 // first-section
 .first-section{
     width: 100%;
-    padding: 120px 150px;
+    padding: 94px 150px 120px;
     &__content{
         row-gap: 15px;
         display: grid;
@@ -1225,11 +1225,11 @@
         align-content: center;
         background-color: var(--primary-color);
         &--title{
-            line-height: 45px;
+            line-height: 1.875em;
             font-size: 1.5em;
         }
         &--main-title{
-            line-height: 70px;
+            line-height: 1.296em;
             padding: 44px 20px 68px 20px;
             font-size: 3.375em;
         }

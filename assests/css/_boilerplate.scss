@@ -66,8 +66,12 @@
     color: var(--primary-color);
 }
 
+.bg-white{
+    background-color: #fff;
+}
+
 .bg-primary{
-    background-color: rgba(23,190,138,0.05);
+    background-color: #f3fcf9;
 }
 
 .signature-text{
@@ -133,7 +137,6 @@
 
 .section-title{
     &__header{
-        z-index: -1;
         position: relative;
         &--secondary{
             position: absolute;
@@ -143,7 +146,6 @@
             opacity: 0.1;
             border: none;
             bottom: 10px;
-            z-index: -1;
             left: 0px;
             @include media-sm{
                 display: none;

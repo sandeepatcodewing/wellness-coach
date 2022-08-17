@@ -101,8 +101,11 @@ h2 {
   cursor: pointer;
   color: var(--primary-color); }
 
+.bg-white {
+  background-color: #fff; }
+
 .bg-primary {
-  background-color: rgba(23, 190, 138, 0.05); }
+  background-color: #f3fcf9; }
 
 .signature-text {
   font-family: var(--signature-font); }
@@ -160,7 +163,6 @@ h2 {
   background-color: var(--secondary-color); }
 
 .section-title__header {
-  z-index: -1;
   position: relative; }
 
 .section-title__header--secondary {
@@ -171,7 +173,6 @@ h2 {
   opacity: 0.1;
   border: none;
   bottom: 10px;
-  z-index: -1;
   left: 0px; }
 
 @media (max-width: 767px) {
@@ -329,6 +330,60 @@ input[type=text], input[type=email] {
   height: 50px;
   margin-top: 7px;
   opacity: 0.9; }
+
+.breadcrumb {
+  padding: 5px 19px 5px 13px; }
+
+.breadcrumb__right {
+  font-size: 0.8em;
+  color: var(--primary-color); }
+
+.breadcrumb__second-page {
+  color: var(--primary-color); }
+
+.breadcrumb a {
+  line-height: 2.286em; }
+
+.gap .first-about__content {
+  display: grid;
+  align-items: end;
+  grid-template-columns: 30% auto; }
+
+.gap .first-about__texts {
+  z-index: 2;
+  max-width: 521px;
+  max-height: 470px;
+  margin-right: -180px;
+  background-color: #fff;
+  padding: 75px 54px 95px 66px;
+  border-left: 5px solid #b9ebdc; }
+
+.gap .first-about__title-section {
+  position: relative; }
+
+.gap .first-about__title {
+  line-height: 1.94em;
+  font-size: 1.125em;
+  letter-spacing: 1.42px;
+  text-transform: uppercase;
+  font-family: var(--header-font); }
+
+.gap .first-about__sub-title {
+  padding: 6px 0px 10px; }
+
+.gap .first-about__line {
+  left: 0px;
+  bottom: 5px;
+  width: 102px;
+  height: 9px;
+  opacity: 0.1;
+  border: none;
+  position: absolute;
+  background: var(--secondary-color); }
+
+.gap .first-about__paragraph {
+  line-height: 1.954;
+  font-size: 1.375em; }
 
 .container-fluid {
   margin: 0 auto;
@@ -688,7 +743,6 @@ input[type=text], input[type=email] {
   transform: rotate(45deg); }
 
 .menu {
-  background-color: #fff;
   font-size: 0.9375em;
   padding: 24px 0px;
   font-family: var(--header-font);
@@ -845,7 +899,7 @@ input[type=text], input[type=email] {
 
 .first-section {
   width: 100%;
-  padding: 120px 150px; }
+  padding: 94px 150px 120px; }
 
 .first-section__content {
   row-gap: 15px;
@@ -1380,11 +1434,11 @@ input[type=text], input[type=email] {
   background-color: var(--primary-color); }
 
 .start__curious--title {
-  line-height: 45px;
+  line-height: 1.875em;
   font-size: 1.5em; }
 
 .start__curious--main-title {
-  line-height: 70px;
+  line-height: 1.296em;
   padding: 44px 20px 68px 20px;
   font-size: 3.375em; }
 

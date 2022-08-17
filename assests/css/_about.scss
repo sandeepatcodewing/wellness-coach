@@ -1,0 +1,62 @@
+// Breadcrumb
+.breadcrumb{
+    padding: 5px 19px 5px 13px;
+    &__right{
+        font-size: 0.8em;
+        color: var(--primary-color);
+    }
+    &__second-page{
+        color: var(--primary-color);
+    }
+    a{
+        line-height: 2.286em;
+    }
+} 
+
+// gap section
+.gap
+
+// first about section
+.first-about{
+    &__content{
+        display: grid;
+        align-items: end;
+        grid-template-columns: 30% auto;
+    }
+    &__texts{
+        z-index: 2;
+        max-width: 521px;
+        max-height: 470px;
+        margin-right: -180px;
+        background-color: #fff;
+        padding: 75px 54px 95px 66px;
+        border-left: 5px solid #b9ebdc;
+    }
+    &__title-section{
+        position: relative;
+    }
+    &__title{
+        line-height: 1.94em;
+        font-size: 1.125em;
+        letter-spacing: 1.42px;
+        text-transform: uppercase;
+        font-family: var(--header-font);
+    }
+    &__sub-title{
+        padding: 6px 0px 10px;
+    }
+    &__line{
+        left: 0px;
+        bottom: 5px;
+        width: 102px;
+        height: 9px;
+        opacity: 0.1;
+        border: none;
+        position: absolute;
+        background: var(--secondary-color);
+    }
+    &__paragraph{
+        line-height: 1.954;
+        font-size: 1.375em;
+    }
+}
